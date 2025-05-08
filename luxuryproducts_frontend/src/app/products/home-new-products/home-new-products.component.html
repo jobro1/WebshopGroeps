@@ -1,0 +1,11 @@
+<div class="new-products">
+  <h2>Products</h2>
+  <ul class="some-products-container">
+    @for (product of products() | slice:0:5; track product.product_id) {
+      <li>
+        <app-product [product]="product"></app-product>
+      </li>
+    }
+  </ul>
+</div>
+

@@ -1,0 +1,35 @@
+<article class="categories">
+  <h2> What category are you looking for?</h2>
+  <section class="categories-container">
+    @for(category of categories(); track category.categoryId){
+
+      @if(category.name === "Wireless"){
+        <div class="category-box" [routerLink]="['/category', category.categoryId]" >
+          <i class="fab fa-bluetooth"></i>
+          <span>Wireless </span>
+        </div>
+      }
+      @if(category.name === "Gaming") {
+        <div class="category-box" [routerLink]="['/category', category.categoryId]">
+          <i class="fa-solid fa-gamepad"></i>
+          <span>Gaming</span>
+        </div>
+      }
+      @if(category.name === "Studio & Professional") {
+        <div class="category-box" [routerLink]="['/category', category.categoryId]">
+          <i class="fa-solid fa-headphones"></i>
+          <span>Studio & Professional </span>
+        </div>
+      }
+
+      @if (category.name === "Sport") {
+        <div class="category-box" [routerLink]="['/category', category.categoryId]">
+          <i class="fa-solid fa-person-running"></i>
+          <span>Sports & Workout </span>
+        </div>
+      }
+
+    }
+
+  </section>
+</article>

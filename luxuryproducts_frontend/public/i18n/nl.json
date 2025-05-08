@@ -1,0 +1,10 @@
+{
+  "header": {
+    "home": "Hoofd pagina",
+    "all-product": "Alle producten"
+  },
+  "switch-language":{
+    "switchToNL": "Zet de taal naar Nederlands",
+    "switchToEN": "Zet de taal naar Engels"
+  }
+}

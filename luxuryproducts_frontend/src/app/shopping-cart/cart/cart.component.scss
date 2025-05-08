@@ -1,0 +1,127 @@
+.shopping-cart {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 20px;
+  margin: 10px 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    text-align: start;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+
+  .items-container {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+    gap: 10px;
+    flex-grow: 1;
+  }
+
+
+  @media (max-width: 768px) {
+    padding: 20px;
+    margin: 5px 10px;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .items-container {
+      gap: 8px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 15px;
+    margin: 5px;
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    .items-container {
+      gap: 5px;
+    }
+  }
+}
+.cart-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  flex-direction: row;
+  color: black;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: auto;
+  margin: 10px 0;
+  gap: 10px;
+
+  .cart-action-btns{
+    display: flex;
+    gap: 10px;
+
+    .checkout-button,
+    .remove-items-btn {
+      width: fit-content;
+      padding: 8px 12px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .checkout-button {
+      background: #7b7bf4;
+
+      &:hover {
+        background: #1a1ae0;
+      }
+    }
+
+    .remove-items-btn {
+      background: #e16700;
+
+      &:hover {
+        background: #c65300;
+      }
+    }
+  }
+
+
+
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+
+    .cart-action-btns{
+      flex-direction: column;
+      .checkout-button,
+      .remove-items-btn {
+        width: 100%;
+        padding: 10px;
+      }
+    }
+
+  }
+
+  @media (max-width: 480px) {
+    padding: 15px;
+
+    .checkout-button,
+    .remove-items-btn {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  }
+}

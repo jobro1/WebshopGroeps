@@ -1,0 +1,5 @@
+<div class="image-slider">
+  <button class="prev" (click)="prevImage(); $event.stopPropagation();">&#10094;</button>
+  <img [src]="images[currentIndex]?.imageUrl" alt="Product Image">
+  <button class="next" (click)="nextImage(); $event.stopPropagation();">&#10095;</button>
+</div>

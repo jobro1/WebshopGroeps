@@ -1,0 +1,56 @@
+
+
+
+<article class="profile-container">
+
+  <section class="container-leftside">
+
+    <div class="user-card" >
+
+      <h2> {{ userInfo()?.firstName }} {{ userInfo()?.lastName }} </h2>
+<!--      <p><strong>Name:</strong> {{ userInfo()?.firstName }} {{ userInfo()?.lastName }}</p>-->
+      <div class="user-info">
+      <p><strong>Date of birth:</strong> {{ userInfo()?.dateOfBirth}}</p>
+      <p><strong>Email:</strong> {{ userInfo()?.email }}</p>
+      <p><strong>Phone:</strong> {{ userInfo()?.phoneNumber }}</p>
+      <p><strong>Address:</strong> {{ userInfo()?.address }}</p>
+      <p><strong>House number:</strong> {{ userInfo()?.houseNumber }}</p>
+      <p><strong>Postcode:</strong> {{ userInfo()?.postcode }}</p>
+      <button type="button" class="logout-button" (click)="onLogout()"> Logout</button>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="container-rightside">
+  <h3>Order History</h3>
+  <div class="order-history" >
+    <ul class="order">
+      @for(order of usersOrders(); track order.orderId){
+        <li >
+          <p class="order-info">
+            <span>Order ID: {{ order.orderId }}</span>
+            <span>Date: {{ order.date }}</span>
+            <span>Total: €{{ order.totalPrice }} </span>
+          </p>
+          <ul class="order-item">
+            @for( orderItem of order.orderItems; track orderItem.orderItemId){
+              <li>
+                {{ orderItem.product?.name }} - Quantity: {{ orderItem.quantity }} - Price: €{{ orderItem.subtotal }}
+              </li>
+            }
+
+          </ul>
+        </li>
+      }
+
+    </ul>
+  </div>
+  </section>
+
+
+</article>
+
+
+

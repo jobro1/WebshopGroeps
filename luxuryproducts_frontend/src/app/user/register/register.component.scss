@@ -1,0 +1,92 @@
+.registering-page-container{
+  display: flex;
+  justify-content: center;
+
+
+  .registering-form-container {
+    width: 90%;
+    max-width: 40rem;
+    background-color: #ffffff;
+    //border-radius: 15px;
+    border: none;
+    //box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    padding: 1rem;
+    top: 5rem;
+    .h2{
+      margin: 0;
+      color: black;
+    }
+    input,
+    textarea {
+      width: 100%;
+      height: 30px;
+      font: inherit;
+      padding: 0.15rem 0.25rem;
+      border-radius: 4px;
+
+      background-color: #ffffff;
+
+    }
+
+    .full-name,
+    .place-postcode{
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    label {
+      display: flex;
+      //font-weight: bold;
+      font-size: 0.9rem;
+      color: #000000;
+      margin-bottom: 0.5rem;
+    }
+
+    input::placeholder {
+      opacity: 0.3;
+    }
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .actions{
+      margin: 1rem 0 0;
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+    }
+    button{
+      font: inherit;
+      font-size: 0.85rem;
+      cursor: pointer;
+      border: none;
+      padding: 1rem 1.25rem;
+      border-radius: 7px;
+      background-color: #93b3f3 ;
+    }
+    .register-button:hover{
+      background-color: blue;
+      color: white;
+    }
+    .cancel-button:hover{
+      background-color: red;
+      color: white;
+    }
+    .wrong-message{
+      color: red;
+    }
+    .correct-message {
+      color: green;
+
+    }
+
+  }
+
+}
+
+
+

@@ -1,0 +1,30 @@
+<body>
+<article class="container">
+  <form   (ngSubmit)="login()">
+    <h1>Login</h1>
+    <span></span>
+    <p>Welcome back! Please login to your account.</p>
+    <span></span>
+    <div class="input-box">
+      <input type="text" name="email" placeholder="Enter your email" [(ngModel)]="email">
+      <i class="fa-solid fa-user"></i>
+    </div>
+    <div class="input-box">
+      <input type="password" name="password"  placeholder="Enter your password" [(ngModel)]="password">
+      <i class="fa-solid fa-lock"></i>
+    </div>
+    @if(passwordInValid){
+      <p class="invalid-password-text"> <i class="fa-solid fa-circle-xmark"></i> The email or password you entered is incorrect.
+        Please double-check your credentials and try again.
+        If you continue to experience issues, consider resetting your password or verifying your email address</p>
+    }
+    <div>
+      <button type="submit" class="login-btn">Login</button>
+    </div>
+    <div class="register" >
+      <p>New User?</p>
+      <button type="button" class="register-button" routerLink="/register"> Register</button>
+    </div>
+  </form>
+</article>
+</body>

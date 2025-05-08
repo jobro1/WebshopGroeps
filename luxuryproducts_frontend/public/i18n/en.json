@@ -1,0 +1,10 @@
+{
+  "header": {
+    "home": "Home",
+    "all-product": "All product"
+  },
+  "switch-language":{
+    "switchToNL": "Set language to Dutch",
+    "switchToEN": "Set language to English"
+  }
+}
