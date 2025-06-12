@@ -4,12 +4,24 @@ stages:
 
 job_test:
   stage: test
+  image: cypress/browsers:node-18.12.0-chrome-107  # Cypress image with Chrome
   script:
-    - echo "running tests.... "
-    - npm test
+    - echo "Installing dependencies..."
+    - npm ci
+    - echo "Running Cypress tests..."
+    - npx cypress run
+  artifacts:
+    when: always
+    paths:
+      - cypress/videos/
+      - cypress/screenshots/
+    expire_in: 1 week
 
 job_build:
   stage: build
+  image: node:18  # Or the same Cypress image if needed
   script:
     - echo "running build.... "
+    - npm ci
     - npm run build
+
