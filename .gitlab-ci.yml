@@ -4,21 +4,22 @@ stages:
 
 job_test:
   stage: test
-  image: cypress/included:13.6.3
+  image: cypress/browsers:node18.12.0-chrome106
+  before_script:
+    - npm ci
+    - npx cypress install
+    - npm install --save-dev wait-on
   script:
-    - echo "Running Cypress E2E tests..."
-  # artifacts:
-  #   when: always
-  #   paths:
-  #     - cypress/videos/
-  #     - cypress/screenshots/
-  #   expire_in: 1 week
-
+    - echo "Starting Angular app..."
+    - npx ng serve --host 0.0.0.0 &
+    - npx wait-on http://localhost:4200 
+    - echo "Running Cypress tests in Chrome..."
+    - npx cypress run --browser chrome --config baseUrl=http://localhost:4200
 
 job_build:
   stage: build
   image: node:18
   script:
-    - echo "running build.... "
+    - echo "Building Angular app..."
     - npm ci
     - npm run build
