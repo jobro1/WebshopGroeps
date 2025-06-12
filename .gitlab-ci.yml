@@ -8,12 +8,12 @@ job_test:
   script:
     - echo "Running Cypress E2E tests..."
     - npx cypress run
-  artifacts:
-    when: always
-    paths:
-      - cypress/videos/
-      - cypress/screenshots/
-    expire_in: 1 week
+  # artifacts:
+  #   when: always
+  #   paths:
+  #     - cypress/videos/
+  #     - cypress/screenshots/
+  #   expire_in: 1 week
 
 job_build:
   stage: build
