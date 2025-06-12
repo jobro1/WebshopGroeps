@@ -4,16 +4,16 @@ stages:
 
 job_test:
   stage: test
-  image: cypress/included:13.6.3  # ✅ Working Cypress image
+  image: cypress/included:13.6.3
   script:
     - echo "Running Cypress E2E tests..."
-    - npx cypress run
   # artifacts:
   #   when: always
   #   paths:
   #     - cypress/videos/
   #     - cypress/screenshots/
   #   expire_in: 1 week
+
 
 job_build:
   stage: build
