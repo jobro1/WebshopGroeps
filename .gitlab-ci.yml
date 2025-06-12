@@ -4,11 +4,9 @@ stages:
 
 job_test:
   stage: test
-  image: cypress/browsers:node-18.12.0-chrome-107  # Cypress image with Chrome
+  image: cypress/included:13.6.3  # ✅ Working Cypress image
   script:
-    - echo "Installing dependencies..."
-    - npm ci
-    - echo "Running Cypress tests..."
+    - echo "Running Cypress E2E tests..."
     - npx cypress run
   artifacts:
     when: always
@@ -19,9 +17,8 @@ job_test:
 
 job_build:
   stage: build
-  image: node:18  # Or the same Cypress image if needed
+  image: node:18
   script:
     - echo "running build.... "
     - npm ci
     - npm run build
-
