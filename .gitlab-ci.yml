@@ -4,7 +4,7 @@ stages:
 
 job_test:
   stage: test
-  image: cypress/browsers:node18.12.0-chrome106
+  image: cypress/browsers:node-22.16.0-chrome-137.0.7151.68-1-ff-139.0.1-edge-137.0.3296.62-1
   before_script:
     - npm ci
     - npx cypress install
@@ -12,9 +12,10 @@ job_test:
   script:
     - echo "Starting Angular app..."
     - npx ng serve --host 0.0.0.0 &
-    - npx wait-on http://localhost:4200 
+    - npx wait-on http://localhost:4200
     - echo "Running Cypress tests in Chrome..."
     - npx cypress run --browser chrome --config baseUrl=http://localhost:4200
+
 
 job_build:
   stage: build
