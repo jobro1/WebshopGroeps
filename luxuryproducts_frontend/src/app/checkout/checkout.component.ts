@@ -4,7 +4,6 @@ import {Router, RouterLink} from '@angular/router';
 import {LoginService} from '../services/login.service';
 import {CustomUserService} from '../services/customUser.service.';
 import {CartService} from '../services/cart.service';
-import {User} from '../models/customUser';
 
 
 @Component({

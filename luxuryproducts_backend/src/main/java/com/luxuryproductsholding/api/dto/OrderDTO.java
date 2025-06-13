@@ -20,4 +20,8 @@ public class OrderDTO {
         this.userId = userId;
         this.orderItems = orderItems;
     }
+
+    public OrderDTO() {
+
+    }
 }

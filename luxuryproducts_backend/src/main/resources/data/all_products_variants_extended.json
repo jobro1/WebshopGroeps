@@ -1,0 +1,2055 @@
+{
+  "products": [
+    {
+      "id": "fb68b057-3bb3-4511-85e5-fd3bd0863a1e",
+      "name": "Regalia Driving Gloves",
+      "description": "Regalia Driving Gloves crafted with meticulous attention to detail.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_driving_glove_2f5861c2-cd14-4713-a32e-26453347ee44.png"
+      ],
+      "variants": [
+        {
+          "sku": "GLV-BRO-S",
+          "color": "Brown",
+          "size": "S",
+          "price": 297.66,
+          "currency": "EUR",
+          "stock": 38
+        },
+        {
+          "sku": "GLV-BRO-M",
+          "color": "Brown",
+          "size": "M",
+          "price": 297.66,
+          "currency": "EUR",
+          "stock": 36
+        },
+        {
+          "sku": "GLV-BRO-L",
+          "color": "Brown",
+          "size": "L",
+          "price": 297.66,
+          "currency": "EUR",
+          "stock": 38
+        },
+        {
+          "sku": "GLV-BLA-S",
+          "color": "Black",
+          "size": "S",
+          "price": 297.66,
+          "currency": "EUR",
+          "stock": 20
+        },
+        {
+          "sku": "GLV-BLA-M",
+          "color": "Black",
+          "size": "M",
+          "price": 297.66,
+          "currency": "EUR",
+          "stock": 26
+        },
+        {
+          "sku": "GLV-BLA-L",
+          "color": "Black",
+          "size": "L",
+          "price": 297.66,
+          "currency": "EUR",
+          "stock": 36
+        }
+      ]
+    },
+    {
+      "id": "a6e8ea30-dda8-4b20-8ccd-2727963f7ec5",
+      "name": "Cavendish Driving Gloves",
+      "description": "Cavendish Driving Gloves crafted with meticulous attention to detail.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_driving_glove_ce5f0f1a-84a4-45b9-b5c3-37845c70f07a.png"
+      ],
+      "variants": [
+        {
+          "sku": "GLV-BRO-S",
+          "color": "Brown",
+          "size": "S",
+          "price": 71.69,
+          "currency": "EUR",
+          "stock": 23
+        },
+        {
+          "sku": "GLV-BRO-M",
+          "color": "Brown",
+          "size": "M",
+          "price": 71.69,
+          "currency": "EUR",
+          "stock": 27
+        },
+        {
+          "sku": "GLV-BRO-L",
+          "color": "Brown",
+          "size": "L",
+          "price": 71.69,
+          "currency": "EUR",
+          "stock": 37
+        },
+        {
+          "sku": "GLV-BLA-S",
+          "color": "Black",
+          "size": "S",
+          "price": 71.69,
+          "currency": "EUR",
+          "stock": 43
+        },
+        {
+          "sku": "GLV-BLA-M",
+          "color": "Black",
+          "size": "M",
+          "price": 71.69,
+          "currency": "EUR",
+          "stock": 39
+        },
+        {
+          "sku": "GLV-BLA-L",
+          "color": "Black",
+          "size": "L",
+          "price": 71.69,
+          "currency": "EUR",
+          "stock": 46
+        }
+      ]
+    },
+    {
+      "id": "c9653b3a-5673-4d91-aeef-79b16d16c560",
+      "name": "Bellvista Vintage Champagne",
+      "description": "Bellvista Vintage Champagne crafted with meticulous attention to detail.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_exclusive_cha_54705363-7b35-4527-86c9-a8f80f0c17ec.png"
+      ],
+      "variants": [
+        {
+          "sku": "ADMI-STD",
+          "price": 265.79,
+          "currency": "EUR",
+          "stock": 20
+        }
+      ]
+    },
+    {
+      "id": "be6767c5-26d0-4771-9b99-6d17b8d0ff4b",
+      "name": "Montclair Vintage Champagne",
+      "description": "Montclair Vintage Champagne crafted with meticulous attention to detail.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_exclusive_cha_b6f7f8be-51da-4f41-a9e8-9699ea3144cc.png"
+      ],
+      "variants": [
+        {
+          "sku": "ADMI-STD",
+          "price": 108.3,
+          "currency": "EUR",
+          "stock": 29
+        }
+      ]
+    },
+    {
+      "id": "ddd80ff7-d070-497b-b786-ed34b316b400",
+      "name": "Aurelius Vintage Champagne",
+      "description": "Aurelius Vintage Champagne crafted with meticulous attention to detail.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_exclusive_cha_ba9fa2e7-53ee-4456-ad7b-fd83ee4edd5f.png"
+      ],
+      "variants": [
+        {
+          "sku": "ADMI-STD",
+          "price": 130.68,
+          "currency": "EUR",
+          "stock": 19
+        }
+      ]
+    },
+    {
+      "id": "da889377-d4f9-482b-8504-4fe3eac50021",
+      "name": "Valencourt Leather Weekender Bag",
+      "description": "Valencourt Leather Weekender Bag crafted with meticulous attention to detail.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_exclusive_lad_62a8f984-df54-4bf3-87b4-01fc7b2c45d6.png"
+      ],
+      "variants": [
+        {
+          "sku": "WEEK-COG-M",
+          "color": "Cognac",
+          "size": "Medium",
+          "price": 281.61,
+          "currency": "EUR",
+          "stock": 37
+        },
+        {
+          "sku": "WEEK-COG-L",
+          "color": "Cognac",
+          "size": "Large",
+          "price": 281.61,
+          "currency": "EUR",
+          "stock": 31
+        },
+        {
+          "sku": "WEEK-EBO-M",
+          "color": "Ebony",
+          "size": "Medium",
+          "price": 281.61,
+          "currency": "EUR",
+          "stock": 17
+        },
+        {
+          "sku": "WEEK-EBO-L",
+          "color": "Ebony",
+          "size": "Large",
+          "price": 281.61,
+          "currency": "EUR",
+          "stock": 39
+        }
+      ]
+    },
+    {
+      "id": "906bcdf4-675d-40e7-a031-5248fa7df284",
+      "name": "Elysian Leather Weekender Bag",
+      "description": "Elysian Leather Weekender Bag crafted with meticulous attention to detail.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_exclusive_lad_dabf92b7-3c71-48ff-ae18-d82ba51a06cc.png"
+      ],
+      "variants": [
+        {
+          "sku": "WEEK-COG-M",
+          "color": "Cognac",
+          "size": "Medium",
+          "price": 282.51,
+          "currency": "EUR",
+          "stock": 35
+        },
+        {
+          "sku": "WEEK-COG-L",
+          "color": "Cognac",
+          "size": "Large",
+          "price": 282.51,
+          "currency": "EUR",
+          "stock": 30
+        },
+        {
+          "sku": "WEEK-EBO-M",
+          "color": "Ebony",
+          "size": "Medium",
+          "price": 282.51,
+          "currency": "EUR",
+          "stock": 33
+        },
+        {
+          "sku": "WEEK-EBO-L",
+          "color": "Ebony",
+          "size": "Large",
+          "price": 282.51,
+          "currency": "EUR",
+          "stock": 30
+        }
+      ]
+    },
+    {
+      "id": "c89b60b9-dc3d-4d0b-8f89-3d6a4968d705",
+      "name": "Marquess Leather Weekender Bag",
+      "description": "Marquess Leather Weekender Bag crafted with meticulous attention to detail.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_exclusive_lad_e7331e71-ad22-4a09-99b4-6552021ff1ff.png"
+      ],
+      "variants": [
+        {
+          "sku": "WEEK-COG-M",
+          "color": "Cognac",
+          "size": "Medium",
+          "price": 239.62,
+          "currency": "EUR",
+          "stock": 17
+        },
+        {
+          "sku": "WEEK-COG-L",
+          "color": "Cognac",
+          "size": "Large",
+          "price": 239.62,
+          "currency": "EUR",
+          "stock": 33
+        },
+        {
+          "sku": "WEEK-EBO-M",
+          "color": "Ebony",
+          "size": "Medium",
+          "price": 239.62,
+          "currency": "EUR",
+          "stock": 40
+        },
+        {
+          "sku": "WEEK-EBO-L",
+          "color": "Ebony",
+          "size": "Large",
+          "price": 239.62,
+          "currency": "EUR",
+          "stock": 32
+        }
+      ]
+    },
+    {
+      "id": "b8a4b34b-5b52-42ea-b642-15f7cbd74d16",
+      "name": "Altair Leather Weekender Bag",
+      "description": "Altair Leather Weekender Bag crafted with meticulous attention to detail.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_exclusive_lad_f31a18cd-cc5a-4d9d-9167-959db8ae6fd4.png"
+      ],
+      "variants": [
+        {
+          "sku": "WEEK-COG-M",
+          "color": "Cognac",
+          "size": "Medium",
+          "price": 129.43,
+          "currency": "EUR",
+          "stock": 26
+        },
+        {
+          "sku": "WEEK-COG-L",
+          "color": "Cognac",
+          "size": "Large",
+          "price": 129.43,
+          "currency": "EUR",
+          "stock": 34
+        },
+        {
+          "sku": "WEEK-EBO-M",
+          "color": "Ebony",
+          "size": "Medium",
+          "price": 129.43,
+          "currency": "EUR",
+          "stock": 15
+        },
+        {
+          "sku": "WEEK-EBO-L",
+          "color": "Ebony",
+          "size": "Large",
+          "price": 129.43,
+          "currency": "EUR",
+          "stock": 25
+        }
+      ]
+    },
+    {
+      "id": "cee580ea-f0cb-4b00-9320-03adc969e026",
+      "name": "Solstice Pomerol Grand Cru",
+      "description": "Solstice Pomerol Grand Cru crafted with meticulous attention to detail.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_pomerol_vin_o_129b2912-6d61-4d62-b8ed-ae31f5d7c3e2.png"
+      ],
+      "variants": [
+        {
+          "sku": "ADMI-STD",
+          "price": 76.35,
+          "currency": "EUR",
+          "stock": 43
+        }
+      ]
+    },
+    {
+      "id": "852ac295-6ca0-442f-b9a2-14bda1adb142",
+      "name": "Regalia Pomerol Grand Cru",
+      "description": "Regalia Pomerol Grand Cru crafted with meticulous attention to detail.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_pomerol_vin_o_1530ca0b-4386-4b7f-80dc-d17e897b2abd.png"
+      ],
+      "variants": [
+        {
+          "sku": "ADMI-STD",
+          "price": 232.17,
+          "currency": "EUR",
+          "stock": 17
+        }
+      ]
+    },
+    {
+      "id": "e463f295-272c-438d-89f0-434bf76e0117",
+      "name": "Cavendish Pomerol Grand Cru",
+      "description": "Cavendish Pomerol Grand Cru crafted with meticulous attention to detail.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_pomerol_vin_o_5daa00bb-399b-421b-9dc2-898838d1d864.png"
+      ],
+      "variants": [
+        {
+          "sku": "ADMI-STD",
+          "price": 279.68,
+          "currency": "EUR",
+          "stock": 47
+        }
+      ]
+    },
+    {
+      "id": "b4f49bcd-3599-4fec-9706-88bec7fc6ebc",
+      "name": "Bellvista Diamond Tiara",
+      "description": "Bellvista Diamond Tiara crafted with meticulous attention to detail.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_tiara_on_a_so_65ec801c-e87d-4b77-8787-7815a105d6f1.png"
+      ],
+      "variants": [
+        {
+          "sku": "ADMI-STD",
+          "price": 5201.19,
+          "currency": "EUR",
+          "stock": 44
+        }
+      ]
+    },
+    {
+      "id": "79a26ed7-9fa2-40ed-bd19-9f1d2fb12545",
+      "name": "Montclair Travel Umbrella",
+      "description": "Montclair Travel Umbrella crafted with meticulous attention to detail.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_umbrella_on_a_508e80d9-a01d-4e8a-8140-227355db45e9.png"
+      ],
+      "variants": [
+        {
+          "sku": "UMB-BLA-C",
+          "color": "Black",
+          "type": "Compact",
+          "price": 191.24,
+          "currency": "EUR",
+          "stock": 15
+        },
+        {
+          "sku": "UMB-BLA-F",
+          "color": "Black",
+          "type": "Full",
+          "price": 191.24,
+          "currency": "EUR",
+          "stock": 18
+        },
+        {
+          "sku": "UMB-NAV-C",
+          "color": "Navy",
+          "type": "Compact",
+          "price": 191.24,
+          "currency": "EUR",
+          "stock": 24
+        },
+        {
+          "sku": "UMB-NAV-F",
+          "color": "Navy",
+          "type": "Full",
+          "price": 191.24,
+          "currency": "EUR",
+          "stock": 11
+        },
+        {
+          "sku": "UMB-BUR-C",
+          "color": "Burgundy",
+          "type": "Compact",
+          "price": 191.24,
+          "currency": "EUR",
+          "stock": 29
+        },
+        {
+          "sku": "UMB-BUR-F",
+          "color": "Burgundy",
+          "type": "Full",
+          "price": 191.24,
+          "currency": "EUR",
+          "stock": 20
+        }
+      ]
+    },
+    {
+      "id": "ea5d1664-960f-4612-a00b-0f3532dc29fb",
+      "name": "Aurelius Travel Umbrella",
+      "description": "Aurelius Travel Umbrella crafted with meticulous attention to detail.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_umbrella_on_a_c4019831-204b-4cca-a2f0-c85c7c089c47.png"
+      ],
+      "variants": [
+        {
+          "sku": "UMB-BLA-C",
+          "color": "Black",
+          "type": "Compact",
+          "price": 295.5,
+          "currency": "EUR",
+          "stock": 30
+        },
+        {
+          "sku": "UMB-BLA-F",
+          "color": "Black",
+          "type": "Full",
+          "price": 295.5,
+          "currency": "EUR",
+          "stock": 30
+        },
+        {
+          "sku": "UMB-NAV-C",
+          "color": "Navy",
+          "type": "Compact",
+          "price": 295.5,
+          "currency": "EUR",
+          "stock": 16
+        },
+        {
+          "sku": "UMB-NAV-F",
+          "color": "Navy",
+          "type": "Full",
+          "price": 295.5,
+          "currency": "EUR",
+          "stock": 22
+        },
+        {
+          "sku": "UMB-BUR-C",
+          "color": "Burgundy",
+          "type": "Compact",
+          "price": 295.5,
+          "currency": "EUR",
+          "stock": 28
+        },
+        {
+          "sku": "UMB-BUR-F",
+          "color": "Burgundy",
+          "type": "Full",
+          "price": 295.5,
+          "currency": "EUR",
+          "stock": 26
+        }
+      ]
+    },
+    {
+      "id": "6bac0376-1d46-42cb-8292-0e6f5dc66a8a",
+      "name": "Valencourt Travel Umbrella",
+      "description": "Valencourt Travel Umbrella crafted with meticulous attention to detail.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_umbrella_on_a_d3df2d70-abe2-4769-922f-7b2567ac863f.png"
+      ],
+      "variants": [
+        {
+          "sku": "UMB-BLA-C",
+          "color": "Black",
+          "type": "Compact",
+          "price": 72.35,
+          "currency": "EUR",
+          "stock": 28
+        },
+        {
+          "sku": "UMB-BLA-F",
+          "color": "Black",
+          "type": "Full",
+          "price": 72.35,
+          "currency": "EUR",
+          "stock": 10
+        },
+        {
+          "sku": "UMB-NAV-C",
+          "color": "Navy",
+          "type": "Compact",
+          "price": 72.35,
+          "currency": "EUR",
+          "stock": 23
+        },
+        {
+          "sku": "UMB-NAV-F",
+          "color": "Navy",
+          "type": "Full",
+          "price": 72.35,
+          "currency": "EUR",
+          "stock": 23
+        },
+        {
+          "sku": "UMB-BUR-C",
+          "color": "Burgundy",
+          "type": "Compact",
+          "price": 72.35,
+          "currency": "EUR",
+          "stock": 21
+        },
+        {
+          "sku": "UMB-BUR-F",
+          "color": "Burgundy",
+          "type": "Full",
+          "price": 72.35,
+          "currency": "EUR",
+          "stock": 27
+        }
+      ]
+    },
+    {
+      "id": "cbf87f70-6021-48b5-9403-c7749e24849b",
+      "name": "Elysian Travel Umbrella",
+      "description": "Elysian Travel Umbrella crafted with meticulous attention to detail.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_umbrella_on_a_fb95f1ad-5c47-40f4-b4ef-36f6c99d8e6a.png"
+      ],
+      "variants": [
+        {
+          "sku": "UMB-BLA-C",
+          "color": "Black",
+          "type": "Compact",
+          "price": 203.08,
+          "currency": "EUR",
+          "stock": 28
+        },
+        {
+          "sku": "UMB-BLA-F",
+          "color": "Black",
+          "type": "Full",
+          "price": 203.08,
+          "currency": "EUR",
+          "stock": 20
+        },
+        {
+          "sku": "UMB-NAV-C",
+          "color": "Navy",
+          "type": "Compact",
+          "price": 203.08,
+          "currency": "EUR",
+          "stock": 14
+        },
+        {
+          "sku": "UMB-NAV-F",
+          "color": "Navy",
+          "type": "Full",
+          "price": 203.08,
+          "currency": "EUR",
+          "stock": 17
+        },
+        {
+          "sku": "UMB-BUR-C",
+          "color": "Burgundy",
+          "type": "Compact",
+          "price": 203.08,
+          "currency": "EUR",
+          "stock": 29
+        },
+        {
+          "sku": "UMB-BUR-F",
+          "color": "Burgundy",
+          "type": "Full",
+          "price": 203.08,
+          "currency": "EUR",
+          "stock": 22
+        }
+      ]
+    },
+    {
+      "id": "e3871dcc-cd0a-4d7a-ad23-f9b783954742",
+      "name": "Marquess Bordeaux Vintage",
+      "description": "Marquess Bordeaux Vintage crafted with meticulous attention to detail.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_vin_on_a_soft_8548eac4-9ac5-495f-aba3-d965285cddeb.png"
+      ],
+      "variants": [
+        {
+          "sku": "ADMI-STD",
+          "price": 113.27,
+          "currency": "EUR",
+          "stock": 25
+        }
+      ]
+    },
+    {
+      "id": "001ccaea-e1a5-43ef-a8ae-2c6e9dc309b4",
+      "name": "Altair Bordeaux Vintage",
+      "description": "Altair Bordeaux Vintage crafted with meticulous attention to detail.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_vin_on_a_soft_da355fd1-e4ee-4413-82c7-55ad87fb318f.png"
+      ],
+      "variants": [
+        {
+          "sku": "ADMI-STD",
+          "price": 117.78,
+          "currency": "EUR",
+          "stock": 35
+        }
+      ]
+    },
+    {
+      "id": "11a3e4dd-da4f-4023-9baf-d76e33ef6a0b",
+      "name": "Solstice Mechanical Wristwatch",
+      "description": "Solstice Mechanical Wristwatch crafted with meticulous attention to detail.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_watch_on_a_so_290b2d77-3b1d-47b1-b2fd-edb701ca1ca4.png"
+      ],
+      "variants": [
+        {
+          "sku": "ADMI-BL",
+          "strap_color": "Black Leather",
+          "price": 1201.31,
+          "currency": "EUR",
+          "stock": 14
+        },
+        {
+          "sku": "ADMI-NA",
+          "strap_color": "Navy Alligator",
+          "price": 1590.52,
+          "currency": "EUR",
+          "stock": 15
+        },
+        {
+          "sku": "ADMI-BL",
+          "strap_color": "Brown Leather",
+          "price": 2620.74,
+          "currency": "EUR",
+          "stock": 7
+        }
+      ]
+    },
+    {
+      "id": "7fd906bb-af7a-427e-a778-bc49a4bbcdf1",
+      "name": "Regalia Mechanical Wristwatch",
+      "description": "Regalia Mechanical Wristwatch crafted with meticulous attention to detail.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_watch_on_a_so_bac9350b-e49c-4690-84e5-cfa7a00c9cfe.png"
+      ],
+      "variants": [
+        {
+          "sku": "ADMI-BL",
+          "strap_color": "Brown Leather",
+          "price": 2893.1,
+          "currency": "EUR",
+          "stock": 14
+        },
+        {
+          "sku": "ADMI-BL",
+          "strap_color": "Black Leather",
+          "price": 2126.29,
+          "currency": "EUR",
+          "stock": 15
+        }
+      ]
+    },
+    {
+      "id": "f6737391-4b84-4e49-85a7-c1e8c659f1b6",
+      "name": "Cavendish Mechanical Wristwatch",
+      "description": "Cavendish Mechanical Wristwatch crafted with meticulous attention to detail.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_watch_on_a_so_d79c2cbd-f08f-4083-b97a-f58ca02706ee.png"
+      ],
+      "variants": [
+        {
+          "sku": "ADMI-BL",
+          "strap_color": "Black Leather",
+          "price": 1774.73,
+          "currency": "EUR",
+          "stock": 5
+        },
+        {
+          "sku": "ADMI-NA",
+          "strap_color": "Navy Alligator",
+          "price": 1226.35,
+          "currency": "EUR",
+          "stock": 8
+        }
+      ]
+    },
+    {
+      "id": "2aaeb405-ff17-45c3-9cad-d7f1f76851a2",
+      "name": "Glacier Chronograph 42 mm – Glacier White",
+      "description": "Swiss‑made chronograph with glacier‑white dial and sapphire crystal.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/22d0c1b1-3462-4b68-afb6-e3714f3ff310.png"
+      ],
+      "variants": [
+        {
+          "sku": "GL42-WHT-LEA",
+          "strap_color": "White Leather",
+          "price": 4950.0,
+          "currency": "EUR",
+          "stock": 6
+        },
+        {
+          "sku": "GL42-WHT-NAV",
+          "strap_color": "Navy Alligator",
+          "price": 5150.0,
+          "currency": "EUR",
+          "stock": 4
+        }
+      ]
+    },
+    {
+      "id": "453f3aff-ced9-4548-9610-02702bda16cd",
+      "name": "Glacier Chronograph 42 mm – Midnight",
+      "description": "Chronograph with midnight‑blue dial, 48‑h power reserve.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/38ea7915-4fe7-4bd8-9cfb-7d3a85143163.png"
+      ],
+      "variants": [
+        {
+          "sku": "GL42-MID-BLK",
+          "strap_color": "Black Leather",
+          "price": 4950.0,
+          "currency": "EUR",
+          "stock": 8
+        }
+      ]
+    },
+    {
+      "id": "679f6cab-d9c0-446a-8795-c7dad843e6b6",
+      "name": "Glacier Chronograph – RoseGold",
+      "description": "Rose‑gold PVD case with galvanic silver dial, automatic movement.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/3002b4a7-ebfc-4f71-9a79-5c6e6e44695d.png"
+      ],
+      "variants": [
+        {
+          "sku": "GL42-ROS-BEI",
+          "strap_color": "BeigeLeather",
+          "price": 5150.0,
+          "currency": "EUR",
+          "stock": 5
+        },
+        {
+          "sku": "GL42-ROS-BLK",
+          "strap_color": "BlackCrocodile",
+          "price": 5250.0,
+          "currency": "EUR",
+          "stock": 3
+        }
+      ]
+    },
+    {
+      "id": "57218634-556d-408f-826b-73673ee5cc3b",
+      "name": "Papillon Jardin Silk Scarf90",
+      "description": "Whimsical butterfly‑garden carré in pure mulberry silk.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/product_image_of_a_colorful_h_061aafd0-5975-4ed7-8e2b-cff0f5d68dea.png"
+      ],
+      "variants": [
+        {
+          "sku": "SCF-ROS-90",
+          "color": "Rose",
+          "size": "90×90cm",
+          "material": "100Silk",
+          "price": 450.0,
+          "currency": "EUR",
+          "stock": 24
+        },
+        {
+          "sku": "SCF-ROS-70",
+          "color": "Rose",
+          "size": "70×70cm",
+          "material": "100Silk",
+          "price": 350.0,
+          "currency": "EUR",
+          "stock": 33
+        },
+        {
+          "sku": "SCF-IND-90",
+          "color": "Indigo",
+          "size": "90×90cm",
+          "material": "100Silk",
+          "price": 450.0,
+          "currency": "EUR",
+          "stock": 11
+        },
+        {
+          "sku": "SCF-IND-70",
+          "color": "Indigo",
+          "size": "70×70cm",
+          "material": "100Silk",
+          "price": 350.0,
+          "currency": "EUR",
+          "stock": 30
+        },
+        {
+          "sku": "SCF-GOL-90",
+          "color": "Gold",
+          "size": "90×90cm",
+          "material": "100Silk",
+          "price": 450.0,
+          "currency": "EUR",
+          "stock": 11
+        },
+        {
+          "sku": "SCF-GOL-70",
+          "color": "Gold",
+          "size": "70×70cm",
+          "material": "100Silk",
+          "price": 350.0,
+          "currency": "EUR",
+          "stock": 34
+        }
+      ]
+    },
+    {
+      "id": "c9d768b5-0854-4e29-8b7d-07133c25cf75",
+      "name": "Nautilus Plumage Silk Scarf90",
+      "description": "Deep‑sea plumage pattern on silk twill with hand‑rolled edges.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/product_image_of_a_hermes_sca_1ef1e5c4-8d9c-4a87-ad6b-47e33e08dc74.png"
+      ],
+      "variants": [
+        {
+          "sku": "SCF-ROS-90",
+          "color": "Rose",
+          "size": "90×90cm",
+          "material": "100Silk",
+          "price": 450.0,
+          "currency": "EUR",
+          "stock": 24
+        },
+        {
+          "sku": "SCF-ROS-70",
+          "color": "Rose",
+          "size": "70×70cm",
+          "material": "100Silk",
+          "price": 350.0,
+          "currency": "EUR",
+          "stock": 20
+        },
+        {
+          "sku": "SCF-IND-90",
+          "color": "Indigo",
+          "size": "90×90cm",
+          "material": "100Silk",
+          "price": 450.0,
+          "currency": "EUR",
+          "stock": 22
+        },
+        {
+          "sku": "SCF-IND-70",
+          "color": "Indigo",
+          "size": "70×70cm",
+          "material": "100Silk",
+          "price": 350.0,
+          "currency": "EUR",
+          "stock": 18
+        },
+        {
+          "sku": "SCF-GOL-90",
+          "color": "Gold",
+          "size": "90×90cm",
+          "material": "100Silk",
+          "price": 450.0,
+          "currency": "EUR",
+          "stock": 13
+        },
+        {
+          "sku": "SCF-GOL-70",
+          "color": "Gold",
+          "size": "70×70cm",
+          "material": "100Silk",
+          "price": 350.0,
+          "currency": "EUR",
+          "stock": 32
+        }
+      ]
+    },
+    {
+      "id": "43d7e339-4ff7-4a3f-8c80-1b29989f409d",
+      "name": "Floraison Floral Silk Scarf90",
+      "description": "Vibrant floral motif inspired by spring gardens, on silk twill.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/product_image_of_a_hermes_sca_195b0e7b-233b-4514-b70a-f82a7f47b9bf.png"
+      ],
+      "variants": [
+        {
+          "sku": "SCF-ROS-90",
+          "color": "Rose",
+          "size": "90×90cm",
+          "material": "100Silk",
+          "price": 450.0,
+          "currency": "EUR",
+          "stock": 11
+        },
+        {
+          "sku": "SCF-ROS-70",
+          "color": "Rose",
+          "size": "70×70cm",
+          "material": "100Silk",
+          "price": 350.0,
+          "currency": "EUR",
+          "stock": 35
+        },
+        {
+          "sku": "SCF-IND-90",
+          "color": "Indigo",
+          "size": "90×90cm",
+          "material": "100% Silk",
+          "price": 450.0,
+          "currency": "EUR",
+          "stock": 32
+        },
+        {
+          "sku": "SCF-IND-70",
+          "color": "Indigo",
+          "size": "70×70cm",
+          "material": "100% Silk",
+          "price": 350.0,
+          "currency": "EUR",
+          "stock": 10
+        },
+        {
+          "sku": "SCF-GOL-90",
+          "color": "Gold",
+          "size": "90×90cm",
+          "material": "100%Silk",
+          "price": 450.0,
+          "currency": "EUR",
+          "stock": 25
+        },
+        {
+          "sku": "SCF-GOL-70",
+          "color": "Gold",
+          "size": "70×70cm",
+          "material": "100%Silk",
+          "price": 350.0,
+          "currency": "EUR",
+          "stock": 12
+        }
+      ]
+    },
+    {
+      "id": "8e9427ef-16f7-4970-a8a5-72d477bfce90",
+      "name": "Metropolis Minimal Watch 40 mm",
+      "description": "Ultra‑thin quartz dress watch with onyx dial and steel case.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/product_image_of_an_watch_sui_afa101bd-9203-4329-8fe6-9f9662701f3c.png"
+      ],
+      "variants": [
+        {
+          "sku": "MM40-BLK",
+          "strap_color": "BlackLeather",
+          "price": 695.0,
+          "currency": "EUR",
+          "stock": 25
+        },
+        {
+          "sku": "MM40-TAN",
+          "strap_color": "TanLeather",
+          "price": 695.0,
+          "currency": "EUR",
+          "stock": 15
+        }
+      ]
+    },
+    {
+      "id": "d0cf8203-77f6-42b5-9c4a-6cb6f1019528",
+      "name": "Hand‑Stitched Cardholder – Cognac",
+      "description": "Slim Barenia calfskin cardholder saddle‑stitched by hand.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_hand-stitched_1bc1ef8b-a097-46e7-b911-16d3ca44b51e.png"
+      ],
+      "variants": [
+        {
+          "sku": "CARD-COG",
+          "color": "Cognac",
+          "price": 195.0,
+          "currency": "EUR",
+          "stock": 40
+        }
+      ]
+    },
+    {
+      "id": "2f53995f-d0d0-413a-ba4d-38df3dcfc124",
+      "name": "Hand‑Stitched Cardholder – Ebony",
+      "description": "Saddle‑stitched full‑grain leather cardholder in rich ebony.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_hand-stitched_2da14f27-20e5-4447-99f6-89544a6babe3.png"
+      ],
+      "variants": [
+        {
+          "sku": "CARD-EBN",
+          "color": "Ebony",
+          "price": 195.0,
+          "currency": "EUR",
+          "stock": 25
+        }
+      ]
+    },
+    {
+      "id": "7f9c9c00-1352-46ec-bb40-b8deb82c3eca",
+      "name": "Hand‑Stitched Cardholder – Emerald",
+      "description": "Emerald‑green calfskin cardholder with tonal stitching.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_hand-stitched_ba7bfe0f-cd1a-463e-824e-f8980a0ff2fa.png"
+      ],
+      "variants": [
+        {
+          "sku": "CARD-EMR",
+          "color": "Emerald",
+          "price": 195.0,
+          "currency": "EUR",
+          "stock": 15
+        }
+      ]
+    },
+    {
+      "id": "6fb994ac-04c5-4058-a0c6-d1e11bc1844a",
+      "name": "Solstice Classic Watch38mm – Brown",
+      "description": "Two‑hand automatic with espresso dial and brown strap.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_watch_on_a_so_0f2685db-758c-4129-a967-f661c33a42c3.png"
+      ],
+      "variants": [
+        {
+          "sku": "SOL38-BRN",
+          "strap_color": "BrownLeather",
+          "price": 1295.0,
+          "currency": "EUR",
+          "stock": 10
+        }
+      ]
+    },
+    {
+      "id": "a69bf249-7bf5-480e-b194-3344190dc63e",
+      "name": "Solstice Classic Watch 38mm – Black",
+      "description": "Automatic watch with sunburst dial and black strap.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_watch_on_a_so_4d0a31fd-0aee-44fc-9a78-9798cc032fa0.png"
+      ],
+      "variants": [
+        {
+          "sku": "SOL38-BLK",
+          "strap_color": "Black Leather",
+          "price": 1295.0,
+          "currency": "EUR",
+          "stock": 10
+        },
+        {
+          "sku": "SOL38-MESH",
+          "strap_color": "Steel Mesh",
+          "price": 1345.0,
+          "currency": "EUR",
+          "stock": 6
+        }
+      ]
+    },
+    {
+      "id": "7b1c1435-0c09-4b68-b122-b34e22fe6a9f",
+      "name": "Solstice Classic Watch 38mm – Burgundy",
+      "description": "Rose‑gold PVD case paired with burgundy leather strap.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_watch_on_a_so_229a6aa9-8857-4dd7-a623-43f1e1d0f563.png"
+      ],
+      "variants": [
+        {
+          "sku": "SOL38-BUR",
+          "strap_color": "Burgundy Leather",
+          "price": 1295.0,
+          "currency": "EUR",
+          "stock": 5
+        }
+      ]
+    },
+    {
+      "id": "d2194ce8-51d9-4524-a8ed-f5e972a0c667",
+      "name": "Horizon Dual‑Time Watch 41mm",
+      "description": "Automatic dual‑time watch with sapphire case‑back.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_watch_on_a_so_731901df-f63e-400a-aba2-fe7186d0d3c5.png"
+      ],
+      "variants": [
+        {
+          "sku": "HRZ41-BLK",
+          "strap_color": "Black Leather",
+          "price": 1595.0,
+          "currency": "EUR",
+          "stock": 8
+        },
+        {
+          "sku": "HRZ41-NAV",
+          "strap_color": "Navy Leather",
+          "price": 1595.0,
+          "currency": "EUR",
+          "stock": 6
+        }
+      ]
+    },
+    {
+      "id": "1e395ee9-549d-4b82-acea-d024d578d2a0",
+      "name": "Meridian Skeleton Watch 44mm",
+      "description": "Open‑worked movement showcased under dome sapphire crystal.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_watch_on_a_so_b983de4d-1367-4cf5-be41-b26dc2c48021.png"
+      ],
+      "variants": [
+        {
+          "sku": "MER44-BLK",
+          "strap_color": "Black Crocodile",
+          "price": 2450.0,
+          "currency": "EUR",
+          "stock": 4
+        }
+      ]
+    },
+    {
+      "id": "768571eb-ee0c-4d7b-8e52-236398f4d728",
+      "name": "Apex Diver 43mm",
+      "description": "Professional diver’s watch water‑resistant to 30 ATM.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_watch_on_a_so_c87cef09-de81-4647-83f8-2c0ce9a8cecc.png"
+      ],
+      "variants": [
+        {
+          "sku": "APX43-BLK",
+          "bezel_color": "Black",
+          "price": 975.0,
+          "currency": "EUR",
+          "stock": 12
+        },
+        {
+          "sku": "APX43-BLU",
+          "bezel_color": "Blue",
+          "price": 975.0,
+          "currency": "EUR",
+          "stock": 10
+        },
+        {
+          "sku": "APX43-GRN",
+          "bezel_color": "Green",
+          "price": 975.0,
+          "currency": "EUR",
+          "stock": 8
+        }
+      ]
+    },
+    {
+      "id": "9ec36519-7603-4fc5-b5a3-d922815e5d30",
+      "name": "Altitude Pilot Watch 42mm",
+      "description": "Pilot chronograph with oversized crown and luminous numerals.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_watch_on_a_so_d7f52fe2-b780-4990-8511-e49acb335821.png"
+      ],
+      "variants": [
+        {
+          "sku": "ALT42-TAN",
+          "strap_color": "TanLeather",
+          "price": 1125.0,
+          "currency": "EUR",
+          "stock": 7
+        },
+        {
+          "sku": "ALT42-BLK",
+          "strap_color": "Black Leather",
+          "price": 1125.0,
+          "currency": "EUR",
+          "stock": 9
+        }
+      ]
+    },
+    {
+      "id": "f9a5a812-e909-4bc5-adee-aecec85358a3",
+      "name": "Face Cream A968",
+      "description": "Rich hydrating  cream with botanical extracts, suitable for all skin types.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_aesop_creme_o_8a6b4c5f-7a9d-4771-bef3-32c6885ae870.png"
+      ],
+      "variants": [
+        {
+          "sku": "FACE-50ml",
+          "size": "50 ml",
+          "price": 79.0,
+          "currency": "EUR",
+          "stock": 45
+        }
+      ]
+    },
+    {
+      "id": "f1f64736-b2ef-49e4-bd8a-993ce74db1ad",
+      "name": "Face Cream FF88",
+      "description": "Rich hydrating  cream with botanical extracts, suitable for all skin types.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_aesop_creme_o_8f05e5d5-b318-4c48-85f3-0e24c4495648.png"
+      ],
+      "variants": [
+        {
+          "sku": "FACE-100ml",
+          "size": "100 ml",
+          "price": 129.0,
+          "currency": "EUR",
+          "stock": 43
+        },
+        {
+          "sku": "FACE-50ml",
+          "size": "50 ml",
+          "price": 79.0,
+          "currency": "EUR",
+          "stock": 43
+        }
+      ]
+    },
+    {
+      "id": "7fdeedde-f69e-45af-aa70-0a41770b4a52",
+      "name": "Bracelet 6903",
+      "description": "Hand‑crafted 18‑karat gold bracelet with polished finish.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_bracelet_on_a_466c5e9c-ffb1-4f71-9f0a-c5f6c47bc182.png"
+      ],
+      "variants": [
+        {
+          "sku": "BRAC-17cm",
+          "length": "17 cm",
+          "price": 1474.19,
+          "currency": "EUR",
+          "stock": 6
+        },
+        {
+          "sku": "BRAC-18cm",
+          "length": "18 cm",
+          "price": 2533.34,
+          "currency": "EUR",
+          "stock": 8
+        },
+        {
+          "sku": "BRAC-15cm",
+          "length": "15 cm",
+          "price": 1948.37,
+          "currency": "EUR",
+          "stock": 9
+        },
+        {
+          "sku": "BRAC-16cm",
+          "length": "16 cm",
+          "price": 2844.95,
+          "currency": "EUR",
+          "stock": 6
+        }
+      ]
+    },
+    {
+      "id": "2cf9de30-609d-43f7-8e3a-8cb883d415ab",
+      "name": "Bracelet 9574",
+      "description": "Hand‑crafted 18‑karat gold bracelet with polished finish.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_bracelet_on_a_59866f3a-2f3c-4c62-8719-7c5afd2103ce.png"
+      ],
+      "variants": [
+        {
+          "sku": "BRAC-15cm",
+          "length": "15 cm",
+          "price": 2678.53,
+          "currency": "EUR",
+          "stock": 6
+        },
+        {
+          "sku": "BRAC-18cm",
+          "length": "18 cm",
+          "price": 2743.97,
+          "currency": "EUR",
+          "stock": 10
+        }
+      ]
+    },
+    {
+      "id": "066623ac-d7a0-4533-978e-7d20a82321e4",
+      "name": "Bracelet EA94",
+      "description": "Hand‑crafted 18‑karat gold bracelet with polished finish.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_bracelet_on_a_acbacc30-4dc7-4c05-8b30-83b6f8380a44.png"
+      ],
+      "variants": [
+        {
+          "sku": "BRAC-18cm",
+          "length": "18 cm",
+          "price": 2849.08,
+          "currency": "EUR",
+          "stock": 6
+        },
+        {
+          "sku": "BRAC-17cm",
+          "length": "17 cm",
+          "price": 1949.42,
+          "currency": "EUR",
+          "stock": 9
+        },
+        {
+          "sku": "BRAC-16cm",
+          "length": "16 cm",
+          "price": 2086.08,
+          "currency": "EUR",
+          "stock": 5
+        }
+      ]
+    },
+    {
+      "id": "3f350460-1a64-4020-99d9-d3b3f23e1f07",
+      "name": "Model Car F710",
+      "description": "1:18 scale die‑cast model of an iconic sports car.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_car_on_a_soft_3c46a2e2-2f85-416e-ad13-bafb62bb110f.png"
+      ],
+      "variants": [
+        {
+          "color": "Verde British",
+          "scale": "1:18",
+          "price": 203.68,
+          "currency": "EUR",
+          "stock": 15
+        },
+        {
+          "color": "Rosso Corsa",
+          "scale": "1:18",
+          "price": 196.94,
+          "currency": "EUR",
+          "stock": 8
+        }
+      ]
+    },
+    {
+      "id": "26cc3da0-7c61-4eaa-b338-ff8942e97024",
+      "name": "Model Car 0FD5",
+      "description": "1:18 scale die‑cast model of an iconic sports car.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_car_on_a_soft_a719d3c2-5cf3-4665-88cf-57f199820740.png"
+      ],
+      "variants": [
+        {
+          "color": "Giallo Modena",
+          "scale": "1:18",
+          "price": 331.58,
+          "currency": "EUR",
+          "stock": 15
+        },
+        {
+          "color": "Rosso Corsa",
+          "scale": "1:18",
+          "price": 203.3,
+          "currency": "EUR",
+          "stock": 13
+        },
+        {
+          "color": "Verde British",
+          "scale": "1:18",
+          "price": 372.19,
+          "currency": "EUR",
+          "stock": 13
+        }
+      ]
+    },
+    {
+      "id": "89c94231-0602-45dd-83ed-581b44eb73a1",
+      "name": "Cufflinks EB50",
+      "description": "Polished sterling‑silver cufflinks with T‑bar fastening.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_cufflinks_on__96bd943c-74ab-47db-84b0-863c30191cda.png"
+      ],
+      "variants": [
+        {
+          "sku": "CUFF-171",
+          "finish": "18k Rose Gold",
+          "price": 441.9,
+          "currency": "EUR",
+          "stock": 19
+        },
+        {
+          "sku": "CUFF-W83",
+          "finish": "White Gold",
+          "price": 390.64,
+          "currency": "EUR",
+          "stock": 11
+        },
+        {
+          "sku": "CUFF-S65",
+          "finish": "Sterling Silver",
+          "price": 443.94,
+          "currency": "EUR",
+          "stock": 15
+        }
+      ]
+    },
+    {
+      "id": "944b7992-17c4-4ddb-a396-ac231428e997",
+      "name": "Cufflinks C953",
+      "description": "Polished sterling‑silver cufflinks with T‑bar fastening.",
+      "one_size": true,
+      "image_urls": [
+        "/assets/images/products/luxury_cufflinks_on__b6055b3f-cb87-4782-a17c-82772efe35c4.png"
+      ],
+      "variants": [
+        {
+          "sku": "CUFF-W15",
+          "finish": "White Gold",
+          "price": 297.11,
+          "currency": "EUR",
+          "stock": 20
+        }
+      ]
+    },
+    {
+      "id": "5e3ab47c-9cfd-4f88-902c-5864b234e7f8",
+      "name": "Cufflinks 470B",
+      "description": "Polished sterling‑silver cufflinks with T‑bar fastening.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_cufflinks_on__f63b0855-6455-4d76-bb8c-2468b3b44f19.png"
+      ],
+      "variants": [
+        {
+          "sku": "CUFF-S19",
+          "finish": "Sterling Silver",
+          "price": 357.73,
+          "currency": "EUR",
+          "stock": 20
+        },
+        {
+          "sku": "CUFF-122",
+          "finish": "18k Rose Gold",
+          "price": 567.51,
+          "currency": "EUR",
+          "stock": 17
+        }
+      ]
+    },
+    {
+      "id": "6a6c3c3e-e5f2-4338-a397-4c344d7b9bef",
+      "name": "Eau de Parfum F6B2",
+      "description": "Artisanal niche fragrance blended with natural essences.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_ds_durga_on_a_71bd5ed3-8efb-4daf-823e-8707c32b4016.png"
+      ],
+      "variants": [
+        {
+          "size": "100 ml",
+          "price": 185.0,
+          "currency": "EUR",
+          "stock": 30
+        },
+        {
+          "size": "50 ml",
+          "price": 125.0,
+          "currency": "EUR",
+          "stock": 15
+        }
+      ]
+    },
+    {
+      "id": "1622b0e4-4ae3-40e7-9465-915df1908506",
+      "name": "Eau de Parfum CB4C",
+      "description": "Artisanal niche fragrance blended with natural essences.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_ds_durga_on_a_88a75a7d-b894-437d-ad3f-de717a37bdc1.png"
+      ],
+      "variants": [
+        {
+          "size": "50 ml",
+          "price": 125.0,
+          "currency": "EUR",
+          "stock": 24
+        }
+      ]
+    },
+    {
+      "id": "63566f8e-39d1-4eca-8f96-c3e811d1f0b7",
+      "name": "Silk Scarf 4CE8",
+      "description": "100 % mulberry silk scarf with hand‑rolled edges.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_hermes_scarf__7ec55aff-307c-447b-a6e6-bc46e2c810cb.png"
+      ],
+      "variants": [
+        {
+          "size": "90×90 cm",
+          "color": "Cerulean Blue",
+          "price": 450.0,
+          "currency": "EUR",
+          "stock": 23
+        },
+        {
+          "size": "90×90 cm",
+          "color": "Emerald",
+          "price": 450.0,
+          "currency": "EUR",
+          "stock": 12
+        },
+        {
+          "size": "90×90 cm",
+          "color": "Crimson",
+          "price": 450.0,
+          "currency": "EUR",
+          "stock": 12
+        },
+        {
+          "size": "90×90 cm",
+          "color": "Sunset",
+          "price": 450.0,
+          "currency": "EUR",
+          "stock": 12
+        }
+      ]
+    },
+    {
+      "id": "ba82b1be-f630-4386-9859-c16187262d35",
+      "name": "Silk Scarf 31EF",
+      "description": "100 % mulberry silk scarf with hand‑rolled edges.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_hermes_scarf__12a4d09c-ee91-4af6-8ce8-566c6acb36f6.png"
+      ],
+      "variants": [
+        {
+          "size": "90×90 cm",
+          "color": "Cerulean Blue",
+          "price": 450.0,
+          "currency": "EUR",
+          "stock": 16
+        }
+      ]
+    },
+    {
+      "id": "1fa06c5c-188f-4167-bca5-378fb8b3eab3",
+      "name": "Leather Loafers 5041",
+      "description": "Hand‑stitched calfskin loafers with leather sole.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_loafers_on_a__5418f261-12a2-47fe-8c7a-caefec375668.png"
+      ],
+      "variants": [
+        {
+          "sku": "LEAT-BRO-41",
+          "color": "Brown",
+          "size": "41",
+          "price": 465.84,
+          "currency": "EUR",
+          "stock": 12
+        },
+        {
+          "sku": "LEAT-BRO-42",
+          "color": "Brown",
+          "size": "42",
+          "price": 465.84,
+          "currency": "EUR",
+          "stock": 8
+        },
+        {
+          "sku": "LEAT-BRO-43",
+          "color": "Brown",
+          "size": "43",
+          "price": 465.84,
+          "currency": "EUR",
+          "stock": 3
+        },
+        {
+          "sku": "LEAT-BRO-44",
+          "color": "Brown",
+          "size": "44",
+          "price": 465.84,
+          "currency": "EUR",
+          "stock": 12
+        },
+        {
+          "sku": "LEAT-BRO-45",
+          "color": "Brown",
+          "size": "45",
+          "price": 465.84,
+          "currency": "EUR",
+          "stock": 9
+        },
+        {
+          "sku": "LEAT-BLA-41",
+          "color": "Black",
+          "size": "41",
+          "price": 465.84,
+          "currency": "EUR",
+          "stock": 11
+        },
+        {
+          "sku": "LEAT-BLA-42",
+          "color": "Black",
+          "size": "42",
+          "price": 465.84,
+          "currency": "EUR",
+          "stock": 6
+        },
+        {
+          "sku": "LEAT-BLA-43",
+          "color": "Black",
+          "size": "43",
+          "price": 465.84,
+          "currency": "EUR",
+          "stock": 3
+        },
+        {
+          "sku": "LEAT-BLA-44",
+          "color": "Black",
+          "size": "44",
+          "price": 465.84,
+          "currency": "EUR",
+          "stock": 7
+        },
+        {
+          "sku": "LEAT-BLA-45",
+          "color": "Black",
+          "size": "45",
+          "price": 465.84,
+          "currency": "EUR",
+          "stock": 5
+        }
+      ]
+    },
+    {
+      "id": "88f68c33-808e-4f4f-ac6f-ea039fbe7811",
+      "name": "Leather Loafers 6B58",
+      "description": "Hand‑stitched calfskin loafers with leather sole.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_loafers_on_a__bd1bd967-ad6b-430f-a644-3cce20e11e45.png"
+      ],
+      "variants": [
+        {
+          "sku": "LEAT-BRO-41",
+          "color": "Brown",
+          "size": "41",
+          "price": 523.97,
+          "currency": "EUR",
+          "stock": 7
+        },
+        {
+          "sku": "LEAT-BRO-42",
+          "color": "Brown",
+          "size": "42",
+          "price": 523.97,
+          "currency": "EUR",
+          "stock": 10
+        },
+        {
+          "sku": "LEAT-BRO-43",
+          "color": "Brown",
+          "size": "43",
+          "price": 523.97,
+          "currency": "EUR",
+          "stock": 11
+        },
+        {
+          "sku": "LEAT-BRO-44",
+          "color": "Brown",
+          "size": "44",
+          "price": 523.97,
+          "currency": "EUR",
+          "stock": 10
+        },
+        {
+          "sku": "LEAT-BRO-45",
+          "color": "Brown",
+          "size": "45",
+          "price": 523.97,
+          "currency": "EUR",
+          "stock": 6
+        },
+        {
+          "sku": "LEAT-BLA-41",
+          "color": "Black",
+          "size": "41",
+          "price": 523.97,
+          "currency": "EUR",
+          "stock": 7
+        },
+        {
+          "sku": "LEAT-BLA-42",
+          "color": "Black",
+          "size": "42",
+          "price": 523.97,
+          "currency": "EUR",
+          "stock": 10
+        },
+        {
+          "sku": "LEAT-BLA-43",
+          "color": "Black",
+          "size": "43",
+          "price": 523.97,
+          "currency": "EUR",
+          "stock": 11
+        },
+        {
+          "sku": "LEAT-BLA-44",
+          "color": "Black",
+          "size": "44",
+          "price": 523.97,
+          "currency": "EUR",
+          "stock": 11
+        },
+        {
+          "sku": "LEAT-BLA-45",
+          "color": "Black",
+          "size": "45",
+          "price": 523.97,
+          "currency": "EUR",
+          "stock": 8
+        }
+      ]
+    },
+    {
+      "id": "e14654bf-5d5d-41ef-9902-b4e985ee2dfd",
+      "name": "Leather Loafers B21F",
+      "description": "Hand‑stitched calfskin loafers with leather sole.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_loafers_on_a__cf8ed129-0f74-4421-9e26-05dd569e2672.png"
+      ],
+      "variants": [
+        {
+          "sku": "LEAT-BRO-41",
+          "color": "Brown",
+          "size": "41",
+          "price": 561.26,
+          "currency": "EUR",
+          "stock": 5
+        },
+        {
+          "sku": "LEAT-BRO-42",
+          "color": "Brown",
+          "size": "42",
+          "price": 561.26,
+          "currency": "EUR",
+          "stock": 2
+        },
+        {
+          "sku": "LEAT-BRO-43",
+          "color": "Brown",
+          "size": "43",
+          "price": 561.26,
+          "currency": "EUR",
+          "stock": 4
+        },
+        {
+          "sku": "LEAT-BRO-44",
+          "color": "Brown",
+          "size": "44",
+          "price": 561.26,
+          "currency": "EUR",
+          "stock": 5
+        },
+        {
+          "sku": "LEAT-BRO-45",
+          "color": "Brown",
+          "size": "45",
+          "price": 561.26,
+          "currency": "EUR",
+          "stock": 12
+        },
+        {
+          "sku": "LEAT-BLA-41",
+          "color": "Black",
+          "size": "41",
+          "price": 561.26,
+          "currency": "EUR",
+          "stock": 8
+        },
+        {
+          "sku": "LEAT-BLA-42",
+          "color": "Black",
+          "size": "42",
+          "price": 561.26,
+          "currency": "EUR",
+          "stock": 9
+        },
+        {
+          "sku": "LEAT-BLA-43",
+          "color": "Black",
+          "size": "43",
+          "price": 561.26,
+          "currency": "EUR",
+          "stock": 5
+        },
+        {
+          "sku": "LEAT-BLA-44",
+          "color": "Black",
+          "size": "44",
+          "price": 561.26,
+          "currency": "EUR",
+          "stock": 4
+        },
+        {
+          "sku": "LEAT-BLA-45",
+          "color": "Black",
+          "size": "45",
+          "price": 561.26,
+          "currency": "EUR",
+          "stock": 12
+        }
+      ]
+    },
+    {
+      "id": "8ad33d8a-9272-4216-bfae-789ed68e45e2",
+      "name": "Necklace 9830",
+      "description": "Delicate 18‑karat gold necklace with solitaire diamond pendant.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_necklace_on_a_61e2be6b-c8cc-478c-8aa4-197b267948fd.png"
+      ],
+      "variants": [
+        {
+          "sku": "NECK-17cm",
+          "length": "17 cm",
+          "price": 2890.77,
+          "currency": "EUR",
+          "stock": 4
+        },
+        {
+          "sku": "NECK-15cm",
+          "length": "15 cm",
+          "price": 2469.13,
+          "currency": "EUR",
+          "stock": 10
+        }
+      ]
+    },
+    {
+      "id": "41d88a91-9b09-45ae-819d-9a057f0bb824",
+      "name": "Ring 21F0",
+      "description": "18‑karat gold ring with hand‑set brilliant‑cut diamonds.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_ring_on_a_sof_5157a06f-d2e3-4efc-ac3d-2a1ca8555750.png"
+      ],
+      "variants": [
+        {
+          "sku": "RING-54",
+          "size": "54",
+          "price": 1515.29,
+          "currency": "EUR",
+          "stock": 11
+        },
+        {
+          "sku": "RING-52",
+          "size": "52",
+          "price": 1211.34,
+          "currency": "EUR",
+          "stock": 4
+        },
+        {
+          "sku": "RING-58",
+          "size": "58",
+          "price": 980.46,
+          "currency": "EUR",
+          "stock": 6
+        },
+        {
+          "sku": "RING-50",
+          "size": "50",
+          "price": 1748.6,
+          "currency": "EUR",
+          "stock": 13
+        }
+      ]
+    },
+    {
+      "id": "4047f7eb-5d03-48d6-b7f8-999e2e7d52a4",
+      "name": "Ring B392",
+      "description": "18‑karat gold ring with hand‑set brilliant‑cut diamonds.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_ring_on_a_sof_b27d558c-1ba7-4845-917e-384bddaeee7e.png"
+      ],
+      "variants": [
+        {
+          "sku": "RING-58",
+          "size": "58",
+          "price": 1515.51,
+          "currency": "EUR",
+          "stock": 12
+        },
+        {
+          "sku": "RING-52",
+          "size": "52",
+          "price": 1450.73,
+          "currency": "EUR",
+          "stock": 12
+        }
+      ]
+    },
+    {
+      "id": "452047a0-cd2a-40f9-9c02-0b66b13e7a33",
+      "name": "Skis 933A",
+      "description": "Lightweight carbon‑fibre skis for advanced alpine skiing.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_set_of_skis_o_002d3a53-1b73-4d22-9d8e-429796e3f67b.png"
+      ],
+      "variants": [
+        {
+          "length": "185 cm",
+          "price": 1065.91,
+          "currency": "EUR",
+          "stock": 3
+        }
+      ]
+    },
+    {
+      "id": "925ddb66-0206-41dd-815c-65bfb26e729b",
+      "name": "Skis 6224",
+      "description": "Lightweight carbon‑fibre skis for advanced alpine skiing.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_set_of_skis_o_5c19e1fe-e7b2-4ec1-9aa3-13e8f1d2f69f.png"
+      ],
+      "variants": [
+        {
+          "length": "165 cm",
+          "price": 1146.95,
+          "currency": "EUR",
+          "stock": 8
+        },
+        {
+          "length": "185 cm",
+          "price": 965.86,
+          "currency": "EUR",
+          "stock": 3
+        }
+      ]
+    },
+    {
+      "id": "3616e634-ea6e-4314-9e70-21785183824f",
+      "name": "Skis 3182",
+      "description": "Lightweight carbon‑fibre skis for advanced alpine skiing.",
+      "one_size": false,
+      "image_urls": [
+        "/assets/images/products/luxury_set_of_skis_o_ee1e0be5-d719-46b2-9374-2887f2a2a1c2.png"
+      ],
+      "variants": [
+        {
+          "length": "175 cm",
+          "price": 837.43,
+          "currency": "EUR",
+          "stock": 4
+        }
+      ]
+    }
+  ]
+}

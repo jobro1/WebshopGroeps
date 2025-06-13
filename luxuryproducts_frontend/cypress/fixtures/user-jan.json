@@ -1,0 +1,15 @@
+{
+  "userId": 1,
+  "firstName": "J",
+  "infix": "",
+  "lastName": "J",
+  "address": "straat",
+  "houseNumber": 123,
+  "postcode": "1234AB",
+  "dateOfBirth": "1990-01-01",
+  "phoneNumber": "0612345678",
+  "email": "jan@email.com",
+  "password": "$2a$10$wFBqOgKSesSyBmO9W96E4.Xpkxi7pGEmY8c8xWnYh3o9MLo2zD4Ba",
+  "role": "ADMIN",
+  "orders": []
+}

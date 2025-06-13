@@ -1,10 +1,10 @@
 import {effect, inject, Injectable, signal} from '@angular/core';
-import {Product} from '../models/product';
 import {CartItem} from '../models/cartItem';
-import {Order} from '../models/order';
 import {HttpClient} from '@angular/common/http';
 import {User} from '../models/customUser';
 import {OrderService} from './order.service';
+import {Productvariation} from "../models/Productvariation";
+import {OrderDTO} from "../models/dtos/orderDTO";
 
 
 @Injectable({
@@ -17,12 +17,10 @@ export class CartService {
 
 
   constructor() {
-
     effect(() => {
       this.saveCartToLocalStorage(this.cartItems());
     });
   }
-
 
   public getCartItems(){
     return this.cartItems.asReadonly();
@@ -33,36 +31,40 @@ export class CartService {
     return savedCart ? JSON.parse(savedCart) : [];
   }
 
-  public addToCart(product: Product) {
-    const updateCart = [...this.cartItems()]
-    const existingItem = updateCart.find(item => item.product.product_id === product.product_id);
+  public addToCart(variation: Productvariation) {
+    const updateCart = [...this.cartItems()];
+    const existingItem = updateCart.find(item => item.productVariation.sku === variation.sku);
 
     if (existingItem) {
-      existingItem.quantity = existingItem.quantity + 1;
-
-    }else{
-      updateCart.push({id:Date.now(),product, quantity: 1})
+      existingItem.quantity += 1;
+    } else {
+      updateCart.push({
+        productVariation: variation,
+        quantity: 1
+      });
     }
+
     this.cartItems.set(updateCart);
   }
 
-  public removeFromCart(productId: number) {
-    this.cartItems.set(this.cartItems().filter(item => item.product.product_id !== productId));
+
+  public removeFromCart(productSku: string) {
+    this.cartItems.set(this.cartItems().filter(item => item.productVariation.sku !== productSku));
   }
 
-  public increaseQuantity(productId: number) {
+  public increaseQuantity(productSku: string) {
     this.cartItems.set(
       this.cartItems().map(item =>
-        item.product.product_id === productId ? { ...item, quantity: item.quantity + 1 } : item
+        item.productVariation.sku === productSku ? { ...item, quantity: item.quantity + 1 } : item
       )
     );
   }
 
-  public decreaseQuantity(productId: number) {
+  public decreaseQuantity(productSku: string) {
     this.cartItems.set(
       this.cartItems()
         .map(item =>
-          item.product.product_id === productId
+          item.productVariation.sku === productSku
             ? { ...item, quantity: item.quantity > 1 ? item.quantity - 1 : 1 }
             : item
         )
@@ -70,7 +72,7 @@ export class CartService {
   }
 
   public getCartCount() {
-    return this.cartItems().reduce((total, item) => total + item.product.price * item.quantity,0)
+    return this.cartItems().reduce((total, item) => total + item.productVariation.price * item.quantity,0)
 
   }
 
@@ -80,24 +82,19 @@ export class CartService {
   }
 
   public createOrder(user: User) {
-    // if(user == null) {
-    //   console.log("User is null")
-    //   return;
-    // }
     const totalPrice = this.getCartCount();
     const currentDate = new Date().toISOString();
     const orderItems = [];
 
     for (let item of this.cartItems()) {
       orderItems.push({
-        orderItemId: item.id,
-        productId: item.product.product_id!,
         quantity: item.quantity,
-        subtotal: item.product.price * item.quantity,
+        subtotal: item.productVariation.price * item.quantity,
+        sku: item.productVariation.sku
       });
     }
 
-    const order: Order = {
+    const order: OrderDTO = {
       userId: user.userId!,
       totalPrice:totalPrice,
       date: currentDate,
@@ -105,12 +102,10 @@ export class CartService {
       orderItems: orderItems,
     };
 
-    this.httpClient.post<Order>('http://localhost:8080/api/orders', order).subscribe({
+    this.httpClient.post<OrderDTO>('http://localhost:8080/api/orders', order).subscribe({
       next: (response) => {
       console.log('Order created successfully!', response);
       this.clearCart();
-      this.orderService.updateOrder(order);
-        // alert(response);
     },
       error: (error) => {
       console.error('Failed to create the order:', error);
@@ -119,14 +114,7 @@ export class CartService {
     });
   }
 
-
-
   private saveCartToLocalStorage(cart: CartItem[]) {
     localStorage.setItem('cart', JSON.stringify(cart));
   }
-
-
-
-
-
 }

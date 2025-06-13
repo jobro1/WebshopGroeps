@@ -8,29 +8,26 @@ import jakarta.persistence.*;
 
 public class OrderItem {
     @Id
-
+    @GeneratedValue
     private Long orderItemId;
+
     private Integer quantity;
     private Double subtotal;
 
     @ManyToOne(cascade = CascadeType.MERGE)
-//    @JsonBackReference
-    private Product product;
+    private ProductVariation productVariation;
 
     @ManyToOne(cascade = CascadeType.MERGE)
-//    @JsonBackReference
+    @JsonBackReference
     private Order order;
-
-
 
     public OrderItem() {}
 
-    public OrderItem( long orderItemId,Integer quantity, Double subtotal, Order order, Product product) {
-        this.orderItemId = orderItemId;
+    public OrderItem(Integer quantity, Double subtotal, Order order, ProductVariation productVariation) {
         this.quantity = quantity;
         this.subtotal = subtotal;
         this.order = order;
-        this.product = product;
+        this.productVariation = productVariation;
     }
 
     public Long getOrderItemId() {
@@ -57,12 +54,12 @@ public class OrderItem {
         this.subtotal = subtotal;
     }
 
-    public Product getProduct() {
-        return product;
+    public ProductVariation getProductVariation() {
+        return productVariation;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public void setProductVariation(ProductVariation product) {
+        this.productVariation = product;
     }
 
     public Order geOrder() {

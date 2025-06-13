@@ -14,10 +14,6 @@ export class OrderService {
     return this.orders.asReadonly()
   }
 
-  updateOrder(order: Order) {
-    return this.orders.update(prevOrders => [...prevOrders, order]);
-  }
-
   public loadOrdersByUserId(userId: number) {
     this.httpClient.get<Order[]>(`${environment.apiUrl}/orders?userId=${userId}`).subscribe({
     next: (orders) => this.orders.set(orders),
