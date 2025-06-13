@@ -19,15 +19,15 @@ export class CartItemComponent implements OnInit {
     this.cartService.loadCartFromLocalStorage();
   }
 
-  removeItem(productID: number) {
-    this.cartService.removeFromCart(productID)
+  removeItem(productSku: string) {
+    this.cartService.removeFromCart(productSku)
   }
 
-  increaseQuantity(productId: number) {
-    this.cartService.increaseQuantity(productId)
+  increaseQuantity(productSku: string) {
+    this.cartService.increaseQuantity(productSku)
   }
-  decreaseQuantity(productId: number) {
-    this.cartService.decreaseQuantity(productId)
+  decreaseQuantity(productSku: string) {
+    this.cartService.decreaseQuantity(productSku)
   }
 
 

@@ -1,0 +1,77 @@
+[
+  {
+    "orderId": 1,
+    "totalPrice": 150.0,
+    "date": "2025-06-12T14:30:00Z",
+    "status": "Pending",
+    "orderItems": []
+  },
+  {
+    "orderId": 2,
+    "totalPrice": 150.0,
+    "date": "2025-06-12T14:30:00Z",
+    "status": "Pending",
+    "orderItems": [
+      {
+        "orderItemId": 2,
+        "quantity": 1,
+        "subtotal": 297.66,
+        "productVariation": {
+          "productVariationId": 3,
+          "sku": "GLV-BRO-L-1-BROWNL",
+          "price": 297.66,
+          "imageUrl": "/assets/images/products/luxury_driving_glove_2f5861c2-cd14-4713-a32e-26453347ee44.png",
+          "stock": 37,
+          "values": [
+            {
+              "variationValueId": 1,
+              "value": "Brown",
+              "variation": {
+                "variationId": 1,
+                "variationName": "Color"
+              }
+            },
+            {
+              "variationValueId": 4,
+              "value": "L",
+              "variation": {
+                "variationId": 2,
+                "variationName": "Size"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "orderItemId": 1,
+        "quantity": 2,
+        "subtotal": 297.66,
+        "productVariation": {
+          "productVariationId": 1,
+          "sku": "GLV-BRO-S-1-BROWNS",
+          "price": 297.66,
+          "imageUrl": "/assets/images/products/luxury_driving_glove_2f5861c2-cd14-4713-a32e-26453347ee44.png",
+          "stock": 36,
+          "values": [
+            {
+              "variationValueId": 1,
+              "value": "Brown",
+              "variation": {
+                "variationId": 1,
+                "variationName": "Color"
+              }
+            },
+            {
+              "variationValueId": 2,
+              "value": "S",
+              "variation": {
+                "variationId": 2,
+                "variationName": "Size"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

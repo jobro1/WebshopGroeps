@@ -1,7 +1,6 @@
 package com.luxuryproductsholding.api.controller;
 
 import com.luxuryproductsholding.api.dao.ProductDAO;
-import com.luxuryproductsholding.api.dao.ProductSpecificationsDAO;
 import com.luxuryproductsholding.api.dto.ProductDTO;
 import com.luxuryproductsholding.api.models.Product;
 import org.springframework.http.ResponseEntity;
@@ -12,15 +11,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/products")
-@CrossOrigin(origins = "http://localhost:4200")
 public class ProductController {
 
     private  final ProductDAO productDAO;
-    private final ProductSpecificationsDAO productSpecificationsDAO;
 
-    public ProductController(ProductDAO productDAO, ProductSpecificationsDAO productSpecificationsDAO) {
+    public ProductController(ProductDAO productDAO) {
         this.productDAO = productDAO;
-        this.productSpecificationsDAO = productSpecificationsDAO;
     }
 
     @GetMapping

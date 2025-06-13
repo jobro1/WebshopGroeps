@@ -1,9 +1,8 @@
-import {Product} from './product';
+import {Productvariation} from "./Productvariation";
 
 export interface OrderItem {
   orderItemId: number;
   quantity: number;
-  productId: number;
   subtotal: number;
-  product?: Product
+  productVariation: Productvariation
 }

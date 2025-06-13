@@ -1,5 +1,7 @@
 package com.luxuryproductsholding.api.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
@@ -14,7 +16,8 @@ public class ProductCategory {
     private String name;
 
     @OneToMany( mappedBy = "productCategory")
-    @JsonManagedReference
+//    @JsonManagedReference(value = "category-product")
+    @JsonIgnore
     private List<Product> products;
 
     public ProductCategory() {}

@@ -1,16 +1,18 @@
 <div class="item-card">
-  <img src="headphone.jpg" alt="not found">
+  <img [src]="item.productVariation.imageUrl" alt="not found">
   <div class="item-info-text">
-    <h3>{{item.product.name}}</h3>
-    <p>{{item.product.description}}</p>
-    <p class="price">Price: €{{ item.product.price }}</p>
-    <p class="price">Total: €{{ item.product.price * item.quantity }}</p>
+    <h3>{{item.productVariation.sku}}</h3>
+      @for (value of item.productVariation.values; track value.variationValueId){
+          <p>{{value.variation.variationName}}: {{value.value}}</p>
+      }
+    <p class="price">Price: €{{ item.productVariation.price }}</p>
+    <p class="price">Total: €{{ item.productVariation.price * item.quantity }}</p>
   </div>
   <div class="item-info-button">
-    <button class="minus-item" (click)="decreaseQuantity(item.product.product_id!)">-</button>
+    <button class="minus-item" (click)="decreaseQuantity(item.productVariation.sku!)">-</button>
     <span class="quantity">{{item.quantity}}</span>
-    <button class="minus-item" (click)="increaseQuantity(item.product.product_id!)">+</button>
-    <button class="remove-btn" (click)="removeItem(item.product.product_id!)"> Remove <i class="fa-solid fa-trash-can"></i></button>
+    <button class="minus-item" (click)="increaseQuantity(item.productVariation.sku!)">+</button>
+    <button class="remove-btn" (click)="removeItem(item.productVariation.sku!)"> Remove <i class="fa-solid fa-trash-can"></i></button>
   </div>
 
 </div>

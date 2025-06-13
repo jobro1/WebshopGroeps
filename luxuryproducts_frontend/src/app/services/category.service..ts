@@ -24,7 +24,6 @@ export class CategoryService {
       next: (resdata) => {
         console.log(resdata);
         this.category.set(resdata)
-
       },
       error: (err) => console.error('Error loading product:', err)
     });
@@ -34,7 +33,10 @@ export class CategoryService {
 
   public loadCategories() {
     this.httpClient.get<ProductCategory[]>(environment.apiUrl + '/productCategories').subscribe({
-      next: (data) => this.categories.set(data),
+      next: (data) => {
+        console.log(data);
+        this.categories.set(data);
+      },
       error: (err) => console.error('Error loading product:', err)
     });
   }
