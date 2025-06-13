@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fabe853c-2faf-4358-8a62-cb2469d4ff19" name="Changes" comment="testing: heb nu ook voor de frontend testen kunnen schrijven van het orderprocess" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature_variant" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2y876rtMHJCBxWtQkcz0XTTcoNf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "last_opened_file_path": "C:/Users/alexa/WebstormProjects/insofad-toets-2-groep-19/luxuryproducts_frontend/public",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\alexa\\WebstormProjects\\insofad-toets-2-groep-19\\luxuryproducts_frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alexa\WebstormProjects\insofad-toets-2-groep-19\luxuryproducts_frontend\public" />
+      <recent name="C:\Users\alexa\WebstormProjects\insofad-toets-2-groep-19\luxuryproducts_frontend\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alexa\WebstormProjects\insofad-toets-2-groep-19\luxuryproducts_frontend\src\app" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fabe853c-2faf-4358-8a62-cb2469d4ff19" name="Changes" comment="" />
+      <created>1749204174432</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749204174432</updated>
+      <workItem from="1749204176015" duration="1540000" />
+      <workItem from="1749622483231" duration="524000" />
+      <workItem from="1749623081547" duration="189000" />
+      <workItem from="1749623510816" duration="5990000" />
+      <workItem from="1749732156506" duration="5503000" />
+      <workItem from="1749798138471" duration="50000" />
+    </task>
+    <task id="LOCAL-00001" summary="alle code van mijn feature erin gezet, precies zoals voor toets 1">
+      <option name="closed" value="true" />
+      <created>1749622635689</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749622635689</updated>
+    </task>
+    <task id="LOCAL-00002" summary="admin paneel en de images staan er nu in">
+      <option name="closed" value="true" />
+      <created>1749623840154</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749623840154</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix: admin verwijdert om ruimte te maken voor admin van Bram">
+      <option name="closed" value="true" />
+      <created>1749654205478</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749654205478</updated>
+    </task>
+    <task id="LOCAL-00004" summary="testing: heb nu ook voor de frontend testen kunnen schrijven van het orderprocess">
+      <option name="closed" value="true" />
+      <created>1749736875261</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749736875261</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/luxuryproducts_frontend/cypress/support/commands.d.ts" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="alle code van mijn feature erin gezet, precies zoals voor toets 1" />
+    <MESSAGE value="admin paneel en de images staan er nu in" />
+    <MESSAGE value="fix: admin verwijdert om ruimte te maken voor admin van Bram" />
+    <MESSAGE value="testing: heb nu ook voor de frontend testen kunnen schrijven van het orderprocess" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing: heb nu ook voor de frontend testen kunnen schrijven van het orderprocess" />
+  </component>
+</project>
