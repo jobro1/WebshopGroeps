@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="Testing: heb testen toegevoegd voor order proces van een variant">
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature_variant" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2y85EF63E7odBImwzrF4gh56cjm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.TestOrderDAO.executor": "Run",
+    "JUnit.TestOrderDAO.testCreateOrder_EmptyOrderItems.executor": "Run",
+    "JUnit.TestOrderDAO.testGetAllOrders.executor": "Run",
+    "JUnit.TestOrderDAO.testGetOrderById_NotFound.executor": "Run",
+    "JUnit.TestOrderService.executor": "Run",
+    "JUnit.TestOrderService.testSaveOrderItems_NegativeQuantity.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.WebshopBackend.executor": "Run",
+    "git-widget-placeholder": "chore__pipeline",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/alexa/IdeaProjects/insofad-toets-2-groep-19/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alexa\IdeaProjects\insofad-toets-2-groep-19\luxuryproducts_backend\src\main\java\com\luxuryproductsholding\api" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alexa\IdeaProjects\insofad-toets-2-groep-19\luxuryproducts_backend\src\main\java\com\luxuryproductsholding\api\config" />
+      <recent name="C:\Users\alexa\IdeaProjects\insofad-toets-2-groep-19\luxuryproducts_backend\src\main\resources\data" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.WebshopBackend">
+    <configuration name="TestOrderDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="luxuryproducts_backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.luxuryproductsholding.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.luxuryproductsholding.api" />
+      <option name="MAIN_CLASS_NAME" value="com.luxuryproductsholding.api.TestOrderDAO" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestOrderDAO.testCreateOrder_EmptyOrderItems" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="luxuryproducts_backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.luxuryproductsholding.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.luxuryproductsholding.api" />
+      <option name="MAIN_CLASS_NAME" value="com.luxuryproductsholding.api.TestOrderDAO" />
+      <option name="METHOD_NAME" value="testCreateOrder_EmptyOrderItems" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestOrderDAO.testGetOrderById_NotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="luxuryproducts_backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.luxuryproductsholding.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.luxuryproductsholding.api" />
+      <option name="MAIN_CLASS_NAME" value="com.luxuryproductsholding.api.TestOrderDAO" />
+      <option name="METHOD_NAME" value="testGetOrderById_NotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestOrderService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="luxuryproducts_backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.luxuryproductsholding.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.luxuryproductsholding.api" />
+      <option name="MAIN_CLASS_NAME" value="com.luxuryproductsholding.api.TestOrderService" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestOrderService.testSaveOrderItems_NegativeQuantity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="luxuryproducts_backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.luxuryproductsholding.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.luxuryproductsholding.api" />
+      <option name="MAIN_CLASS_NAME" value="com.luxuryproductsholding.api.TestOrderService" />
+      <option name="METHOD_NAME" value="testSaveOrderItems_NegativeQuantity" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebshopBackend" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="luxuryproducts_backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.luxuryproductsholding.api.WebshopBackend" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestOrderDAO" />
+        <item itemvalue="JUnit.TestOrderDAO.testCreateOrder_EmptyOrderItems" />
+        <item itemvalue="JUnit.TestOrderDAO.testGetOrderById_NotFound" />
+        <item itemvalue="JUnit.TestOrderService" />
+        <item itemvalue="JUnit.TestOrderService.testSaveOrderItems_NegativeQuantity" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="" />
+      <created>1749203246159</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749203246159</updated>
+      <workItem from="1749203247570" duration="516000" />
+      <workItem from="1749203804224" duration="1090000" />
+      <workItem from="1749204904980" duration="1240000" />
+      <workItem from="1749622158250" duration="8106000" />
+      <workItem from="1749729723448" duration="6266000" />
+      <workItem from="1749760561340" duration="599000" />
+      <workItem from="1749797183919" duration="381000" />
+    </task>
+    <task id="LOCAL-00001" summary="gitignore on the application.properties">
+      <option name="closed" value="true" />
+      <created>1749203633556</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749203633556</updated>
+    </task>
+    <task id="LOCAL-00002" summary="gitignore on the application.properties">
+      <option name="closed" value="true" />
+      <created>1749203852550</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749203852550</updated>
+    </task>
+    <task id="LOCAL-00003" summary="b">
+      <option name="closed" value="true" />
+      <created>1749203990947</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749203990947</updated>
+    </task>
+    <task id="LOCAL-00004" summary="code van mijn feature net als bij toets 1">
+      <option name="closed" value="true" />
+      <created>1749622668029</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749622668029</updated>
+    </task>
+    <task id="LOCAL-00005" summary="gitlab-ci file toegevoegd">
+      <option name="closed" value="true" />
+      <created>1749634389127</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1749634389127</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix: admin verwijdert om ruimte te maken voor admin van Bram">
+      <option name="closed" value="true" />
+      <created>1749654351187</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1749654351187</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix: admin verwijdert om ruimte te maken voor admin van Bram">
+      <option name="closed" value="true" />
+      <created>1749654410607</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1749654410607</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Testing: heb testen toegevoegd voor order proces van een variant">
+      <option name="closed" value="true" />
+      <created>1749732118446</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1749732118446</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="gitignore on the application.properties" />
+    <MESSAGE value="b" />
+    <MESSAGE value="code van mijn feature net als bij toets 1" />
+    <MESSAGE value="gitlab-ci file toegevoegd" />
+    <MESSAGE value="fix: admin verwijdert om ruimte te maken voor admin van Bram" />
+    <MESSAGE value="Testing: heb testen toegevoegd voor order proces van een variant" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing: heb testen toegevoegd voor order proces van een variant" />
+  </component>
+</project>
