@@ -18,9 +18,10 @@ public class CustomUser {
     private String postcode;
     private String dateOfBirth;
     private String phoneNumber;
-    private String userType;
     private String email;
     private String password;
+
+    private String role;
 
     @OneToMany(mappedBy = "user")
     @JsonManagedReference
@@ -29,7 +30,7 @@ public class CustomUser {
     public CustomUser() {}
 
     public CustomUser(String firstName, String infix, String lastName, String address, Integer houseNumber, String postcode,
-                      String dateOfBirth, String phoneNumber, String userType, String email, String password
+                      String dateOfBirth, String phoneNumber, String email, String password, String role
                 ) {
         this.firstName = firstName;
         this.infix = infix;
@@ -39,9 +40,9 @@ public class CustomUser {
         this.postcode = postcode;
         this.dateOfBirth = dateOfBirth;
         this.phoneNumber = phoneNumber;
-        this.userType = userType;
         this.email = email;
         this.password = password;
+        this.role = role;
 
     }
 
@@ -97,6 +98,14 @@ public class CustomUser {
         return postcode;
     }
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     public void setPostcode(String postcode) {
         this.postcode = postcode;
     }
@@ -115,14 +124,6 @@ public class CustomUser {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
-    }
-
-    public String getUserType() {
-        return userType;
-    }
-
-    public void setUserType(String userType) {
-        this.userType = userType;
     }
 
     public String getEmail() {

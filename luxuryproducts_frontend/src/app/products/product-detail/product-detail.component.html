@@ -1,36 +1,29 @@
+<div class="product-detail-container" *ngIf="product()">
+    <div *ngFor="let name of variationNames()" class="variation-group">
+        <label>{{ name }}:</label>
+        <div class="variation-buttons">
+            <button
+                    *ngFor="let option of getFilteredOptions(name)"
+                    (click)="onSelectValue(name, option)"
+                    [class.selected]="selectedValues[name] === option"
+                    type="button"
+            >
+                {{ option }}
+            </button>
+        </div>
+    </div>
 
-<article class="product-detail">
+    <div class="product-display" *ngIf="selectedVariation && selectedVariation.stock > 0">
+        <img [src]="selectedVariation.imageUrl" [alt]="selectedVariation.sku" class="product-image" />
+        <div class="product-info">
+            <p><strong>Prijs:</strong> €{{ selectedVariation.price }}</p>
+            <p><strong>Voorraad:</strong> {{ selectedVariation.stock }} stuks</p>
 
+            <p *ngIf="selectedVariation.stock <= 3 && selectedVariation.stock > 0" class="low-stock-warning">
+                ⚠️ Bijna uitverkocht!
+            </p>
 
-
-  <section class="product-carousel">
-    <app-image-slider [images]="product()?.imageUrls || []"></app-image-slider>
-  </section>
-  <section class="left-side">
-  <h2>{{ product()?.name}}</h2>
-
-  <div class="product-info">
-
-    <p>Description: {{ product()?.description }}</p>
-    <p>Brand: {{ product()?.brand }}</p>
-    <p>Warranty: {{ product()?.warranty }}</p>
-  </div>
-  <section class="prica-and-button">
-  <p>Price: €{{ product()?.price }}</p>
-    <button class="buy-now" (click)="onSelectBuyNow()">Add to cart</button>
-  </section>
-
-    <div class="specifications">
-    <h3>Specifications</h3>
-    <ul>
-      @for(sep of product()?.productSpecifications; track sep.id) {
-        <li>{{sep.name}} :  {{sep.value}}</li>
-      }
-
-    </ul>
-  </div>
-  </section>
-
-
-</article>
-
+            <button (click)="cartService.addToCart(selectedVariation)">Add to cart</button>
+        </div>
+    </div>
+</div>

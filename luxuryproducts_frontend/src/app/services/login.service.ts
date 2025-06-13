@@ -49,6 +49,7 @@ export class LoginService {
         if (Token.token) {
           this.loggedIn = true;
           this.saveTokenInLocalStorage(Token.token);
+          this.saveUserIdToLocalStorage(Token.userId);
           this.token=Token.token;
         }
       })
@@ -61,5 +62,13 @@ export class LoginService {
   }
   private removeTokenFromLocalStorage() {
     localStorage.removeItem('authToken');
+  }
+
+  private saveUserIdToLocalStorage(userId: number) {
+    localStorage.setItem('userId', String(userId));
+  }
+
+  public getLoggedInUserid(): string {
+    return <string>localStorage.getItem('userId');
   }
 }

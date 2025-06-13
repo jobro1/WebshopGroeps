@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 
 import java.util.List;
 @Entity(name="UserOrder")
-public class Order {
+public class  Order {
     @Id
     @GeneratedValue
     private Long orderId;

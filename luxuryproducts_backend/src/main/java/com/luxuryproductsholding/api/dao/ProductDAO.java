@@ -1,13 +1,8 @@
 package com.luxuryproductsholding.api.dao;
 
-import com.luxuryproductsholding.api.dto.ImageUrlDTO;
 import com.luxuryproductsholding.api.dto.ProductDTO;
-import com.luxuryproductsholding.api.dto.ProductSpecificationsDTO;
-import com.luxuryproductsholding.api.models.ImageUrl;
 import com.luxuryproductsholding.api.models.Product;
 import com.luxuryproductsholding.api.models.ProductCategory;
-import com.luxuryproductsholding.api.models.ProductSpecifications;
-import jakarta.transaction.Transactional;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
@@ -20,17 +15,15 @@ public class ProductDAO {
 
     private final ProductRepository productRepository;
     private final ProductCategoryRepository productCategoryRepository;
-    private final ProductSpecificationsRepository productSpecificationsRepository;
 
-    public ProductDAO(ProductRepository productRepository, ProductCategoryRepository productCategoryRepository,
-                      ProductSpecificationsRepository productSpecificationsRepository) {
+    public ProductDAO(ProductRepository productRepository, ProductCategoryRepository productCategoryRepository) {
         this.productRepository = productRepository;
         this.productCategoryRepository = productCategoryRepository;
-        this.productSpecificationsRepository = productSpecificationsRepository;
     }
 
     public List<Product> getAllProducts() {
         List<Product> allProducts =  this.productRepository.findAll();
+        System.out.println(allProducts);
         if (allProducts.isEmpty()) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         };
@@ -60,31 +53,20 @@ public class ProductDAO {
         return productRepository.findByNameContainingIgnoreCaseOrDescriptionContainingIgnoreCase(query, query);
     }
 
-    @Transactional
     public void createProduct(ProductDTO productDTO) {
         Optional<ProductCategory> productCategory = this.productCategoryRepository.findById(productDTO.categoryId);
          if (productCategory.isPresent()) {
             Product product = new Product(
                     productDTO.name,
-                    productDTO.manufacturer_code,
                     productDTO.price,
                     productDTO.description,
                     productDTO.brand,
-                    productDTO.warranty,
-                    productDTO.amount,
                     productCategory.get()
             );
 
-             product = this.productRepository.save(product);
+            product = this.productRepository.save(product);
 
-             for (ProductSpecificationsDTO specDTO: productDTO.productSpecificationsDTO) {
-                 ProductSpecifications productSpecifications = new ProductSpecifications(specDTO.name, specDTO.value, product);
-                  this.productSpecificationsRepository.save(productSpecifications);
-             }
-             for (ImageUrlDTO imageUrlDTO: productDTO.imageUrlDTO) {
-                 ImageUrl imageUrl = new ImageUrl(imageUrlDTO.imageUrl, product);
-             }
-             return;
+            return;
 
          }
         throw new ResponseStatusException(

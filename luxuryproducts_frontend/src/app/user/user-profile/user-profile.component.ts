@@ -3,11 +3,17 @@ import {CustomUserService} from '../../services/customUser.service.';
 import {ActivatedRoute, Router} from '@angular/router';
 import {OrderService} from '../../services/order.service';
 import {LoginService} from '../../services/login.service';
+import {last} from "rxjs";
+import {DecimalPipe, NgForOf, NgIf} from "@angular/common";
 
 
 @Component({
   selector: 'app-user-profile',
-  imports: [],
+  imports: [
+    NgIf,
+    NgForOf,
+    DecimalPipe
+  ],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.scss'
 })
@@ -66,5 +72,5 @@ export class UserProfileComponent implements OnInit {
   }
 
 
-
+  protected readonly last = last;
 }

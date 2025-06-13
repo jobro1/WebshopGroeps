@@ -1,11 +1,8 @@
 package com.luxuryproductsholding.api.dao;
 
 import com.luxuryproductsholding.api.dto.OrderDTO;
-import com.luxuryproductsholding.api.dto.OrderItemDTO;
-import com.luxuryproductsholding.api.models.Order;
-import com.luxuryproductsholding.api.models.OrderItem;
-import com.luxuryproductsholding.api.models.Product;
-import com.luxuryproductsholding.api.models.CustomUser;
+import com.luxuryproductsholding.api.models.*;
+import com.luxuryproductsholding.api.services.OrderService;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
@@ -18,15 +15,12 @@ public class OrderDAO {
 
     private final OrderRepository orderRepository;
     private final UserRepository userRepository;
-    private final ProductRepository productRepository;
-    private final OrderItemRepository orderItemRepository;
+    private final OrderService orderService;
 
-    public OrderDAO(OrderRepository orderRepository, UserRepository userRepository,
-                    ProductRepository productRepository, OrderItemRepository orderItemRepository) {
+    public OrderDAO(OrderRepository orderRepository, UserRepository userRepository, OrderService orderService) {
         this.orderRepository = orderRepository;
         this.userRepository = userRepository;
-        this.productRepository = productRepository;
-        this.orderItemRepository = orderItemRepository;
+        this.orderService = orderService;
     }
 
     public List<Order> getAllOrders() {
@@ -34,13 +28,14 @@ public class OrderDAO {
     }
 
     public Order getOrderById(Long id) {
-        return this.orderRepository.findById(id).get();
+        return orderRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No order found with that id"));
     }
 
     public List<Order> getAllOrdersByUserId(Long userId) {
         Optional<List<Order>> orders = this.orderRepository.findByUserUserId(userId);
 
-        if (orders.get().isEmpty()) {
+        if (orders.isEmpty()) {
             throw new ResponseStatusException(
                     HttpStatus.NOT_FOUND, "No orders found with that user id");
         }
@@ -49,57 +44,29 @@ public class OrderDAO {
 
     }
 
-//    public void creatOrder(OrderDTO orderDTO) {
-//        Optional<CustomUser> user = this.userRepository.findById(orderDTO.userId);
-//        if (user.isPresent()) {
-//            Order order = new Order(
-//                    orderDTO.totalPrice,
-//                    orderDTO.date,
-//                    orderDTO.status,
-//                    user.get()
-//            );
-//            order = this.orderRepository.save(order);
-//            for(OrderItemDTO orderItemDTO: orderDTO.orderItemDTO) {
-//                Optional<Product> product = this.productRepository.findById(orderItemDTO.productId);
-//                OrderItem orderItem = new OrderItem(orderItemDTO.quantity, orderItemDTO.subtotal, order, product.get());
-//                this.orderItemRepository.save(orderItem);
-//            }
-//
-//            return;
-//        }
-//        throw new ResponseStatusException(
-//                HttpStatus.NOT_FOUND, "coudn't create order"
-//        );
-//    }
-
-    public Order creatOrder(OrderDTO orderDTO) {
+    public void creatOrder(OrderDTO orderDTO) {
         Optional<CustomUser> userOptional = this.userRepository.findById(orderDTO.userId);
 
         if (userOptional.isEmpty()) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found with ID: " + orderDTO.userId);
         }
 
+        if (orderDTO.orderItems == null || orderDTO.orderItems.isEmpty()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Order must contain at least one item.");
+        }
+
         CustomUser user = userOptional.get();
-        Order order = new Order(
+        Order newOrder = new Order(
                 orderDTO.totalPrice,
                 orderDTO.date,
                 orderDTO.status,
                 user
         );
-        order = this.orderRepository.save(order);
+        newOrder = this.orderRepository.save(newOrder);
 
-        for (OrderItemDTO orderItemDTO : orderDTO.orderItems) {
-            Optional<Product> productOptional = this.productRepository.findById(orderItemDTO.productId);
+        this.orderService.saveOrderItems(orderDTO, newOrder);
 
-            if (productOptional.isEmpty()) {
-                throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found with ID: " + orderItemDTO.productId);
-            }
-
-            Product product = productOptional.get();
-            OrderItem orderItem = new OrderItem(orderItemDTO.orderItemId, orderItemDTO.quantity, orderItemDTO.subtotal, order, product);
-            this.orderItemRepository.save(orderItem);
-        }
-
-        return order;
     }
+
+
 }

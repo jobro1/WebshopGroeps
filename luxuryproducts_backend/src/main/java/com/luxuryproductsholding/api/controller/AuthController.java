@@ -3,6 +3,7 @@ package com.luxuryproductsholding.api.controller;
 import com.luxuryproductsholding.api.config.JWTUtil;
 import com.luxuryproductsholding.api.dao.UserRepository;
 import com.luxuryproductsholding.api.dto.AuthenticationDTO;
+import com.luxuryproductsholding.api.dto.LoginDTO;
 import com.luxuryproductsholding.api.dto.LoginResponse;
 import com.luxuryproductsholding.api.models.CustomUser;
 import com.luxuryproductsholding.api.services.CredentialValidator;
@@ -15,8 +16,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.List;
+
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/auth")
 public class AuthController {
 
@@ -73,12 +75,12 @@ public class AuthController {
                 );
         userDAO.save(registerdCustomUser);
         String token = jwtUtil.generateToken(registerdCustomUser.getEmail());
-        LoginResponse loginResponse = new LoginResponse(registerdCustomUser.getEmail(), token);
+        LoginResponse loginResponse = new LoginResponse(registerdCustomUser.getUserId(), registerdCustomUser.getEmail(), token);
         return ResponseEntity.ok(loginResponse);
     }
 
     @PostMapping("/login")
-    public ResponseEntity<LoginResponse> login(@RequestBody AuthenticationDTO body) {
+    public ResponseEntity<LoginResponse> login(@RequestBody LoginDTO body) {
         try {
             UsernamePasswordAuthenticationToken authInputToken =
                     new UsernamePasswordAuthenticationToken(body.email, body.password);
@@ -88,7 +90,7 @@ public class AuthController {
             String token = jwtUtil.generateToken(body.email);
 
             CustomUser customUser = userDAO.findByEmail(body.email);
-            LoginResponse loginResponse = new LoginResponse(customUser.getEmail(), token);
+            LoginResponse loginResponse = new LoginResponse(customUser.getUserId(), customUser.getEmail(), token);
 
 
             return ResponseEntity.ok(loginResponse);

@@ -1,14 +1,10 @@
-<app-product-card >
 <article class="product-info" [routerLink]="['/products',product.product_id]" >
   <figure class="product-images">
-    <app-image-slider [images]="product.imageUrls || []"></app-image-slider>
+    <img [src]="product.variations?.[0]?.imageUrl" [alt]="product.name" />
   </figure>
 
   <h3>{{ product.name }}</h3>
   <p>{{ product.description }}</p>
   <span class="price">${{ product.price }}</span>
-  <button class="buy-now" (click)="onSelectBuyNow(product); $event.stopPropagation();">Buy Now</button>
-
 
 </article>
-</app-product-card>

@@ -1,6 +1,3 @@
-
-
-
 <article class="profile-container">
 
   <section class="container-leftside">
@@ -23,31 +20,40 @@
     </div>
   </section>
 
-  <section class="container-rightside">
-  <h3>Order History</h3>
-  <div class="order-history" >
-    <ul class="order">
-      @for(order of usersOrders(); track order.orderId){
-        <li >
-          <p class="order-info">
-            <span>Order ID: {{ order.orderId }}</span>
-            <span>Date: {{ order.date }}</span>
-            <span>Total: €{{ order.totalPrice }} </span>
-          </p>
-          <ul class="order-item">
-            @for( orderItem of order.orderItems; track orderItem.orderItemId){
-              <li>
-                {{ orderItem.product?.name }} - Quantity: {{ orderItem.quantity }} - Price: €{{ orderItem.subtotal }}
-              </li>
-            }
+    <section class="container-rightside">
+        <h3>Order History</h3>
+        <div class="order-history">
+            <ul class="order">
+                @for(order of usersOrders(); track order.orderId) {
+                    <li>
+                        <p class="order-info">
+                            <span><strong>Order ID:</strong> {{ order.orderId }}</span>
+                            <span><strong>Date:</strong> {{ order.date }}</span>
+                            <span><strong>Status:</strong> {{ order.status }}</span>
+                            <span><strong>Total:</strong> €{{ order.totalPrice | number:'1.2-2'}}</span>
+                        </p>
+                        <ul class="order-item">
+                            @for(orderItem of order.orderItems; track orderItem.orderItemId){
+                                <li *ngIf="orderItem.productVariation">
+                                    <img [src]="orderItem.productVariation.imageUrl" alt="Product image" width="100">
+                                    <p>
+                                        {{ orderItem.productVariation.sku }} - Quantity: {{ orderItem.quantity }} - Price: €{{ orderItem.subtotal }}
+                                    </p>
+                                    <ul>
+                                        <li *ngFor="let value of orderItem.productVariation.values">
+                                            {{ value.variation.variationName }}: {{ value.value }}
+                                        </li>
+                                    </ul>
+                                </li>
+                            }
+                        </ul>
 
-          </ul>
-        </li>
-      }
+                    </li>
+                }
+            </ul>
+        </div>
+    </section>
 
-    </ul>
-  </div>
-  </section>
 
 
 </article>

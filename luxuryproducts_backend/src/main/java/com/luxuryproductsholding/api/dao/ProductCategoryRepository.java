@@ -8,6 +8,7 @@ import java.util.Optional;
 @Repository
 public interface ProductCategoryRepository extends JpaRepository<ProductCategory, Long> {
 
-    Optional<ProductCategory> findByCategoryId(Long productCategoryId);
+    Optional<ProductCategory> findByCategoryId(Long CategoryId);
 
+    ProductCategory findByName(String luxury);
 }

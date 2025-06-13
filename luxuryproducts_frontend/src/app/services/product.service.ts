@@ -1,8 +1,7 @@
-  import {inject, Injectable,signal} from '@angular/core';
+import {inject, Injectable,signal} from '@angular/core';
 import {Product} from '../models/product';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
-import {tap} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,16 +18,14 @@ export class ProductService {
     return this.product.asReadonly();
   }
 
-
-
-
   public loadProductById(id:number){
       this.httpClient.get<Product>(environment.apiUrl + `/products/${id}`).subscribe({
-        next: (data) => this.product.set(data),
+        next: (data) => {
+          console.log(data);
+          this.product.set(data)
+        },
         error: (err) => console.error('Error loading product:', err)
       });
-
-
   }
 
   public loadProducts() {
@@ -36,19 +33,11 @@ export class ProductService {
       environment.apiUrl +'/products',
     ).subscribe({
         next: (responseData) => {
+          console.log(responseData);
           this.products.set(responseData);
         }
       }
-
     )
-  }
-
-  public searchProducts(query:string) {
-    this.httpClient.get<Product[]>(environment.apiUrl + `/products/search?query=${query}`).pipe(tap({
-      next: (data) => this.products.set(data),
-      error: (err) => console.error('Error loading products:', err)
-
-    }))
   }
 
 }
