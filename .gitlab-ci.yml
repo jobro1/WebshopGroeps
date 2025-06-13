@@ -10,6 +10,8 @@ job_test:
     - npm ci
     - npx cypress install
     - npm install --save-dev wait-on
+  tags:
+    - "groep19Runner"
   script:
     - echo "Starting Angular app..."
     - npx ng serve --host 0.0.0.0 &
@@ -21,6 +23,8 @@ job_test:
 job_build:
   stage: build
   image: node:18
+  tags:
+    - "groep19Runner"
   script:
     - echo "Building Angular app..."
     - npm ci
