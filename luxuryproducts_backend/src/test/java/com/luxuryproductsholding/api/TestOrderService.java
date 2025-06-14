@@ -11,8 +11,10 @@ import com.luxuryproductsholding.api.models.ProductVariation;
 import com.luxuryproductsholding.api.services.OrderService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.*;
 
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
@@ -21,6 +23,7 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+@ExtendWith(MockitoExtension.class)
 public class TestOrderService {
 
     @Mock
@@ -31,11 +34,6 @@ public class TestOrderService {
 
     @InjectMocks
     private OrderService orderService;
-
-    @BeforeEach
-    void setUp() {
-        MockitoAnnotations.openMocks(this);
-    }
 
     @Test
     void testSaveOrderItems_Success() {
@@ -131,7 +129,8 @@ public class TestOrderService {
         ResponseStatusException ex = assertThrows(ResponseStatusException.class,
                 () -> orderService.saveOrderItems(dto, order));
 
-        assertTrue(ex.getMessage().contains("Quantity must be greater than zero"));
+        assertTrue(ex.getMessage().contains("Quantity must be greater than zero"),
+                "Expected error message not found");
     }
 
 
