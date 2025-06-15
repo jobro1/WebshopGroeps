@@ -1,0 +1,3 @@
+CREATE DATABASE MoneyGrabber;
+CREATE USER MoneyGrabber WITH PASSWORD 'W#llH#ll0Th#r#M0n#yH@H@042';
+GRANT ALL PRIVILEGES ON DATABASE MoneyGrabber TO MoneyGrabber;
