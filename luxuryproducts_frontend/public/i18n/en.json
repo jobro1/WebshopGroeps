@@ -10,6 +10,9 @@
   "footer": {
     "notice": "This website is not a real website; it is a student project created for educational purposes."
   },
+  "categories": {
+    "title": "Categories"
+  },
   "products": {
     "title": "All Products"
   },

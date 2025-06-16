@@ -3,7 +3,6 @@
     <section class="categories-container">
         @for(category of categories(); track category.categoryId) {
             <div class="category-box" [routerLink]="['/category/', category.categoryId]">
-                <i class="fab fa-bluetooth"></i>
                 <span>{{ category.name }}</span>
             </div>
         }
