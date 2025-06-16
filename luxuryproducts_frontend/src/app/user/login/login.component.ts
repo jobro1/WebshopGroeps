@@ -2,10 +2,11 @@ import {Component, inject} from '@angular/core';
 import {Router, RouterLink} from '@angular/router';
 import {LoginService} from '../../services/login.service';
 import {FormsModule} from '@angular/forms';
+import {TranslatePipe} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule, RouterLink],
+    imports: [FormsModule, RouterLink, TranslatePipe],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })

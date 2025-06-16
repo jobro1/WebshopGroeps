@@ -5,15 +5,17 @@ import {OrderService} from '../../services/order.service';
 import {LoginService} from '../../services/login.service';
 import {last} from "rxjs";
 import {DecimalPipe, NgForOf, NgIf} from "@angular/common";
+import {TranslatePipe} from "@ngx-translate/core";
 
 
 @Component({
   selector: 'app-user-profile',
-  imports: [
-    NgIf,
-    NgForOf,
-    DecimalPipe
-  ],
+    imports: [
+        NgIf,
+        NgForOf,
+        DecimalPipe,
+        TranslatePipe
+    ],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.scss'
 })
