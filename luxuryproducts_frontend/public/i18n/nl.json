@@ -10,6 +10,9 @@
   "footer": {
     "notice": "Deze website is geen echte website; het is een studentenproject dat is gemaakt voor educatieve doeleinden."
   },
+  "categories": {
+    "title": "Categorien"
+  },
   "products": {
     "title": "Alle Producten"
   },
