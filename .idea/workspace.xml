@@ -269,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750058559459</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="de bluetooth icon verwijdert un category cards">
+      <option name="closed" value="true" />
+      <created>1750058967502</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1750058967502</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +304,7 @@
     <MESSAGE value="fix unversioned files" />
     <MESSAGE value="fix unverisioned files" />
     <MESSAGE value="de json files, bevatten nu ook alle tekst" />
-    <option name="LAST_COMMIT_MESSAGE" value="de json files, bevatten nu ook alle tekst" />
+    <MESSAGE value="de bluetooth icon verwijdert un category cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="de bluetooth icon verwijdert un category cards" />
   </component>
 </project>
