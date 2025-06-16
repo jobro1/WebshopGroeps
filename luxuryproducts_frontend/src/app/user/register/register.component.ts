@@ -3,15 +3,15 @@ import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/
 import {Router} from "@angular/router";
 import {RegisterService} from '../../services/register.service';
 import {User} from '../../models/customUser';
-import {NgIf} from '@angular/common';
+import {CommonModule} from '@angular/common';
 import {TranslatePipe} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-register',
     imports: [
         ReactiveFormsModule,
-        NgIf,
         TranslatePipe,
+        CommonModule
     ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss'

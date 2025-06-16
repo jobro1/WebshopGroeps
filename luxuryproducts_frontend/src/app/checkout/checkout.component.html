@@ -1,136 +1,127 @@
 <div class="backdrop" routerLink="/cart"></div>
-
 @if (loginRequest) {
-    <dialog open>
-        <h2>{{ 'checkout.login.title' | translate }}</h2>
-        <p>{{ 'checkout.login.message' | translate }}</p>
-        <p class="actions">
-            <button class="login-btn" (click)="onLoginButton()">{{ 'checkout.login.loginBtn' | translate }}</button>
-            <button class="register-button" (click)="onRegisterButton()">{{ 'checkout.login.registerBtn' | translate }}</button>
-        </p>
-    </dialog>
+  <dialog open>
+    <h2>{{ 'checkout.login-request.title' | translate }}</h2>
+    <p>{{ 'checkout.login-request.message' | translate }}</p>
+    <p class="actions">
+      <button class="login-btn" (click)="onLoginButton()">{{ 'login.button.login' | translate }}</button>
+      <button class="register-button" (click)="onRegisterButton()">{{ 'login.button.register' | translate }}</button>
+    </p>
+  </dialog>
 } @else {
-    <dialog open>
-        <h2>{{ 'checkout.title' | translate }}</h2>
-        <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-            <div class="full-name">
-                <p>
-                    <label>{{ 'form.firstName.label' | translate }}</label>
-                    <input type="text" formControlName="firstName" placeholder="{{ 'form.firstName.placeholder' | translate }}" />
-                    @if(firstName?.touched && firstName?.invalid) {
-                        <small class="wrong-message">
-                            <i class="fa-solid fa-circle-xmark"></i> {{ 'form.firstName.invalid' | translate }}
-                        </small>
-                    }
-                    @if (firstName?.valid) {
-                        <small class="correct-message">
-                            <i class="fa-solid fa-circle-check"></i> {{ 'form.correct' | translate }}
-                        </small>
-                    }
-                </p>
-
-                <p>
-                    <label>{{ 'form.infix.label' | translate }}</label>
-                    <input type="text" formControlName="infix" placeholder="{{ 'form.infix.placeholder' | translate }}" />
-                </p>
-
-                <p>
-                    <label>{{ 'form.lastName.label' | translate }}</label>
-                    <input type="text" formControlName="lastName" placeholder="{{ 'form.lastName.placeholder' | translate }}" />
-                    @if(lastName?.touched && lastName?.invalid) {
-                        <small class="wrong-message">
-                            <i class="fa-solid fa-circle-xmark"></i> {{ 'form.lastName.invalid' | translate }}
-                        </small>
-                    }
-                    @if (lastName?.valid) {
-                        <small class="correct-message">
-                            <i class="fa-solid fa-circle-check"></i> {{ 'form.correct' | translate }}
-                        </small>
-                    }
-                </p>
-            </div>
-
-            <p>
-                <label>{{ 'form.address.label' | translate }}</label>
-                <input type="text" formControlName="address" placeholder="{{ 'form.address.placeholder' | translate }}" />
-                @if(address?.touched && address?.invalid) {
-                    <small class="wrong-message">
-                        <i class="fa-solid fa-circle-xmark"></i> {{ 'form.address.invalid' | translate }}
-                    </small>
-                }
-                @if (address?.valid) {
-                    <small class="correct-message">
-                        <i class="fa-solid fa-circle-check"></i> {{ 'form.correct' | translate }}
-                    </small>
-                }
-            </p>
-
-            <div class="place-postcode">
-                <p>
-                    <label>{{ 'form.houseNumber.label' | translate }}</label>
-                    <input type="text" formControlName="houseNumber" placeholder="{{ 'form.houseNumber.placeholder' | translate }}" />
-                    @if(houseNumber?.touched && houseNumber?.invalid) {
-                        <small class="wrong-message">
-                            <i class="fa-solid fa-circle-xmark"></i> {{ 'form.houseNumber.invalid' | translate }}
-                        </small>
-                    }
-                    @if (houseNumber?.valid) {
-                        <small class="correct-message">
-                            <i class="fa-solid fa-circle-check"></i> {{ 'form.correct' | translate }}
-                        </small>
-                    }
-                </p>
-
-                <p>
-                    <label>{{ 'form.postcode.label' | translate }}</label>
-                    <input type="text" formControlName="postcode" placeholder="{{ 'form.postcode.placeholder' | translate }}" />
-                    @if(postcode?.touched && postcode?.invalid) {
-                        <small class="wrong-message">
-                            <i class="fa-solid fa-circle-xmark"></i> {{ 'form.postcode.invalid' | translate }}
-                        </small>
-                    }
-                    @if (postcode?.valid) {
-                        <small class="correct-message">
-                            <i class="fa-solid fa-circle-check"></i> {{ 'form.correct' | translate }}
-                        </small>
-                    }
-                </p>
-            </div>
-
-            <p>
-                <label>{{ 'form.phone.label' | translate }}</label>
-                <input type="number" formControlName="phoneNumber" placeholder="{{ 'form.phone.placeholder' | translate }}" />
-                @if(phoneNumber?.touched && phoneNumber?.invalid) {
-                    <small class="wrong-message">
-                        <i class="fa-solid fa-circle-xmark"></i> {{ 'form.phone.invalid' | translate }}
-                    </small>
-                }
-                @if (phoneNumber?.valid) {
-                    <small class="correct-message">
-                        <i class="fa-solid fa-circle-check"></i> {{ 'form.correct' | translate }}
-                    </small>
-                }
-            </p>
-
-            <p>
-                <label>{{ 'form.email.label' | translate }}</label>
-                <input type="text" formControlName="email" placeholder="{{ 'form.email.placeholder' | translate }}" />
-                @if(email?.touched && email?.invalid) {
-                    <small class="wrong-message">
-                        <i class="fa-solid fa-circle-xmark"></i> {{ 'form.email.invalid' | translate }}
-                    </small>
-                }
-                @if (email?.valid) {
-                    <small class="correct-message">
-                        <i class="fa-solid fa-circle-check"></i> {{ 'form.correct' | translate }}
-                    </small>
-                }
-            </p>
-
-            <p class="actions">
-                <button type="button" routerLink="/cart" class="cancel-button">{{ 'form.cancel' | translate }}</button>
-                <button type="submit" class="submit-button">{{ 'form.submit' | translate }}</button>
-            </p>
-        </form>
-    </dialog>
+  <dialog open>
+    <h2>{{ 'cart.checkout' | translate }}</h2>
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+      <div class="full-name">
+        <p>
+          <label for="firstName">{{ 'register.firstName.label' | translate }}</label>
+          <input id="firstName" type="text" formControlName="firstName" [placeholder]="'register.firstName.placeholder' | translate" />
+          @if (firstName?.touched && firstName?.invalid) {
+            <small class="wrong-message">
+              <i class="fa-solid fa-circle-xmark"></i> {{ 'register.firstName.error' | translate }}
+            </small>
+          }
+          @if (firstName?.valid) {
+            <small class="correct-message">
+              <i class="fa-solid fa-circle-check"></i> {{ 'register.correct' | translate }}
+            </small>
+          }
+        </p>
+        <p>
+          <label for="infix">{{ 'register.infix.label' | translate }}</label>
+          <input id="infix" type="text" formControlName="infix" [placeholder]="'register.infix.placeholder' | translate" />
+        </p>
+        <p>
+          <label for="lastName">{{ 'register.lastName.label' | translate }}</label>
+          <input id="lastName" type="text" formControlName="lastName" [placeholder]="'register.lastName.placeholder' | translate" />
+          @if (lastName?.touched && lastName?.invalid) {
+            <small class="wrong-message">
+              <i class="fa-solid fa-circle-xmark"></i> {{ 'register.lastName.error' | translate }}
+            </small>
+          }
+          @if (lastName?.valid) {
+            <small class="correct-message">
+              <i class="fa-solid fa-circle-check"></i> {{ 'register.correct' | translate }}
+            </small>
+          }
+        </p>
+      </div>
+      <p>
+        <label for="address">{{ 'register.address.label' | translate }}</label>
+        <input id="address" type="text" formControlName="address" [placeholder]="'register.address.placeholder' | translate" />
+        @if (address?.touched && address?.invalid) {
+          <small class="wrong-message">
+            <i class="fa-solid fa-circle-xmark"></i> {{ 'register.address.error' | translate }}
+          </small>
+        }
+        @if (address?.valid) {
+          <small class="correct-message">
+            <i class="fa-solid fa-circle-check"></i> {{ 'register.correct' | translate }}
+          </small>
+        }
+      </p>
+      <div class="place-postcode">
+        <p>
+          <label for="houseNumber">{{ 'register.houseNumber.label' | translate }}</label>
+          <input id="houseNumber" type="text" formControlName="houseNumber" [placeholder]="'register.houseNumber.placeholder' | translate" />
+          @if (houseNumber?.touched && houseNumber?.invalid) {
+            <small class="wrong-message">
+              <i class="fa-solid fa-circle-xmark"></i> {{ 'register.houseNumber.error' | translate }}
+            </small>
+          }
+          @if (houseNumber?.valid) {
+            <small class="correct-message">
+              <i class="fa-solid fa-circle-check"></i> {{ 'register.correct' | translate }}
+            </small>
+          }
+        </p>
+        <p>
+          <label for="postcode">{{ 'register.postcode.label' | translate }}</label>
+          <input id="postcode" type="text" formControlName="postcode" [placeholder]="'register.postcode.placeholder' | translate" />
+          @if (postcode?.touched && postcode?.invalid) {
+            <small class="wrong-message">
+              <i class="fa-solid fa-circle-xmark"></i> {{ 'register.postcode.error' | translate }}
+            </small>
+          }
+          @if (postcode?.valid) {
+            <small class="correct-message">
+              <i class="fa-solid fa-circle-check"></i> {{ 'register.correct' | translate }}
+            </small>
+          }
+        </p>
+      </div>
+      <p>
+        <label for="phoneNumber">{{ 'register.phoneNumber.label' | translate }}</label>
+        <input id="phoneNumber" type="number" formControlName="phoneNumber" [placeholder]="'register.phoneNumber.placeholder' | translate" />
+        @if (phoneNumber?.touched && phoneNumber?.invalid) {
+          <small class="wrong-message">
+            <i class="fa-solid fa-circle-xmark"></i> {{ 'register.phoneNumber.error' | translate }}
+          </small>
+        }
+        @if (phoneNumber?.valid) {
+          <small class="correct-message">
+            <i class="fa-solid fa-circle-check"></i> {{ 'register.correct' | translate }}
+          </small>
+        }
+      </p>
+      <p>
+        <label for="email">{{ 'register.email.label' | translate }}</label>
+        <input id="email" type="text" formControlName="email" [placeholder]="'register.email.placeholder' | translate" />
+        @if (email?.touched && email?.invalid) {
+          <small class="wrong-message">
+            <i class="fa-solid fa-circle-xmark"></i> {{ 'register.email.error' | translate }}
+          </small>
+        }
+        @if (email?.valid) {
+          <small class="correct-message">
+            <i class="fa-solid fa-circle-check"></i> {{ 'register.correct' | translate }}
+          </small>
+        }
+      </p>
+      <p class="actions">
+        <button type="button" routerLink="/cart" class="cancel-button">{{ 'cart.title' | translate }}</button>
+        <button type="submit" class="submit-button">{{ 'register.submit' | translate }}</button>
+      </p>
+    </form>
+  </dialog>
 }
