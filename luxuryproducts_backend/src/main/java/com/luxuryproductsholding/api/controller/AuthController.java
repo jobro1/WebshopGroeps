@@ -16,7 +16,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.List;
 
 @RestController
 @RequestMapping("/auth")
@@ -26,7 +25,7 @@ public class AuthController {
     private final JWTUtil jwtUtil;
     private final AuthenticationManager authManager;
     private final PasswordEncoder passwordEncoder;
-    private CredentialValidator validator;
+    private final CredentialValidator validator;
 
     public AuthController(UserRepository userDAO, JWTUtil jwtUtil, AuthenticationManager authManager,
                           PasswordEncoder passwordEncoder, CredentialValidator validator) {
@@ -69,10 +68,10 @@ public class AuthController {
                 authenticationDTO.postcode,
                 authenticationDTO.dateOfBirth,
                 authenticationDTO.phoneNumber,
-                authenticationDTO.userType,
                 authenticationDTO.email,
                 encodedPassword
                 );
+        registerdCustomUser.setRole("USER");
         userDAO.save(registerdCustomUser);
         String token = jwtUtil.generateToken(registerdCustomUser.getEmail());
         LoginResponse loginResponse = new LoginResponse(registerdCustomUser.getUserId(), registerdCustomUser.getEmail(), token);
