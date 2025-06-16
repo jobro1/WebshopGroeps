@@ -1,13 +1,10 @@
 <article class="categories">
-  <h2> What category are you looking for?</h2>
-  <section class="categories-container">
-    @for(category of categories(); track category.categoryId){
-
-        <div class="category-box" [routerLink]="['/category/', category.categoryId]" >
-          <i class="fab fa-bluetooth"></i>
-          <span>{{category.name}}</span>
-        </div>
-    }
-
-  </section>
+    <h2>{{ 'categories.title' | translate }}</h2>
+    <section class="categories-container">
+        @for(category of categories(); track category.categoryId) {
+            <div class="category-box" [routerLink]="['/category/', category.categoryId]">
+                <span>{{ category.name }}</span>
+            </div>
+        }
+    </section>
 </article>

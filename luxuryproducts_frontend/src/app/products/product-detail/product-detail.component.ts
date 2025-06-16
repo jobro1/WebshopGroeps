@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { CartService } from '../../services/cart.service';
 import { NgForOf, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import {TranslatePipe} from "@ngx-translate/core";
 
 // Interfaces for better typing
 interface ProductVariationValue {
@@ -23,8 +24,12 @@ interface Productvariation {
 
 @Component({
   selector: 'app-product-detail',
-  standalone: true,
-  imports: [NgForOf, NgIf, FormsModule],
+    imports: [
+        NgForOf,
+        NgIf,
+        FormsModule,
+        TranslatePipe,
+    ],
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.scss',
 })

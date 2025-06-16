@@ -61,9 +61,9 @@ public class Seeder {
                 "1990-01-01",
                 "0612345678",
                 "jan@email.com",
-                (new BCryptPasswordEncoder().encode("Password12!")),
-                "ADMIN"
+                (new BCryptPasswordEncoder().encode("Password12!"))
         );
+        user.setRole("ADMIN");
         userRepository.save(user);
     }
 

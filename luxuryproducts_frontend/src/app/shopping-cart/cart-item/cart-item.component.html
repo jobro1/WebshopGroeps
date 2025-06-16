@@ -1,18 +1,19 @@
 <div class="item-card">
-  <img [src]="item.productVariation.imageUrl" alt="not found">
-  <div class="item-info-text">
-    <h3>{{item.productVariation.sku}}</h3>
-      @for (value of item.productVariation.values; track value.variationValueId){
-          <p>{{value.variation.variationName}}: {{value.value}}</p>
-      }
-    <p class="price">Price: €{{ item.productVariation.price }}</p>
-    <p class="price">Total: €{{ item.productVariation.price * item.quantity }}</p>
-  </div>
-  <div class="item-info-button">
-    <button class="minus-item" (click)="decreaseQuantity(item.productVariation.sku!)">-</button>
-    <span class="quantity">{{item.quantity}}</span>
-    <button class="minus-item" (click)="increaseQuantity(item.productVariation.sku!)">+</button>
-    <button class="remove-btn" (click)="removeItem(item.productVariation.sku!)"> Remove <i class="fa-solid fa-trash-can"></i></button>
-  </div>
-
+    <img [src]="item.productVariation.imageUrl" alt="not found">
+    <div class="item-info-text">
+        <h3>{{ item.productVariation.sku }}</h3>
+        @for (value of item.productVariation.values; track value.variationValueId) {
+            <p>{{ value.variation.variationName }}: {{ value.value }}</p>
+        }
+        <p class="price">{{ 'item.price' | translate }} €{{ item.productVariation.price }}</p>
+        <p class="price">{{ 'item.total' | translate }} €{{ item.productVariation.price * item.quantity }}</p>
+    </div>
+    <div class="item-info-button">
+        <button class="minus-item" (click)="decreaseQuantity(item.productVariation.sku!)">-</button>
+        <span class="quantity">{{ item.quantity }}</span>
+        <button class="minus-item" (click)="increaseQuantity(item.productVariation.sku!)">+</button>
+        <button class="remove-btn" (click)="removeItem(item.productVariation.sku!)">
+            {{ 'item.remove' | translate }} <i class="fa-solid fa-trash-can"></i>
+        </button>
+    </div>
 </div>

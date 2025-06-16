@@ -1,10 +1,13 @@
 import {Component, inject, Input, OnInit} from '@angular/core';
 import {CartService} from '../../services/cart.service';
 import {CartItem} from '../../models/cartItem';
+import {TranslatePipe} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-cart-item',
-  imports: [],
+    imports: [
+        TranslatePipe
+    ],
   templateUrl: './cart-item.component.html',
   styleUrl: './cart-item.component.scss'
 })

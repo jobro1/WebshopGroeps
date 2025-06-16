@@ -16,17 +16,15 @@
     <div class="product-display" *ngIf="selectedVariation && selectedVariation.stock > 0">
         <img [src]="selectedVariation.imageUrl" [alt]="selectedVariation.sku" class="product-image" />
         <div class="product-info">
-            <p><strong>Prijs:</strong> €{{ selectedVariation.price }}</p>
-            <p><strong>Voorraad:</strong> {{ selectedVariation.stock }} stuks</p>
+            <p><strong>{{ 'product-detail.price' | translate }}:</strong> €{{ selectedVariation.price }}</p>
+            <p><strong>{{ 'product-detail.stock' | translate }}:</strong> {{ selectedVariation.stock }} {{ 'product-detail.items' | translate }}</p>
 
             <p *ngIf="selectedVariation.stock <= 3 && selectedVariation.stock > 0" class="low-stock-warning">
-                ⚠️ Bijna uitverkocht!
+                ⚠️ {{ 'product-detail.low-stock' | translate }}
             </p>
 
-            <button
-                *ngIf="selectedVariation"
-                (click)="cartService.addToCart(toSingleValueTuple(selectedVariation))">
-                Add to cart
+            <button (click)="cartService.addToCart(toSingleValueTuple(selectedVariation))">
+                {{ 'product-detail.add-to-cart' | translate }}
             </button>
         </div>
     </div>

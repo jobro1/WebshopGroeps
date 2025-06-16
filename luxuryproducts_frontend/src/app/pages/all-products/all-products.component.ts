@@ -1,12 +1,14 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {ProductService} from '../../services/product.service';
 import {ProductComponent} from '../../products/product/product.component';
+import {TranslatePipe} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-all-products',
-  imports: [
-    ProductComponent
-  ],
+    imports: [
+        ProductComponent,
+        TranslatePipe
+    ],
   templateUrl: './all-products.component.html',
   styleUrl: './all-products.component.scss'
 })
