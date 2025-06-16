@@ -4,11 +4,12 @@ import {Router, RouterLink} from '@angular/router';
 import {LoginService} from '../services/login.service';
 import {CustomUserService} from '../services/customUser.service.';
 import {CartService} from '../services/cart.service';
+import {TranslatePipe} from "@ngx-translate/core";
 
 
 @Component({
   selector: 'app-checkout',
-  imports: [ReactiveFormsModule, RouterLink],
+  imports: [ReactiveFormsModule, RouterLink, TranslatePipe],
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.scss'
 })

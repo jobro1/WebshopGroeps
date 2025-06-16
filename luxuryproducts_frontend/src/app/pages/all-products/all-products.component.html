@@ -1,11 +1,10 @@
 <div class="all-products">
-  <h2>All Product</h2>
-  <ul class="products-container">
-    @for (product of products(); track product.product_id) {
-      <li>
-        <app-product [product]="product"></app-product>
-      </li>
-    }
-  </ul>
-
+    <h2>{{ 'products.title' | translate }}</h2>
+    <ul class="products-container">
+        @for (product of products(); track product.product_id) {
+            <li>
+                <app-product [product]="product"></app-product>
+            </li>
+        }
+    </ul>
 </div>

@@ -1,62 +1,55 @@
 <article class="profile-container">
 
-  <section class="container-leftside">
+    <section class="container-leftside">
 
-    <div class="user-card" >
+        <div class="user-card">
 
-      <h2> {{ userInfo()?.firstName }} {{ userInfo()?.lastName }} </h2>
-<!--      <p><strong>Name:</strong> {{ userInfo()?.firstName }} {{ userInfo()?.lastName }}</p>-->
-      <div class="user-info">
-      <p><strong>Date of birth:</strong> {{ userInfo()?.dateOfBirth}}</p>
-      <p><strong>Email:</strong> {{ userInfo()?.email }}</p>
-      <p><strong>Phone:</strong> {{ userInfo()?.phoneNumber }}</p>
-      <p><strong>Address:</strong> {{ userInfo()?.address }}</p>
-      <p><strong>House number:</strong> {{ userInfo()?.houseNumber }}</p>
-      <p><strong>Postcode:</strong> {{ userInfo()?.postcode }}</p>
-      <button type="button" class="logout-button" (click)="onLogout()"> Logout</button>
-      </div>
+            <h2>{{ 'profile.title' | translate }}</h2> <!-- bv "Mijn profiel" -->
 
+            <div class="user-info">
+                <p><strong>{{ 'profile.dateOfBirth' | translate }}:</strong> {{ userInfo()?.dateOfBirth | date:'longDate' }}</p>
+                <p><strong>{{ 'profile.email' | translate }}:</strong> {{ userInfo()?.email }}</p>
+                <p><strong>{{ 'profile.phone' | translate }}:</strong> {{ userInfo()?.phoneNumber }}</p>
+                <p><strong>{{ 'profile.address' | translate }}:</strong> {{ userInfo()?.address }}</p>
+                <p><strong>{{ 'profile.houseNumber' | translate }}:</strong> {{ userInfo()?.houseNumber }}</p>
+                <p><strong>{{ 'profile.postcode' | translate }}:</strong> {{ userInfo()?.postcode }}</p>
+                <button type="button" class="logout-button" (click)="onLogout()">
+                    {{ 'profile.logout' | translate }}
+                </button>
+            </div>
 
-    </div>
-  </section>
+        </div>
+    </section>
 
     <section class="container-rightside">
-        <h3>Order History</h3>
+        <h3>{{ 'profile.orderHistory' | translate }}</h3>
         <div class="order-history">
             <ul class="order">
-                @for(order of usersOrders(); track order.orderId) {
-                    <li>
-                        <p class="order-info">
-                            <span><strong>Order ID:</strong> {{ order.orderId }}</span>
-                            <span><strong>Date:</strong> {{ order.date }}</span>
-                            <span><strong>Status:</strong> {{ order.status }}</span>
-                            <span><strong>Total:</strong> €{{ order.totalPrice | number:'1.2-2'}}</span>
-                        </p>
-                        <ul class="order-item">
-                            @for(orderItem of order.orderItems; track orderItem.orderItemId){
-                                <li *ngIf="orderItem.productVariation">
-                                    <img [src]="orderItem.productVariation.imageUrl" alt="Product image" width="100">
-                                    <p>
-                                        {{ orderItem.productVariation.sku }} - Quantity: {{ orderItem.quantity }} - Price: €{{ orderItem.subtotal }}
-                                    </p>
-                                    <ul>
-                                        <li *ngFor="let value of orderItem.productVariation.values">
-                                            {{ value.variation.variationName }}: {{ value.value }}
-                                        </li>
-                                    </ul>
-                                </li>
-                            }
-                        </ul>
-
-                    </li>
-                }
+                <li *ngFor="let order of usersOrders(); trackBy: trackByOrderId">
+                    <p class="order-info">
+                        <span><strong>{{ 'profile.orderId' | translate }}:</strong> {{ order.orderId }}</span>
+                        <span><strong>{{ 'profile.date' | translate }}:</strong> {{ order.date | date:'shortDate' }}</span>
+                        <span><strong>{{ 'profile.status' | translate }}:</strong> {{ order.status }}</span>
+                        <span><strong>{{ 'profile.total' | translate }}:</strong> {{ order.totalPrice | currency:'EUR':'symbol':'1.2-2' }}</span>
+                    </p>
+                    <ul class="order-item">
+                        <li *ngFor="let orderItem of order.orderItems; trackBy: trackByOrderItemId">
+                            <ng-container *ngIf="orderItem.productVariation">
+                                <img [src]="orderItem.productVariation.imageUrl" alt="Product image" width="100">
+                                <p>
+                                    {{ orderItem.productVariation.sku }} - {{ 'profile.quantity' | translate }}: {{ orderItem.quantity }} - {{ 'profile.price' | translate }}: {{ orderItem.subtotal | currency:'EUR':'symbol':'1.2-2' }}
+                                </p>
+                                <ul>
+                                    <li *ngFor="let value of orderItem.productVariation.values">
+                                        {{ value.variation.variationName }}: {{ value.value }}
+                                    </li>
+                                </ul>
+                            </ng-container>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </section>
 
-
-
 </article>
-
-
-

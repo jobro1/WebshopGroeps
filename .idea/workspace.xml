@@ -4,8 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="Testing: heb testen toegevoegd voor order proces van een variant">
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="fix unverisioned files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/categories/home-categories/home-categories.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/categories/home-categories/home-categories.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/categories/home-categories/home-categories.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/categories/home-categories/home-categories.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/checkout/checkout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/checkout/checkout.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/checkout/checkout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/checkout/checkout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/footer/footer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/footer/footer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/pages/all-products/all-products.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/pages/all-products/all-products.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/pages/all-products/all-products.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/pages/all-products/all-products.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/products/product-detail/product-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/products/product-detail/product-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/products/product-detail/product-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/products/product-detail/product-detail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/products/special-product/special-product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/products/special-product/special-product.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/products/special-product/special-product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/products/special-product/special-product.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/shopping-cart/cart-item/cart-item.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/shopping-cart/cart-item/cart-item.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/shopping-cart/cart-item/cart-item.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/shopping-cart/cart-item/cart-item.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/shopping-cart/cart/cart.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/shopping-cart/cart/cart.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/shopping-cart/cart/cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/shopping-cart/cart/cart.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/user-profile/user-profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/user-profile/user-profile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/user-profile/user-profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/user-profile/user-profile.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +44,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature_variant" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,36 +53,39 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2y85EF63E7odBImwzrF4gh56cjm" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.TestOrderDAO.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderDAO.testCreateOrder_EmptyOrderItems.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderDAO.testGetAllOrders.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderDAO.testGetOrderById_NotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderService.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderService.testSaveOrderItems_NegativeQuantity.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.WebshopBackend.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;chore__pipeline&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alexa/IdeaProjects/insofad-toets-2-groep-19/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.TestOrderDAO.executor": "Run",
+    "JUnit.TestOrderDAO.testCreateOrder_EmptyOrderItems.executor": "Run",
+    "JUnit.TestOrderDAO.testGetAllOrders.executor": "Run",
+    "JUnit.TestOrderDAO.testGetOrderById_NotFound.executor": "Run",
+    "JUnit.TestOrderService.executor": "Run",
+    "JUnit.TestOrderService.testSaveOrderItems_NegativeQuantity.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.WebshopBackend.executor": "Run",
+    "git-widget-placeholder": "feat/language__swap",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/alexa/IdeaProjects/insofad-toets-2-groep-19/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\alexa\\WebstormProjects\\insofad-toets-2-groep-19\\luxuryproducts_frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
 }</component>
   <component name="RecentsManager">
@@ -162,8 +187,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112" />
       </set>
     </attachedChunks>
   </component>
@@ -182,6 +206,7 @@
       <workItem from="1749729723448" duration="6266000" />
       <workItem from="1749760561340" duration="599000" />
       <workItem from="1749797183919" duration="381000" />
+      <workItem from="1750056138710" duration="1011000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore on the application.properties">
       <option name="closed" value="true" />
@@ -247,11 +272,30 @@
       <option name="project" value="LOCAL" />
       <updated>1749732118446</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix unverisioned files">
+      <option name="closed" value="true" />
+      <created>1749802925498</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1749802925498</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gitignore on the application.properties" />
@@ -260,6 +304,8 @@
     <MESSAGE value="gitlab-ci file toegevoegd" />
     <MESSAGE value="fix: admin verwijdert om ruimte te maken voor admin van Bram" />
     <MESSAGE value="Testing: heb testen toegevoegd voor order proces van een variant" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing: heb testen toegevoegd voor order proces van een variant" />
+    <MESSAGE value="fix unversioned files" />
+    <MESSAGE value="fix unverisioned files" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix unverisioned files" />
   </component>
 </project>
