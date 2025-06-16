@@ -86,7 +86,7 @@ export class CartService {
     const currentDate = new Date().toISOString();
     const orderItems = [];
 
-    for (let item of this.cartItems()) {
+    for (const item of this.cartItems()) {
       orderItems.push({
         quantity: item.quantity,
         subtotal: item.productVariation.price * item.quantity,

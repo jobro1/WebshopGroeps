@@ -12,7 +12,7 @@ import {FormsModule} from '@angular/forms';
 export class LoginComponent {
   protected email = "";
   protected password = "";
-  protected passwordInValid: boolean = false;
+  protected passwordInValid = false;
   protected loginService = inject(LoginService);
   private router = inject(Router);
 
@@ -20,7 +20,7 @@ export class LoginComponent {
     const subscription = this.loginService.login({email: this.email, password: this.password})
     subscription.subscribe({
       next: (responseData) => {
-
+        localStorage.setItem('token', responseData.token);
         this.router.navigate([`userProfile/${this.email}`]);
       },
       error: (error) => {

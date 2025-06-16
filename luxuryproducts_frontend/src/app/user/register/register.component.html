@@ -1,115 +1,118 @@
-
 <article class="registering-page-container">
   <section class="registering-form-container">
-  <h2>Register</h2>
-  <form [formGroup]="registerForm"  (ngSubmit)="onSubmit()" >
-    <div class="full-name">
-      <p>
-        <label type="text">First name: </label>
-        <input type="text" formControlName="firstName" placeholder="required"/>
-        @if(firstName?.touched && firstName?.invalid) {
-          <small class="wrong-message"><i class="fa-solid fa-circle-xmark"></i> First name is required and must be at least 2 characters </small>
-        }
-        @if (firstName?.valid){
-          <small class="correct-message"><i class="fa-solid fa-circle-check"></i>Correct</small>
-        }
-      </p>
-      <p>
-        <label type="text">Infix: </label>
-        <input type="text" formControlName="infix"  placeholder="optional"/>
-      </p>
-      <p>
-        <label type="text">Last name: </label>
-        <input type="text" formControlName="lastName" placeholder="required"/>
-        @if(lastName?.touched && lastName?.invalid) {
-          <small class="wrong-message"><i class="fa-solid fa-circle-xmark"></i> Last name is required and must be at
-            least 2 characters </small>
-        }
-        @if (lastName?.valid){
-          <small class="correct-message"><i class="fa-solid fa-circle-check"></i>Correct</small>
-        }
-      </p>
-    </div>
-    <p>
-      <label type="text">Date of birth </label>
-      <input type="date" formControlName="dateOfBirth" placeholder="example-street "/>
-      @if(dateOfBirth?.touched && dateOfBirth?.invalid) {
-        <small class="wrong-message"><i class="fa-solid fa-circle-xmark"></i> Date of birth is required </small>
-      }
-      @if (dateOfBirth?.valid){
-        <small class="correct-message"><i class="fa-solid fa-circle-check"></i>Correct</small>
-      }
-    </p>
+    <h2>Register</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="full-name">
+        <p>
+          <label for="firstName">First name: </label>
+          <input id="firstName" type="text" formControlName="firstName" placeholder="required" />
+          <small class="wrong-message" *ngIf="registerForm.get('firstName')?.touched && registerForm.get('firstName')?.invalid">
+            <i class="fa-solid fa-circle-xmark"></i> First name is required and must be at least 2 characters
+          </small>
+          <small class="correct-message" *ngIf="registerForm.get('firstName')?.valid">
+            <i class="fa-solid fa-circle-check"></i> Correct
+          </small>
+        </p>
 
-    <p>
-      <label type="text">Address: </label>
-      <input type="text" formControlName="address" placeholder="example-street "/>
-      @if(address?.touched && address?.invalid) {
-        <small class="wrong-message"><i class="fa-solid fa-circle-xmark"></i> Address is required </small>
-      }
-      @if (address?.valid){
-        <small class="correct-message"><i class="fa-solid fa-circle-check"></i>Correct</small>
-      }
-    </p>
+        <p>
+          <label for="infix">Infix: </label>
+          <input id="infix" type="text" formControlName="infix" placeholder="optional" />
+        </p>
 
-    <div class="place-postcode">
-      <p>
-        <label type="text">Hous number: </label>
-        <input type="text" formControlName="houseNumber" placeholder="12"/>
-        @if(houseNumber?.touched && houseNumber?.invalid) {
-          <small class="wrong-message"><i class="fa-solid fa-circle-xmark"></i> Please enter your house number correctly  </small>
-        }
-        @if (houseNumber?.valid){
-          <small class="correct-message"><i class="fa-solid fa-circle-check"></i>Correct</small>
-        }
-      </p>
-      <p>
-        <label type="text">Postcode: </label>
-        <input type="text" formControlName="postcode" placeholder="1234 AT"/>
-        @if(postcode?.touched && postcode?.invalid) {
-          <small class="wrong-message"><i class="fa-solid fa-circle-xmark"></i> something went wrong, please enter a validated postcode </small>
-        }
-        @if (postcode?.valid){
-          <small class="correct-message"><i class="fa-solid fa-circle-check"></i>Correct</small>
-        }
-      </p>
-    </div>
+        <p>
+          <label for="lastName">Last name: </label>
+          <input id="lastName" type="text" formControlName="lastName" placeholder="required" />
+          <small class="wrong-message" *ngIf="registerForm.get('lastName')?.touched && registerForm.get('lastName')?.invalid">
+            <i class="fa-solid fa-circle-xmark"></i> Last name is required and must be at least 2 characters
+          </small>
+          <small class="correct-message" *ngIf="registerForm.get('lastName')?.valid">
+            <i class="fa-solid fa-circle-check"></i> Correct
+          </small>
+        </p>
+      </div>
 
-    <p>
-      <label type="text">Phone number: </label>
-      <input type="number" formControlName="phoneNumber" placeholder=" 0612345678"/>
-      @if(phoneNumber?.touched && phoneNumber?.invalid) {
-        <small class="wrong-message"> <i class="fa-solid fa-circle-xmark"></i>something went wrong, please enter a validated phone number </small>
-      }
-      @if (phoneNumber?.valid){
-        <small class="correct-message"><i class="fa-solid fa-circle-check"></i>Correct</small>
-      }
-    </p>
-    <p>
-      <label type="text">Email: </label>
-      <input type="text" formControlName="email" placeholder="example@mail.com"/>
-      @if(email?.touched && email?.invalid) {
-        <small class="wrong-message"><i class="fa-solid fa-circle-xmark"></i> something went wrong, please enter a validated email.</small>
-      }
-      @if (email?.valid){
-        <small class="correct-message"><i class="fa-solid fa-circle-check"></i>Correct</small>
-      }
-    </p>
-    <p>
-      <label type="text">Password: </label>
-      <input type="text" formControlName="password" placeholder="Example123@"/>
-      @if(password?.touched && password?.invalid) {
-        <small class="wrong-message"><i class="fa-solid fa-circle-xmark"></i> Invalid password. Your password must
-          contain at least one uppercase letter, one lowercase letter, one number, and one special character.
-          Please try again. </small>
-      }
-      @if (password?.valid){
-        <small class="correct-message"><i class="fa-solid fa-circle-check"></i>Correct</small>
-      }
-    </p>
-    <p class="actions">
-      <button  type="submit" class="register-button"  [disabled]="!registerForm.valid">Submit</button>
-    </p>
-  </form>
+      <p>
+        <label for="dateOfBirth">Date of birth: </label>
+        <input id="dateOfBirth" type="date" formControlName="dateOfBirth" placeholder="example-street" />
+        <small class="wrong-message" *ngIf="registerForm.get('dateOfBirth')?.touched && registerForm.get('dateOfBirth')?.invalid">
+          <i class="fa-solid fa-circle-xmark"></i> Date of birth is required
+        </small>
+        <small class="correct-message" *ngIf="registerForm.get('dateOfBirth')?.valid">
+          <i class="fa-solid fa-circle-check"></i> Correct
+        </small>
+      </p>
+
+      <p>
+        <label for="address">Address: </label>
+        <input id="address" type="text" formControlName="address" placeholder="example-street" />
+        <small class="wrong-message" *ngIf="registerForm.get('address')?.touched && registerForm.get('address')?.invalid">
+          <i class="fa-solid fa-circle-xmark"></i> Address is required
+        </small>
+        <small class="correct-message" *ngIf="registerForm.get('address')?.valid">
+          <i class="fa-solid fa-circle-check"></i> Correct
+        </small>
+      </p>
+
+      <div class="place-postcode">
+        <p>
+          <label for="houseNumber">House number: </label>
+          <input id="houseNumber" type="text" formControlName="houseNumber" placeholder="12" />
+          <small class="wrong-message" *ngIf="registerForm.get('houseNumber')?.touched && registerForm.get('houseNumber')?.invalid">
+            <i class="fa-solid fa-circle-xmark"></i> Please enter your house number correctly
+          </small>
+          <small class="correct-message" *ngIf="registerForm.get('houseNumber')?.valid">
+            <i class="fa-solid fa-circle-check"></i> Correct
+          </small>
+        </p>
+
+        <p>
+          <label for="postcode">Postcode: </label>
+          <input id="postcode" type="text" formControlName="postcode" placeholder="1234 AT" />
+          <small class="wrong-message" *ngIf="registerForm.get('postcode')?.touched && registerForm.get('postcode')?.invalid">
+            <i class="fa-solid fa-circle-xmark"></i> Something went wrong, please enter a validated postcode
+          </small>
+          <small class="correct-message" *ngIf="registerForm.get('postcode')?.valid">
+            <i class="fa-solid fa-circle-check"></i> Correct
+          </small>
+        </p>
+      </div>
+
+      <p>
+        <label for="phoneNumber">Phone number: </label>
+        <input id="phoneNumber" type="number" formControlName="phoneNumber" placeholder="0612345678" />
+        <small class="wrong-message" *ngIf="registerForm.get('phoneNumber')?.touched && registerForm.get('phoneNumber')?.invalid">
+          <i class="fa-solid fa-circle-xmark"></i> Something went wrong, please enter a validated phone number
+        </small>
+        <small class="correct-message" *ngIf="registerForm.get('phoneNumber')?.valid">
+          <i class="fa-solid fa-circle-check"></i> Correct
+        </small>
+      </p>
+
+      <p>
+        <label for="email">Email: </label>
+        <input id="email" type="text" formControlName="email" placeholder="example@mail.com" />
+        <small class="wrong-message" *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid">
+          <i class="fa-solid fa-circle-xmark"></i> Something went wrong, please enter a validated email.
+        </small>
+        <small class="correct-message" *ngIf="registerForm.get('email')?.valid">
+          <i class="fa-solid fa-circle-check"></i> Correct
+        </small>
+      </p>
+
+      <p>
+        <label for="password">Password: </label>
+        <input id="password" type="text" formControlName="password" placeholder="Example123@" />
+        <small class="wrong-message" *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.invalid">
+          <i class="fa-solid fa-circle-xmark"></i> Invalid password. Your password must contain at least one uppercase letter, one lowercase letter, one number, and one special character. Please try again.
+        </small>
+        <small class="correct-message" *ngIf="registerForm.get('password')?.valid">
+          <i class="fa-solid fa-circle-check"></i> Correct
+        </small>
+      </p>
+
+      <p class="actions">
+        <button type="submit" class="register-button" [disabled]="!registerForm.valid">Submit</button>
+      </p>
+    </form>
   </section>
 </article>

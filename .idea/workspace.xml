@@ -36,33 +36,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.TestOrderDAO.executor": "Run",
-    "JUnit.TestOrderDAO.testCreateOrder_EmptyOrderItems.executor": "Run",
-    "JUnit.TestOrderDAO.testGetAllOrders.executor": "Run",
-    "JUnit.TestOrderDAO.testGetOrderById_NotFound.executor": "Run",
-    "JUnit.TestOrderService.executor": "Run",
-    "JUnit.TestOrderService.testSaveOrderItems_NegativeQuantity.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.WebshopBackend.executor": "Run",
-    "git-widget-placeholder": "chore__pipeline",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/alexa/IdeaProjects/insofad-toets-2-groep-19/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.TestOrderDAO.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestOrderDAO.testCreateOrder_EmptyOrderItems.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestOrderDAO.testGetAllOrders.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestOrderDAO.testGetOrderById_NotFound.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestOrderService.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestOrderService.testSaveOrderItems_NegativeQuantity.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.WebshopBackend.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;chore__pipeline&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alexa/IdeaProjects/insofad-toets-2-groep-19/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alexa\IdeaProjects\insofad-toets-2-groep-19\luxuryproducts_backend\src\main\java\com\luxuryproductsholding\api" />
@@ -72,7 +72,7 @@
       <recent name="C:\Users\alexa\IdeaProjects\insofad-toets-2-groep-19\luxuryproducts_backend\src\main\resources\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.WebshopBackend">
+  <component name="RunManager">
     <configuration name="TestOrderDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="luxuryproducts_backend" />
       <extension name="coverage">
@@ -158,15 +158,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.TestOrderDAO" />
-        <item itemvalue="JUnit.TestOrderDAO.testCreateOrder_EmptyOrderItems" />
-        <item itemvalue="JUnit.TestOrderDAO.testGetOrderById_NotFound" />
-        <item itemvalue="JUnit.TestOrderService" />
-        <item itemvalue="JUnit.TestOrderService.testSaveOrderItems_NegativeQuantity" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
