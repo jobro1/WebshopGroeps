@@ -6,5 +6,123 @@
   "switch-language":{
     "switchToNL": "Zet de taal naar Nederlands",
     "switchToEN": "Zet de taal naar Engels"
+  },
+  "footer": {
+    "notice": "Deze website is geen echte website; het is een studentenproject dat is gemaakt voor educatieve doeleinden."
+  },
+  "products": {
+    "title": "Alle Producten"
+  },
+  "product-detail": {
+    "price": "Prijs",
+    "stock": "Voorraad",
+    "items": "stuks",
+    "low-stock": "Bijna uitverkocht!",
+    "add-to-cart": "In winkelwagen"
+  },
+  "special-product": {
+    "title": "Luxe producten",
+    "description": "Dompel jezelf onder in hoogwaardige producten",
+    "button": "Koop Nu",
+    "alt": "Speciaal product"
+  },
+  "cart": {
+    "title": "Winkelwagen",
+    "total": "Totaal:",
+    "remove-all": "Verwijder alle items",
+    "checkout": "Afrekenen"
+  },
+  "item": {
+    "price": "Prijs:",
+    "total": "Totaal:",
+    "remove": "Verwijderen"
+  },
+  "login": {
+    "title": "Inloggen",
+    "welcome": "Welkom terug! Log in op je account.",
+    "placeholder": {
+      "email": "Vul je e-mailadres in",
+      "password": "Vul je wachtwoord in"
+    },
+    "error": {
+      "invalid": "Het e-mailadres of wachtwoord is onjuist. Controleer je gegevens en probeer het opnieuw. Als je problemen blijft ondervinden, reset dan je wachtwoord of verifieer je e-mailadres."
+    },
+    "button": {
+      "login": "Inloggen",
+      "register": "Registreren"
+    },
+    "newUser": "Nieuwe gebruiker?"
+  },
+  "register": {
+    "title": "Registreren",
+    "firstName": {
+      "label": "Voornaam:",
+      "placeholder": "verplicht",
+      "error": "Voornaam is verplicht en moet minimaal 2 tekens bevatten"
+    },
+    "infix": {
+      "label": "Tussenvoegsel:",
+      "placeholder": "optioneel"
+    },
+    "lastName": {
+      "label": "Achternaam:",
+      "placeholder": "verplicht",
+      "error": "Achternaam is verplicht en moet minimaal 2 tekens bevatten"
+    },
+    "dateOfBirth": {
+      "label": "Geboortedatum",
+      "placeholder": "dd-mm-jjjj",
+      "error": "Geboortedatum is verplicht"
+    },
+    "address": {
+      "label": "Adres:",
+      "placeholder": "voorbeeldstraat",
+      "error": "Adres is verplicht"
+    },
+    "houseNumber": {
+      "label": "Huisnummer:",
+      "placeholder": "12",
+      "error": "Vul je huisnummer correct in"
+    },
+    "postcode": {
+      "label": "Postcode:",
+      "placeholder": "1234 AT",
+      "error": "Er is iets misgegaan, voer een geldige postcode in"
+    },
+    "phoneNumber": {
+      "label": "Telefoonnummer:",
+      "placeholder": "0612345678",
+      "error": "Er is iets misgegaan, voer een geldig telefoonnummer in"
+    },
+    "email": {
+      "label": "E-mail:",
+      "placeholder": "voorbeeld@mail.com",
+      "error": "Er is iets misgegaan, voer een geldig e-mailadres in"
+    },
+    "password": {
+      "label": "Wachtwoord:",
+      "placeholder": "Voorbeeld123@",
+      "error": "Ongeldig wachtwoord. Het moet minstens één hoofdletter, één kleine letter, één cijfer en één speciaal teken bevatten."
+    },
+    "correct": "Correct",
+    "submit": "Versturen"
+  },
+  "profile": {
+    "name": "Naam",
+    "dateOfBirth": "Geboortedatum",
+    "email": "E-mail",
+    "phone": "Telefoon",
+    "address": "Adres",
+    "houseNumber": "Huisnummer",
+    "postcode": "Postcode",
+    "logout": "Uitloggen",
+    "orderHistory": "Bestelgeschiedenis",
+    "orderId": "Bestelnummer",
+    "date": "Datum",
+    "status": "Status",
+    "total": "Totaal",
+    "productImageAlt": "Productafbeelding",
+    "quantity": "Aantal",
+    "price": "Prijs"
   }
 }
