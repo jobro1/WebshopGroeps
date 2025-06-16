@@ -10,9 +10,8 @@ import {LoginService} from './services/login.service';
 import {ProductDetailComponent} from './products/product-detail/product-detail.component';
 import {ProductsByCategoryComponent} from './categories/products-by-category/products-by-category.component';
 import {RegisterComponent} from './user/register/register.component';
-import {AdminService} from "./services/admin.service";
 
-const canAccessUserProfile: CanMatchFn = (route, segments) => {
+const canAccessUserProfile: CanMatchFn = () => {
   const loginService = inject(LoginService);
   const router = inject(Router);
 

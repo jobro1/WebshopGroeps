@@ -2,9 +2,8 @@ import {Component, inject} from '@angular/core';
 import {Router, RouterLink} from '@angular/router';
 import {CustomUserService} from '../services/customUser.service.';
 import {LoginService} from '../services/login.service';
-import {ProductService} from '../services/product.service';
 import {FormsModule} from '@angular/forms';
-import {TranslateDirective,TranslatePipe, TranslateService} from '@ngx-translate/core';
+import {TranslatePipe, TranslateService} from '@ngx-translate/core';
 import {SwitchLanguageComponent} from './switch-language/switch-language.component';
 import translationsEN from "../../../public/i18n/en.json";
 import translationsNL from "../../../public/i18n/nl.json";
@@ -32,16 +31,11 @@ export class HeaderComponent {
     }
   }
 
-  isNavbarActive: boolean = false;
-  // searchQuery: string = '';
+  isNavbarActive = false;
 
   toggleNavbar(): void {
     this.isNavbarActive = !this.isNavbarActive;
   }
-
-  // onSearchQuery(){
-  //   this.productService.searchProducts(this.searchQuery);
-  // }
 
   private translateService = inject(TranslateService);
 

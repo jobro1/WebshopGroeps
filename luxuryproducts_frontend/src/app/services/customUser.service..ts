@@ -1,10 +1,8 @@
 import {inject, Injectable, signal} from '@angular/core';
-import {CartItem} from '../models/cartItem';
 import {HttpClient} from '@angular/common/http';
 import {User} from '../models/customUser';
-import {Product} from '../models/product';
 import {environment} from '../../environments/environment';
-import {catchError, map, tap, throwError} from 'rxjs';
+import {tap} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

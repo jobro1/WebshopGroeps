@@ -2,9 +2,9 @@
   <div class="logo">
     <span class="brand" routerLink="/">Luxury Products</span>
   </div>
-  <div class="menu-toggle" (click)="toggleNavbar()">
+  <button class="menu-toggle" (click)="toggleNavbar()" aria-label="Toggle navigation menu">
     <i class="fas fa-bars"></i>
-  </div>
+  </button>
   <ul class="navbar" [class.active]="isNavbarActive">
     <li><a routerLink="/">{{ 'header.home' | translate}} </a></li>
     <li><a routerLink="/products">{{ 'header.all-product' | translate}}</a></li>
