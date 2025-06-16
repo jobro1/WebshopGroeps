@@ -1,6 +1,6 @@
 <article class="product-info" [routerLink]="['/products',product.product_id]" >
   <figure class="product-images">
-    <img [src]="product.variations?.[0]?.imageUrl" [alt]="product.name" />
+    <img [src]="product.variations[0].imageUrl" [alt]="product.name" />
   </figure>
 
   <h3>{{ product.name }}</h3>

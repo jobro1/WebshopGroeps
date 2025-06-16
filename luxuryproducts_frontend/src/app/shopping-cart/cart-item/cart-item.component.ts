@@ -1,5 +1,4 @@
 import {Component, inject, Input, OnInit} from '@angular/core';
-import {Product} from '../../models/product';
 import {CartService} from '../../services/cart.service';
 import {CartItem} from '../../models/cartItem';
 import {TranslatePipe} from "@ngx-translate/core";

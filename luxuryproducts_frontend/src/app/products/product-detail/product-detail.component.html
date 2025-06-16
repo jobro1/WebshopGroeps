@@ -1,6 +1,6 @@
 <div class="product-detail-container" *ngIf="product()">
     <div *ngFor="let name of variationNames()" class="variation-group">
-        <label>{{ name }}:</label>
+        <span class="variation-label">{{ name }}:</span>
         <div class="variation-buttons">
             <button
                     *ngFor="let option of getFilteredOptions(name)"

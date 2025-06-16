@@ -2,7 +2,6 @@ import {Component, computed, inject, OnInit} from '@angular/core';
 import { RouterLink} from '@angular/router';
 import {CartService} from '../../services/cart.service';
 import {CartItemComponent} from '../cart-item/cart-item.component';
-import {LoginService} from '../../services/login.service';
 import {TranslatePipe} from "@ngx-translate/core";
 
 

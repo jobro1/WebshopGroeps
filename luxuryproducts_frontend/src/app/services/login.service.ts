@@ -1,4 +1,4 @@
-import {inject, Injectable, signal} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {Login} from '../models/login';
 import {HttpClient} from '@angular/common/http';
 import {Token} from '../models/token';
@@ -13,7 +13,7 @@ import {environment} from '../../environments/environment';
 })
 export class LoginService {
   private httpClient=  inject(HttpClient);
-  private loggedIn: boolean = false;
+  private loggedIn = false;
   private token: string | null = null;
 
 
@@ -69,6 +69,6 @@ export class LoginService {
   }
 
   public getLoggedInUserid(): string {
-    return <string>localStorage.getItem('userId');
+    return localStorage.getItem('userId') ?? '';
   }
 }
