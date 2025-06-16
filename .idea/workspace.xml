@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="de json files, bevatten nu ook alle tekst">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api/models/CustomUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api/models/CustomUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api/utils/Seeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api/utils/Seeder.java" afterDir="false" />
+    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="de bluetooth icon verwijdert un category cards">
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/register/register.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +75,7 @@
       <recent name="C:\Users\alexa\IdeaProjects\insofad-toets-2-groep-19\luxuryproducts_backend\src\main\resources\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.WebshopBackend">
+  <component name="RunManager">
     <configuration name="TestOrderDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="luxuryproducts_backend" />
       <extension name="coverage">
@@ -269,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750058559459</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="de bluetooth icon verwijdert un category cards">
+      <option name="closed" value="true" />
+      <created>1750058967502</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1750058967502</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +301,7 @@
     <MESSAGE value="fix unversioned files" />
     <MESSAGE value="fix unverisioned files" />
     <MESSAGE value="de json files, bevatten nu ook alle tekst" />
-    <option name="LAST_COMMIT_MESSAGE" value="de json files, bevatten nu ook alle tekst" />
+    <MESSAGE value="de bluetooth icon verwijdert un category cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="de bluetooth icon verwijdert un category cards" />
   </component>
 </project>
