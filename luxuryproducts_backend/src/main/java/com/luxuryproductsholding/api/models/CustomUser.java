@@ -30,7 +30,7 @@ public class CustomUser {
     public CustomUser() {}
 
     public CustomUser(String firstName, String infix, String lastName, String address, Integer houseNumber, String postcode,
-                      String dateOfBirth, String phoneNumber, String email, String password, String role
+                      String dateOfBirth, String phoneNumber, String email, String password
                 ) {
         this.firstName = firstName;
         this.infix = infix;
@@ -42,8 +42,6 @@ public class CustomUser {
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.password = password;
-        this.role = role;
-
     }
 
     public Long getUserId() {

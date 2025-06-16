@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="de json files, bevatten nu ook alle tekst">
-      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/public/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/public/i18n/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/public/i18n/nl.json" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/public/i18n/nl.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api/models/CustomUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api/models/CustomUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api/utils/Seeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api/utils/Seeder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +78,7 @@
       <recent name="C:\Users\alexa\IdeaProjects\insofad-toets-2-groep-19\luxuryproducts_backend\src\main\resources\data" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.WebshopBackend">
     <configuration name="TestOrderDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="luxuryproducts_backend" />
       <extension name="coverage">
