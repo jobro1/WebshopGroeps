@@ -6,5 +6,123 @@
   "switch-language":{
     "switchToNL": "Set language to Dutch",
     "switchToEN": "Set language to English"
+  },
+  "footer": {
+    "notice": "This website is not a real website; it is a student project created for educational purposes."
+  },
+  "products": {
+    "title": "All Products"
+  },
+  "product-detail": {
+    "price": "Price",
+    "stock": "Stock",
+    "items": "items",
+    "low-stock": "Almost sold out!",
+    "add-to-cart": "Add to cart"
+  },
+  "special-product": {
+    "title": "Luxury products",
+    "description": "Immerse yourself in high-quality products",
+    "button": "Buy Now",
+    "alt": "Special Product"
+  },
+  "cart": {
+    "title": "Shopping cart",
+    "total": "Total:",
+    "remove-all": "Remove all items",
+    "checkout": "Checkout"
+  },
+  "item": {
+  "price": "Price:",
+  "total": "Total:",
+  "remove": "Remove"
+  },
+  "login": {
+    "title": "Login",
+    "welcome": "Welcome back! Please login to your account.",
+    "placeholder": {
+      "email": "Enter your email",
+      "password": "Enter your password"
+    },
+    "error": {
+      "invalid": "The email or password you entered is incorrect. Please double-check your credentials and try again. If you continue to experience issues, consider resetting your password or verifying your email address."
+    },
+    "button": {
+      "login": "Login",
+      "register": "Register"
+    },
+    "newUser": "New User?"
+  },
+  "register": {
+    "title": "Register",
+    "firstName": {
+      "label": "First name:",
+      "placeholder": "required",
+      "error": "First name is required and must be at least 2 characters"
+    },
+    "infix": {
+      "label": "Infix:",
+      "placeholder": "optional"
+    },
+    "lastName": {
+      "label": "Last name:",
+      "placeholder": "required",
+      "error": "Last name is required and must be at least 2 characters"
+    },
+    "dateOfBirth": {
+      "label": "Date of birth",
+      "placeholder": "dd-mm-yyyy",
+      "error": "Date of birth is required"
+    },
+    "address": {
+      "label": "Address:",
+      "placeholder": "example street",
+      "error": "Address is required"
+    },
+    "houseNumber": {
+      "label": "House number:",
+      "placeholder": "12",
+      "error": "Please enter your house number correctly"
+    },
+    "postcode": {
+      "label": "Postcode:",
+      "placeholder": "1234 AT",
+      "error": "Something went wrong, please enter a valid postcode"
+    },
+    "phoneNumber": {
+      "label": "Phone number:",
+      "placeholder": "0612345678",
+      "error": "Something went wrong, please enter a valid phone number"
+    },
+    "email": {
+      "label": "Email:",
+      "placeholder": "example@mail.com",
+      "error": "Something went wrong, please enter a valid email address"
+    },
+    "password": {
+      "label": "Password:",
+      "placeholder": "Example123@",
+      "error": "Invalid password. It must contain at least one uppercase letter, one lowercase letter, one digit, and one special character."
+    },
+    "correct": "Correct",
+    "submit": "Submit"
+  },
+  "profile": {
+    "name": "Name",
+    "dateOfBirth": "Date of birth",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "houseNumber": "House number",
+    "postcode": "Postcode",
+    "logout": "Logout",
+    "orderHistory": "Order History",
+    "orderId": "Order ID",
+    "date": "Date",
+    "status": "Status",
+    "total": "Total",
+    "productImageAlt": "Product image",
+    "quantity": "Quantity",
+    "price": "Price"
   }
 }
