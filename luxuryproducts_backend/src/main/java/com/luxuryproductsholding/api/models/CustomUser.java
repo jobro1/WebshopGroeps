@@ -27,6 +27,10 @@ public class CustomUser {
     @JsonManagedReference
     private List<Order> orders;
 
+    @OneToMany(mappedBy = "linkedUser")
+    @JsonManagedReference
+    private List<Giftcard> giftcards;
+
     public CustomUser() {}
 
     public CustomUser(String firstName, String infix, String lastName, String address, Integer houseNumber, String postcode,
@@ -146,5 +150,13 @@ public class CustomUser {
 
     public void setOrders(List<Order> orders) {
         this.orders = orders;
+    }
+
+    public List<Giftcard> getGiftcards() {
+        return giftcards;
+    }
+
+    public void setGiftcards(List<Giftcard> giftcards) {
+        this.giftcards = giftcards;
     }
 }

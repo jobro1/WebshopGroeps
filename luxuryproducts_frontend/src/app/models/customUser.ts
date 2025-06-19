@@ -1,4 +1,5 @@
 import {Order} from './order';
+import {Giftcard} from "./giftcard";
 
 export interface User {
   userId?: number;
@@ -14,4 +15,5 @@ export interface User {
   email: string;
   password?: string;
   orders?: Order[];
+  giftcards?: Giftcard[];
 }

@@ -51,7 +51,7 @@ public class Seeder {
     }
 
     private void seedCustomUser(){
-        CustomUser user = new CustomUser(
+        CustomUser user1 = new CustomUser(
                 "J",
                 "",
                 "J",
@@ -63,8 +63,38 @@ public class Seeder {
                 "jan@email.com",
                 (new BCryptPasswordEncoder().encode("Password12!"))
         );
-        user.setRole("ADMIN");
-        userRepository.save(user);
+        user1.setRole("ADMIN");
+        userRepository.save(user1);
+
+        CustomUser user2 = new CustomUser(
+                "admin",
+                "",
+                "user",
+                "straat",
+                2,
+                "1233AB",
+                "1990-01-01",
+                "0612444678",
+                "admin@lux.com",
+                (new BCryptPasswordEncoder().encode("Admin123!"))
+        );
+        user2.setRole("ADMIN");
+        userRepository.save(user2);
+
+        CustomUser user3 = new CustomUser(
+                "User",
+                "",
+                "UU",
+                "straat",
+                13,
+                "1214AB",
+                "1990-01-01",
+                "0612395678",
+                "user@lux.com",
+                (new BCryptPasswordEncoder().encode("User123!"))
+        );
+        user3.setRole("ADMIN");
+        userRepository.save(user3);
     }
 
 
@@ -103,7 +133,7 @@ public class Seeder {
     private Map<String, ProductCategory> ensureCategoriesExist() {
         String[] categoryNames = {
                 "Accessories", "Wine & Champagne", "Travel & Bags", "Watches",
-                "Grooming & Skincare", "Jewelry", "Footwear", "Collectibles", "Sports & Outdoors"
+                "Grooming & Skincare", "Jewelry", "Footwear", "Collectibles", "Sports & Outdoors", "Giftcards"
         };
 
         Map<String, ProductCategory> categories = new HashMap<>();
@@ -136,7 +166,10 @@ public class Seeder {
             return categories.get("Collectibles");
         } else if (name.contains("skis")) {
             return categories.get("Sports & Outdoors");
+        } else if (name.contains("cadeaubon")) {
+            return categories.get("Giftcards");
         }
+
         return categories.get("Accessories");
     }
 

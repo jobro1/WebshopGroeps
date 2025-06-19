@@ -2050,6 +2050,91 @@
           "stock": 4
         }
       ]
+    },
+    {
+      "id": "gc1",
+      "name": "Cadeaubon €50",
+      "description": "Een luxe cadeaubon ter waarde van €50, perfect voor elke gelegenheid.",
+      "one_size": true,
+      "image_urls": [
+        "https://i.ibb.co/N6CFZnwg/0164dc86-3f8a-4118-8890-d4698580018c.png"
+      ],
+      "variants": [
+        {
+          "sku": "GC50",
+          "price": 50.00,
+          "currency": "EUR",
+          "stock": 999
+        }
+      ]
+    },
+    {
+      "id": "gc2",
+      "name": "Cadeaubon €100",
+      "description": "Een luxe cadeaubon ter waarde van €100, een royaal geschenk voor uw dierbaren.",
+      "one_size": true,
+      "image_urls": [
+        "https://i.ibb.co/N6CFZnwg/0164dc86-3f8a-4118-8890-d4698580018c.png"
+      ],
+      "variants": [
+        {
+          "sku": "GC100",
+          "price": 100.00,
+          "currency": "EUR",
+          "stock": 999
+        }
+      ]
+    },
+    {
+      "id": "gc3",
+      "name": "Cadeaubon €200",
+      "description": "Een luxe cadeaubon ter waarde van €200, voor een extra speciale verrassing.",
+      "one_size": true,
+      "image_urls": [
+        "https://i.ibb.co/N6CFZnwg/0164dc86-3f8a-4118-8890-d4698580018c.png"
+      ],
+      "variants": [
+        {
+          "sku": "GC200",
+          "price": 200.00,
+          "currency": "EUR",
+          "stock": 999
+        }
+      ]
+    },
+    {
+      "id": "gc4",
+      "name": "Cadeaubon €400",
+      "description": "Een luxe cadeaubon ter waarde van €400, voor een buitengewone gift.",
+      "one_size": true,
+      "image_urls": [
+        "https://i.ibb.co/N6CFZnwg/0164dc86-3f8a-4118-8890-d4698580018c.png"
+      ],
+      "variants": [
+        {
+          "sku": "GC400",
+          "price": 400.00,
+          "currency": "EUR",
+          "stock": 999
+        }
+      ]
+    },
+    {
+      "id": "gc5",
+      "name": "Cadeaubon €780",
+      "description": "Een luxe cadeaubon ter waarde van €780, voor de ultieme verwennerij.",
+      "one_size": true,
+      "image_urls": [
+        "https://i.ibb.co/N6CFZnwg/0164dc86-3f8a-4118-8890-d4698580018c.png"
+      ],
+      "variants": [
+        {
+          "sku": "GC780",
+          "price": 780.00,
+          "currency": "EUR",
+          "stock": 999
+        }
+      ]
     }
   ]
 }

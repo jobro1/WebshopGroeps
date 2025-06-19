@@ -122,6 +122,50 @@
         <button type="button" routerLink="/cart" class="cancel-button">{{ 'cart.title' | translate }}</button>
         <button type="submit" class="submit-button">{{ 'register.submit' | translate }}</button>
       </p>
+
+        <!-- Gift Card Recipients Section -->
+        @if (hasGiftCardsInCart()) {
+            <div class="gift-card-recipients">
+                <h3>Gift Card Recipients</h3>
+                @for (item of giftCardItems(); track item.productVariation.sku) {
+                    <div class="gift-card-recipient">
+                        <p>Gift Card: {{item.productVariation.sku}} - €{{item.productVariation.price}}</p>
+                        <div class="recipient-input">
+                            <label [for]="'recipient-' + item.productVariation.sku">Recipient Email:</label>
+                            <input type="email"
+                                   [id]="'recipient-' + item.productVariation.sku"
+                                   [formControlName]="'giftCardRecipient' + item.productVariation.sku"
+                                   placeholder="Enter recipient's email"/>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+
+        <!-- Gift Card Payment Section -->
+        <div class="gift-card-section">
+            <h3>Gift Cards</h3>
+            @if (isLoadingGiftCards()) {
+                <p>Loading gift cards...</p>
+            } @else if (activeGiftCards().length > 0) {
+                <div class="gift-cards-list">
+                    @for (card of activeGiftCards(); track card.code) {
+                        <div class="gift-card-item">
+                            <span>Gift Card: {{card.code}}</span>
+                            <span>Balance: €{{card.currentBalance | number:'1.2-2'}}</span>
+                        </div>
+                    }
+                </div>
+                <div class="price-breakdown">
+                    <p>Original Total: €{{originalTotal | number:'1.2-2'}}</p>
+                    <p>Gift Card Discount: €{{(originalTotal - finalTotal()) | number:'1.2-2'}}</p>
+                    <p class="final-total">Final Total: €{{finalTotal() | number:'1.2-2'}}</p>
+                </div>
+            } @else {
+                <p>No active gift cards available.</p>
+                <p class="final-total">Total: €{{originalTotal | number:'1.2-2'}}</p>
+            }
+        </div>
     </form>
   </dialog>
 }

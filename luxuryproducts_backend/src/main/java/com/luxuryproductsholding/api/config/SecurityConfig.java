@@ -38,6 +38,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests((auth) -> auth
                     .requestMatchers("/auth/**").permitAll()
                     .requestMatchers("/products/**").permitAll()
+                    .requestMatchers("/giftcards/**").permitAll()
                     .requestMatchers("/productCategories/**").permitAll()
                     .requestMatchers("/admin/**").hasRole("ADMIN")
                     .requestMatchers("/error").anonymous()
