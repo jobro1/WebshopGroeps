@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="heb de registratie gefixed, zodat de rol, email en password goed worden opgeslagen">
-      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/cypress/e2e/testGiftCards.cy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/cypress/e2e/testGiftCards.cy.ts" afterDir="false" />
-    </list>
+    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="heb de registratie gefixed, zodat de rol, email en password goed worden opgeslagen" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="feature_variant" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,34 +36,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.TestOrderDAO.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderDAO.testCreateOrder_EmptyOrderItems.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderDAO.testGetAllOrders.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderDAO.testGetOrderById_NotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderService.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderService.testSaveOrderItems_NegativeQuantity.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.WebshopBackend.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature__giftcard&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alexa/IdeaProjects/insofad-toets-2-groep-19/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\darkc\\Projects\\insofad-toets-2-groep-19\\luxuryproducts_frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.TestOrderDAO.executor": "Run",
+    "JUnit.TestOrderDAO.testCreateOrder_EmptyOrderItems.executor": "Run",
+    "JUnit.TestOrderDAO.testGetAllOrders.executor": "Run",
+    "JUnit.TestOrderDAO.testGetOrderById_NotFound.executor": "Run",
+    "JUnit.TestOrderService.executor": "Run",
+    "JUnit.TestOrderService.testSaveOrderItems_NegativeQuantity.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.WebshopBackend.executor": "Run",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/alexa/IdeaProjects/insofad-toets-2-groep-19/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\darkc\\Projects\\insofad-toets-2-groep-19\\luxuryproducts_frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alexa\IdeaProjects\insofad-toets-2-groep-19\luxuryproducts_backend\src\main\java\com\luxuryproductsholding\api" />
@@ -161,15 +159,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.TestOrderService.testSaveOrderItems_NegativeQuantity" />
-        <item itemvalue="JUnit.TestOrderService" />
-        <item itemvalue="JUnit.TestOrderDAO.testGetOrderById_NotFound" />
-        <item itemvalue="JUnit.TestOrderDAO.testCreateOrder_EmptyOrderItems" />
-        <item itemvalue="JUnit.TestOrderDAO" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -291,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750403691836</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix cypress tests errors temp">
+      <option name="closed" value="true" />
+      <created>1750406368647</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1750406368647</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,6 +317,7 @@
     <MESSAGE value="de json files, bevatten nu ook alle tekst" />
     <MESSAGE value="de bluetooth icon verwijdert un category cards" />
     <MESSAGE value="d" />
-    <option name="LAST_COMMIT_MESSAGE" value="d" />
+    <MESSAGE value="fix cypress tests errors temp" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix cypress tests errors temp" />
   </component>
 </project>
