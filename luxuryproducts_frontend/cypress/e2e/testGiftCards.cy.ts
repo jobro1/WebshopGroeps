@@ -18,20 +18,20 @@ describe('Gift Card Tests', () => {
       cy.get('button').contains(/Login|Inloggen/).click();
       cy.url().should('not.include', '/login');
     });
-  
+
     it('should display gift cards in category 10', () => {
       cy.visit('/category/10');
-      
+
       // Wait for products to load
       cy.get('.product-info').should('exist');
-      
+
       // Check if we have products displayed
       cy.get('.product-info').should('have.length.at.least', 1);
-      
+
       // Verify the first product is visible and contains expected gift card text
       cy.get('.product-info').first()
-        .should('be.visible')
-        .should('contain.text', 'Cadeaubon');
+          .should('be.visible')
+          .should('contain.text', 'Cadeaubon');
     });
   });
-}); 
+});
