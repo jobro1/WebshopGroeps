@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="heb de registratie gefixed, zodat de rol, email en password goed worden opgeslagen">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/luxuryproducts_backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/cypress/e2e/testCheckout.cy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/cypress/e2e/testCheckout.cy.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/cypress/e2e/testGiftCards.cy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/cypress/e2e/testGiftCards.cy.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
