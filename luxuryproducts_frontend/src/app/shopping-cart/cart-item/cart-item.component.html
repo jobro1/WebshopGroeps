@@ -1,16 +1,28 @@
 <div class="item-card">
-  <img src="headphone.jpg" alt="not found">
-  <div class="item-info-text">
-    <h3>{{item.product.name}}</h3>
-    <p>{{item.product.description}}</p>
-    <p class="price">Price: €{{ item.product.price }}</p>
-    <p class="price">Total: €{{ item.product.price * item.quantity }}</p>
-  </div>
-  <div class="item-info-button">
-    <button class="minus-item" (click)="decreaseQuantity(item.product.product_id!)">-</button>
-    <span class="quantity">{{item.quantity}}</span>
-    <button class="minus-item" (click)="increaseQuantity(item.product.product_id!)">+</button>
-    <button class="remove-btn" (click)="removeItem(item.product.product_id!)"> Remove <i class="fa-solid fa-trash-can"></i></button>
-  </div>
-
+    <div class="image-container">
+        <img [src]="getImageUrl(item.productVariation)" 
+             [alt]="getProductName(item.productVariation)" 
+             class="product-image" 
+             onerror="this.src='/assets/placeholder.png'">
+    </div>
+    <div class="item-info-text">
+        <h3>{{ getProductName(item.productVariation) }}</h3>
+        @if (item.productVariation?.values?.length) {
+            @for (value of item.productVariation.values; track $index) {
+                @if (value?.variation?.variationName && value?.value) {
+                    <p>{{ value.variation.variationName }}: {{ value.value }}</p>
+                }
+            }
+        }
+        <p class="price">{{ 'item.price' | translate }} €{{ item.productVariation?.price || 0 }}</p>
+        <p class="price">{{ 'item.total' | translate }} €{{ (item.productVariation?.price || 0) * item.quantity }}</p>
+    </div>
+    <div class="item-info-button">
+        <button class="minus-item" (click)="decreaseQuantity(item.productVariation?.sku || '')">-</button>
+        <span class="quantity">{{ item.quantity }}</span>
+        <button class="plus-item" (click)="increaseQuantity(item.productVariation?.sku || '')">+</button>
+        <button class="remove-btn" (click)="removeItem(item.productVariation?.sku || '')">
+            {{ 'item.remove' | translate }} <i class="fa-solid fa-trash-can"></i>
+        </button>
+    </div>
 </div>

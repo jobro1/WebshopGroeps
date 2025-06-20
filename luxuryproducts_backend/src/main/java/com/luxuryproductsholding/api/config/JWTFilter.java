@@ -11,6 +11,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
+import com.luxuryproductsholding.api.models.CustomUser;
+import com.luxuryproductsholding.api.dao.UserRepository;
 
 import java.io.IOException;
 @Component
@@ -18,10 +20,12 @@ public class JWTFilter extends OncePerRequestFilter {
 
     private final UserService userService;
     private final JWTUtil jwtTokenUtil;
+    private final UserRepository userRepository;
 
-    public JWTFilter(UserService userService, JWTUtil jwtTokenUtil) {
+    public JWTFilter(UserService userService, JWTUtil jwtTokenUtil, UserRepository userRepository) {
         this.userService = userService;
         this.jwtTokenUtil = jwtTokenUtil;
+        this.userRepository = userRepository;
     }
 
     @Override
@@ -36,10 +40,14 @@ public class JWTFilter extends OncePerRequestFilter {
                 try {
                     String email = jwtTokenUtil.validateTokenAndRetrieveSubject(jwt);
                     UserDetails userDetails = userService.loadUserByUsername(email);
-                    UsernamePasswordAuthenticationToken authToken =
-                            new UsernamePasswordAuthenticationToken(email, userDetails.getPassword(), userDetails.getAuthorities());
-                    if (SecurityContextHolder.getContext().getAuthentication() == null) {
-                        SecurityContextHolder.getContext().setAuthentication(authToken);
+                    CustomUser customUser = userRepository.findByEmail(email);
+                    
+                    if (customUser != null) {
+                        UsernamePasswordAuthenticationToken authToken =
+                                new UsernamePasswordAuthenticationToken(customUser, userDetails.getPassword(), userDetails.getAuthorities());
+                        if (SecurityContextHolder.getContext().getAuthentication() == null) {
+                            SecurityContextHolder.getContext().setAuthentication(authToken);
+                        }
                     }
                 } catch (JWTVerificationException exc) {
                     response.sendError(401, exc.getMessage());

@@ -1,115 +1,171 @@
-<div class="backdrop" routerLink="/cart" ></div>
-@if (loginRequest){
+<div class="backdrop" routerLink="/cart"></div>
+@if (loginRequest) {
   <dialog open>
-    <h2>Login Request</h2>
-    <p> Please login to continue the checkout request</p>
+    <h2>{{ 'checkout.login-request.title' | translate }}</h2>
+    <p>{{ 'checkout.login-request.message' | translate }}</p>
     <p class="actions">
-      <button class="login-btn" (click)="onLoginButton()"> Login</button>
-      <button class="register-button" (click)="onRegisterButton()"> Register</button>
+      <button class="login-btn" (click)="onLoginButton()">{{ 'login.button.login' | translate }}</button>
+      <button class="register-button" (click)="onRegisterButton()">{{ 'login.button.register' | translate }}</button>
     </p>
   </dialog>
-
-
-
-
-
 } @else {
   <dialog open>
-    <h2>Checkout</h2>
-    <form [formGroup]="checkoutForm"  (ngSubmit)="onSubmit()" >
+    <h2>{{ 'cart.checkout' | translate }}</h2>
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
       <div class="full-name">
         <p>
-          <label type="text">First name: </label>
-          <input type="text" formControlName="firstName" placeholder="required"/>
-          @if(firstName?.touched && firstName?.invalid) {
-            <small class="wrong-message"><i class="fa-solid fa-circle-xmark"></i> First name is required and must be at least 2 characters </small>
+          <label for="firstName">{{ 'register.firstName.label' | translate }}</label>
+          <input id="firstName" type="text" formControlName="firstName" [placeholder]="'register.firstName.placeholder' | translate" />
+          @if (firstName?.touched && firstName?.invalid) {
+            <small class="wrong-message">
+              <i class="fa-solid fa-circle-xmark"></i> {{ 'register.firstName.error' | translate }}
+            </small>
           }
-          @if (firstName?.valid){
-            <small class="correct-message"><i class="fa-solid fa-circle-check"></i>Correct</small>
+          @if (firstName?.valid) {
+            <small class="correct-message">
+              <i class="fa-solid fa-circle-check"></i> {{ 'register.correct' | translate }}
+            </small>
           }
         </p>
         <p>
-          <label type="text">Infix: </label>
-          <input type="text" formControlName="infix"  placeholder="optional"/>
+          <label for="infix">{{ 'register.infix.label' | translate }}</label>
+          <input id="infix" type="text" formControlName="infix" [placeholder]="'register.infix.placeholder' | translate" />
         </p>
         <p>
-          <label type="text">Last name: </label>
-          <input type="text" formControlName="lastName" placeholder="required"/>
-          @if(lastName?.touched && lastName?.invalid) {
-            <small class="wrong-message"><i class="fa-solid fa-circle-xmark"></i> Last name is required and must be at
-              least 2 characters </small>
+          <label for="lastName">{{ 'register.lastName.label' | translate }}</label>
+          <input id="lastName" type="text" formControlName="lastName" [placeholder]="'register.lastName.placeholder' | translate" />
+          @if (lastName?.touched && lastName?.invalid) {
+            <small class="wrong-message">
+              <i class="fa-solid fa-circle-xmark"></i> {{ 'register.lastName.error' | translate }}
+            </small>
           }
-          @if (lastName?.valid){
-            <small class="correct-message"><i class="fa-solid fa-circle-check"></i>Correct</small>
+          @if (lastName?.valid) {
+            <small class="correct-message">
+              <i class="fa-solid fa-circle-check"></i> {{ 'register.correct' | translate }}
+            </small>
           }
         </p>
       </div>
-
       <p>
-        <label type="text">Address: </label>
-        <input type="text" formControlName="address" placeholder="example-street "/>
-        @if(address?.touched && address?.invalid) {
-          <small class="wrong-message"><i class="fa-solid fa-circle-xmark"></i> Address is required </small>
+        <label for="address">{{ 'register.address.label' | translate }}</label>
+        <input id="address" type="text" formControlName="address" [placeholder]="'register.address.placeholder' | translate" />
+        @if (address?.touched && address?.invalid) {
+          <small class="wrong-message">
+            <i class="fa-solid fa-circle-xmark"></i> {{ 'register.address.error' | translate }}
+          </small>
         }
-        @if (address?.valid){
-          <small class="correct-message"><i class="fa-solid fa-circle-check"></i>Correct</small>
+        @if (address?.valid) {
+          <small class="correct-message">
+            <i class="fa-solid fa-circle-check"></i> {{ 'register.correct' | translate }}
+          </small>
         }
-
       </p>
       <div class="place-postcode">
         <p>
-          <label type="text">Hous number: </label>
-          <input type="text" formControlName="houseNumber" placeholder="12"/>
-          @if(houseNumber?.touched && houseNumber?.invalid) {
-            <small class="wrong-message"><i class="fa-solid fa-circle-xmark"></i> Please enter your house number correctly  </small>
+          <label for="houseNumber">{{ 'register.houseNumber.label' | translate }}</label>
+          <input id="houseNumber" type="text" formControlName="houseNumber" [placeholder]="'register.houseNumber.placeholder' | translate" />
+          @if (houseNumber?.touched && houseNumber?.invalid) {
+            <small class="wrong-message">
+              <i class="fa-solid fa-circle-xmark"></i> {{ 'register.houseNumber.error' | translate }}
+            </small>
           }
-          @if (houseNumber?.valid){
-            <small class="correct-message"><i class="fa-solid fa-circle-check"></i>Correct</small>
+          @if (houseNumber?.valid) {
+            <small class="correct-message">
+              <i class="fa-solid fa-circle-check"></i> {{ 'register.correct' | translate }}
+            </small>
           }
         </p>
         <p>
-          <label type="text">Postcode: </label>
-          <input type="text" formControlName="postcode" placeholder="1234 AT"/>
-          @if(postcode?.touched && postcode?.invalid) {
-            <small class="wrong-message"><i class="fa-solid fa-circle-xmark"></i> something went wrong, please enter a validated postcode </small>
+          <label for="postcode">{{ 'register.postcode.label' | translate }}</label>
+          <input id="postcode" type="text" formControlName="postcode" [placeholder]="'register.postcode.placeholder' | translate" />
+          @if (postcode?.touched && postcode?.invalid) {
+            <small class="wrong-message">
+              <i class="fa-solid fa-circle-xmark"></i> {{ 'register.postcode.error' | translate }}
+            </small>
           }
-          @if (postcode?.valid){
-            <small class="correct-message"><i class="fa-solid fa-circle-check"></i>Correct</small>
+          @if (postcode?.valid) {
+            <small class="correct-message">
+              <i class="fa-solid fa-circle-check"></i> {{ 'register.correct' | translate }}
+            </small>
           }
         </p>
       </div>
-
       <p>
-        <label type="text">Phone number: </label>
-        <input type="number" formControlName="phoneNumber" placeholder=" 0612345678"/>
-        @if(phoneNumber?.touched && phoneNumber?.invalid) {
-          <small class="wrong-message"> <i class="fa-solid fa-circle-xmark"></i>something went wrong, please enter a validated phone number </small>
+        <label for="phoneNumber">{{ 'register.phoneNumber.label' | translate }}</label>
+        <input id="phoneNumber" type="number" formControlName="phoneNumber" [placeholder]="'register.phoneNumber.placeholder' | translate" />
+        @if (phoneNumber?.touched && phoneNumber?.invalid) {
+          <small class="wrong-message">
+            <i class="fa-solid fa-circle-xmark"></i> {{ 'register.phoneNumber.error' | translate }}
+          </small>
         }
-        @if (phoneNumber?.valid){
-          <small class="correct-message"><i class="fa-solid fa-circle-check"></i>Correct</small>
+        @if (phoneNumber?.valid) {
+          <small class="correct-message">
+            <i class="fa-solid fa-circle-check"></i> {{ 'register.correct' | translate }}
+          </small>
         }
       </p>
       <p>
-        <label type="text">Email: </label>
-        <input type="text" formControlName="email" placeholder="example@mail.com"/>
-        @if(email?.touched && email?.invalid) {
-          <small class="wrong-message"><i class="fa-solid fa-circle-xmark"></i> something went wrong, please enter a validated email.</small>
+        <label for="email">{{ 'register.email.label' | translate }}</label>
+        <input id="email" type="text" formControlName="email" [placeholder]="'register.email.placeholder' | translate" />
+        @if (email?.touched && email?.invalid) {
+          <small class="wrong-message">
+            <i class="fa-solid fa-circle-xmark"></i> {{ 'register.email.error' | translate }}
+          </small>
         }
-        @if (email?.valid){
-          <small class="correct-message"><i class="fa-solid fa-circle-check"></i>Correct</small>
+        @if (email?.valid) {
+          <small class="correct-message">
+            <i class="fa-solid fa-circle-check"></i> {{ 'register.correct' | translate }}
+          </small>
         }
       </p>
       <p class="actions">
-        <button type="button" routerLink="/cart" class="cancel-button"> Cancel</button>
-        <button  type="submit" class="submit-button" > pay</button>
-        <!--      <button  type="submit" class="submit-button" [disabled]="!checkoutForm.valid" > pay</button>-->
+        <button type="button" routerLink="/cart" class="cancel-button">{{ 'cart.title' | translate }}</button>
+        <button type="submit" class="submit-button">{{ 'register.submit' | translate }}</button>
       </p>
+
+        <!-- Gift Card Recipients Section -->
+        @if (hasGiftCardsInCart()) {
+            <div class="gift-card-recipients">
+                <h3>Gift Card Recipients</h3>
+                @for (item of giftCardItems(); track item.productVariation.sku) {
+                    <div class="gift-card-recipient">
+                        <p>Gift Card: {{item.productVariation.sku}} - €{{item.productVariation.price}}</p>
+                        <div class="recipient-input">
+                            <label [for]="'recipient-' + item.productVariation.sku">Recipient Email:</label>
+                            <input type="email"
+                                   [id]="'recipient-' + item.productVariation.sku"
+                                   [formControlName]="'giftCardRecipient' + item.productVariation.sku"
+                                   placeholder="Enter recipient's email"/>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+
+        <!-- Gift Card Payment Section -->
+        <div class="gift-card-section">
+            <h3>Gift Cards</h3>
+            @if (isLoadingGiftCards()) {
+                <p>Loading gift cards...</p>
+            } @else if (activeGiftCards().length > 0) {
+                <div class="gift-cards-list">
+                    @for (card of activeGiftCards(); track card.code) {
+                        <div class="gift-card-item">
+                            <span>Gift Card: {{card.code}}</span>
+                            <span>Balance: €{{card.currentBalance | number:'1.2-2'}}</span>
+                        </div>
+                    }
+                </div>
+                <div class="price-breakdown">
+                    <p>Original Total: €{{originalTotal | number:'1.2-2'}}</p>
+                    <p>Gift Card Discount: €{{(originalTotal - finalTotal()) | number:'1.2-2'}}</p>
+                    <p class="final-total">Final Total: €{{finalTotal() | number:'1.2-2'}}</p>
+                </div>
+            } @else {
+                <p>No active gift cards available.</p>
+                <p class="final-total">Total: €{{originalTotal | number:'1.2-2'}}</p>
+            }
+        </div>
     </form>
-
   </dialog>
-
-
 }
-
-
-

@@ -1,4 +1,4 @@
-import {inject, Injectable, signal} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {Login} from '../models/login';
 import {HttpClient} from '@angular/common/http';
 import {Token} from '../models/token';
@@ -13,7 +13,7 @@ import {environment} from '../../environments/environment';
 })
 export class LoginService {
   private httpClient=  inject(HttpClient);
-  private loggedIn: boolean = false;
+  private loggedIn = false;
   private token: string | null = null;
 
 
@@ -49,6 +49,7 @@ export class LoginService {
         if (Token.token) {
           this.loggedIn = true;
           this.saveTokenInLocalStorage(Token.token);
+          this.saveUserIdToLocalStorage(Token.userId);
           this.token=Token.token;
         }
       })
@@ -61,5 +62,13 @@ export class LoginService {
   }
   private removeTokenFromLocalStorage() {
     localStorage.removeItem('authToken');
+  }
+
+  private saveUserIdToLocalStorage(userId: number) {
+    localStorage.setItem('userId', String(userId));
+  }
+
+  public getLoggedInUserid(): string {
+    return localStorage.getItem('userId') ?? '';
   }
 }

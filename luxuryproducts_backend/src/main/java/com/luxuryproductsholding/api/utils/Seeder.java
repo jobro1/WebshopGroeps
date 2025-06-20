@@ -1,87 +1,243 @@
 package com.luxuryproductsholding.api.utils;
 
 import com.luxuryproductsholding.api.dao.*;
+import com.luxuryproductsholding.api.dto.JsonDTOs.JsonData;
+import com.luxuryproductsholding.api.dto.JsonDTOs.JsonProduct;
+import com.luxuryproductsholding.api.dto.JsonDTOs.JsonVariant;
 import com.luxuryproductsholding.api.models.*;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.io.InputStream;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Component
 public class Seeder {
 
     private final ProductRepository productRepository;
     private final ProductCategoryRepository productCategoryRepository;
-    private final ProductSpecificationsRepository productSpecificationsRepository;
+    private final VariationRepository variationRepository;
+    private final VariationValueRepository variationValueRepository;
+    private final ProductVariationRepository productVariationRepository;
     private final UserRepository userRepository;
-    private final OrderRepository orderRepository;
-    private final OrderItemRepository orderItemRepository;
-    private final ImageUrlRepository imageUrlRepository;
 
     public Seeder(ProductRepository productRepository,
                   ProductCategoryRepository productCategoryRepository,
-                  ProductSpecificationsRepository productSpecificationsRepository,
-                  UserRepository userRepository, OrderRepository orderRepository,
-                  OrderItemRepository orderItemRepository, ImageUrlRepository imageUrlRepository) {
-
+                  VariationRepository variationRepository,
+                  VariationValueRepository variationValueRepository,
+                  ProductVariationRepository productVariationRepository, UserRepository userRepository) {
         this.productRepository = productRepository;
         this.productCategoryRepository = productCategoryRepository;
-        this.productSpecificationsRepository = productSpecificationsRepository;
+        this.variationRepository = variationRepository;
+        this.variationValueRepository = variationValueRepository;
+        this.productVariationRepository = productVariationRepository;
         this.userRepository = userRepository;
-        this.orderRepository = orderRepository;
-        this.orderItemRepository = orderItemRepository;
-        this.imageUrlRepository = imageUrlRepository;
     }
 
     @EventListener
     public void Seed(ContextRefreshedEvent event) {
-        this.seedProduct();
+        this.seedProductsFromJson();
+//        this.seedProducts();
+        this.seedCustomUser();
     }
 
-    private void seedProduct() {
-        ProductCategory watches = new ProductCategory("Horloges");
-        ProductCategory bracelets = new ProductCategory("Armbanden");
-        ProductCategory bags = new ProductCategory("Tassen");
-        ProductCategory glasses = new ProductCategory("Brillen");
+    private void seedCustomUser(){
+        CustomUser user1 = new CustomUser(
+                "J",
+                "",
+                "J",
+                "straat",
+                123,
+                "1234AB",
+                "1990-01-01",
+                "0612345678",
+                "jan@email.com",
+                (new BCryptPasswordEncoder().encode("Password12!"))
+        );
+        user1.setRole("ADMIN");
+        userRepository.save(user1);
 
-        this.productCategoryRepository.saveAll(List.of(watches, bracelets, bags, glasses));
+        CustomUser user2 = new CustomUser(
+                "admin",
+                "",
+                "user",
+                "straat",
+                2,
+                "1233AB",
+                "1990-01-01",
+                "0612444678",
+                "admin@lux.com",
+                (new BCryptPasswordEncoder().encode("Admin123!"))
+        );
+        user2.setRole("ADMIN");
+        userRepository.save(user2);
 
-        Product p1 = new Product("Rolex Submariner", "RSUB2025", 7999.99, "Iconisch duikhorloge met zwarte wijzerplaat en keramische bezel.", "Rolex", "2 jaar", 5, watches);
-        productRepository.save(p1);
-        imageUrlRepository.save(new ImageUrl("https://i0.wp.com/wannabuyawatch.com/wp-content/uploads/2021/03/52078.jpg?fit=960%2C1280&ssl=1", p1));
-
-        Product p2 = new Product("Omega Speedmaster", "OSPEED1969", 6299.00, "De legendarische Moonwatch, gedragen tijdens Apollo-missies.", "Omega", "2 jaar", 4, watches);
-        productRepository.save(p2);
-        imageUrlRepository.save(new ImageUrl("https://www.eugenevanbaal.nl/media/catalog/product/cache/4f2c711297192d1e648fdfaf4a68b673/3/2/32930445104001.webp", p2));
-
-        Product p3 = new Product("Cartier Love Bracelet", "CLB2025", 7150.00, "Gouden armband met schroefsysteem, symbool van eeuwige liefde.", "Cartier", "2 jaar", 10, bracelets);
-        productRepository.save(p3);
-        imageUrlRepository.save(new ImageUrl("https://a.1stdibscdn.com/archivesE/upload/j_214/15_15/org_mtsj118232/MTSJ118232_l.jpeg?disable=upscale&auto=webp&quality=60&width=1400", p3));
-
-        Product p4 = new Product("Tiffany T Wire Bracelet", "TTWB2025", 3450.00, "Minimalistisch design in 18k goud met iconisch T-ontwerp.", "Tiffany & Co.", "2 jaar", 8, bracelets);
-        productRepository.save(p4);
-        imageUrlRepository.save(new ImageUrl("https://www.net-a-porter.com/variants/images/17957409494218415/in/w2000_q60.jpg", p4));
-
-        Product p5 = new Product("Louis Vuitton Neverfull MM", "LVNFMM2025", 1650.00, "Luxe handtas van gecoat canvas en leer, met LV-monogram.", "Louis Vuitton", "2 jaar", 6, bags);
-        productRepository.save(p5);
-        imageUrlRepository.save(new ImageUrl("https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-neverfull-mm--N40599_PM1_Side%20view.png?wid=2400&hei=2400", p5));
-
-        Product p6 = new Product("Chanel Classic Flap Bag", "CCFB2025", 7950.00, "Elegante tas met kettingband en quilted leer.", "Chanel", "2 jaar", 3, bags);
-        productRepository.save(p6);
-        imageUrlRepository.save(new ImageUrl("https://images.vestiairecollective.com/images/resized/w=1024,q=75,f=auto,/produit/chanel-timeless-classique-leer-zwart-handtas-48641947-1_3.jpg", p6));
-
-        Product p7 = new Product("Ray-Ban Aviator Gold", "RBAG2025", 599.00, "De originele pilotenbril met gouden frame.", "Ray-Ban", "2 jaar", 15, glasses);
-        productRepository.save(p7);
-        imageUrlRepository.save(new ImageUrl("https://grandvision-media.imgix.net/m/6167739297197404/original_png-0RB3025__001_51__STD__shad__qt.png?w=1440&auto=format", p7));
-
-        Product p8 = new Product("Gucci GG0406S", "GG0406S", 690.00, "Statement zonnebril met oversized lenzen en goudkleurig frame.", "Gucci", "2 jaar", 10, glasses);
-        productRepository.save(p8);
-        imageUrlRepository.save(new ImageUrl("https://grandvision-media.imgix.net/m/7a7a65e179d137dc/original_png-gucci_gg0121o_8056376076967_00025.png?w=1440&auto=format", p8));
-
-        Product p9 = new Product("TAG Heuer Carrera Calibre 5", "THCC5", 2850.00, "Automatisch horloge met sportief design en Zwitserse precisie.", "TAG Heuer", "2 jaar", 5, watches);
-        productRepository.save(p9);
-        imageUrlRepository.save(new ImageUrl("https://chronexttime.imgix.net/V/8/V85849/V85849_1_det.png?w=570&ar=1:1&auto=format&fm=png&q=55&usm=50&usmrad=1.5&dpr=2&trim=color&fit=fill&auto=compress&bg=FFFFFF&bg-remove=true", p9));
+        CustomUser user3 = new CustomUser(
+                "User",
+                "",
+                "UU",
+                "straat",
+                13,
+                "1214AB",
+                "1990-01-01",
+                "0612395678",
+                "user@lux.com",
+                (new BCryptPasswordEncoder().encode("User123!"))
+        );
+        user3.setRole("ADMIN");
+        userRepository.save(user3);
     }
+
+
+    public void seedProductsFromJson() {
+        try {
+            JsonData data = loadJsonData();
+            Map<String, ProductCategory> categories = ensureCategoriesExist();
+            Map<String, Variation> variationMap = new HashMap<>();
+            Map<String, VariationValue> variationValueMap = new HashMap<>();
+
+            for (JsonProduct jsonProduct : data.getProducts()) {
+                if (productRepository.findByName(jsonProduct.getName()) != null) {
+                    System.out.println("Product " + jsonProduct.getName() + " bestaat al, overslaan.");
+                    continue;
+                }
+
+                ProductCategory category = determineCategory(jsonProduct.getName(), categories);
+                Product product = createProduct(jsonProduct, category);
+                List<ProductVariation> productVariations = createProductVariations(jsonProduct, product, variationMap, variationValueMap);
+                productVariationRepository.saveAll(productVariations);
+            }
+
+            System.out.println("Producten en categorieën succesvol toegevoegd.");
+        } catch (Exception e) {
+            System.err.println("Fout bij inladen JSON: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    private JsonData loadJsonData() throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        InputStream inputStream = new ClassPathResource("data/all_products_variants_extended.json").getInputStream();
+        return mapper.readValue(inputStream, JsonData.class);
+    }
+
+    private Map<String, ProductCategory> ensureCategoriesExist() {
+        String[] categoryNames = {
+                "Accessories", "Wine & Champagne", "Travel & Bags", "Watches",
+                "Grooming & Skincare", "Jewelry", "Footwear", "Collectibles", "Sports & Outdoors", "Giftcards"
+        };
+
+        Map<String, ProductCategory> categories = new HashMap<>();
+        for (String name : categoryNames) {
+            ProductCategory category = productCategoryRepository.findByName(name);
+            if (category == null) {
+                category = new ProductCategory(name);
+                productCategoryRepository.save(category);
+            }
+            categories.put(name, category);
+        }
+        return categories;
+    }
+
+    private ProductCategory determineCategory(String productName, Map<String, ProductCategory> categories) {
+        String name = productName.toLowerCase();
+        if (name.contains("champagne") || name.contains("pomerol") || name.contains("bordeaux")) {
+            return categories.get("Wine & Champagne");
+        } else if (name.contains("bag") || name.contains("umbrella") || name.contains("weekender")) {
+            return categories.get("Travel & Bags");
+        } else if (name.contains("watch") || name.contains("chronograph")) {
+            return categories.get("Watches");
+        } else if (name.contains("cream") || name.contains("parfum")) {
+            return categories.get("Grooming & Skincare");
+        } else if (name.contains("bracelet") || name.contains("cufflinks") || name.contains("ring") || name.contains("necklace")) {
+            return categories.get("Jewelry");
+        } else if (name.contains("loafers")) {
+            return categories.get("Footwear");
+        } else if (name.contains("model car")) {
+            return categories.get("Collectibles");
+        } else if (name.contains("skis")) {
+            return categories.get("Sports & Outdoors");
+        } else if (name.contains("cadeaubon")) {
+            return categories.get("Giftcards");
+        }
+
+        return categories.get("Accessories");
+    }
+
+    private Product createProduct(JsonProduct jsonProduct, ProductCategory category) {
+        double basePrice = jsonProduct.getVariants().isEmpty() ? 0 : jsonProduct.getVariants().get(0).getPrice();
+        Product product = new Product(
+                jsonProduct.getName(),
+                basePrice,
+                jsonProduct.getDescription(),
+                "Unknown Brand",
+                category
+        );
+        return productRepository.save(product);
+    }
+
+    private List<ProductVariation> createProductVariations(JsonProduct jsonProduct, Product product,
+                                                           Map<String, Variation> variationMap, Map<String, VariationValue> variationValueMap) {
+
+        List<ProductVariation> variations = new ArrayList<>();
+
+        for (JsonVariant variant : jsonProduct.getVariants()) {
+            List<VariationValue> values = new ArrayList<>();
+            for (Map.Entry<String, String> entry : variant.getDynamicAttributes().entrySet()) {
+                String varName = capitalize(entry.getKey());
+                String varValue = entry.getValue();
+
+                Variation variation = variationMap.computeIfAbsent(varName, key -> {
+                    Variation newVar = new Variation(key);
+                    return variationRepository.save(newVar);
+                });
+
+                String valueKey = varName + ":" + varValue;
+                VariationValue vv = variationValueMap.computeIfAbsent(valueKey, k -> {
+                    VariationValue newVal = new VariationValue(varValue, variation);
+                    return variationValueRepository.save(newVal);
+                });
+
+                values.add(vv);
+            }
+
+            String uniqueSku = generateUniqueSku(variant.getSku(), product.getId(), values);
+
+            ProductVariation pv = new ProductVariation(
+                    uniqueSku,
+                    variant.getPrice(),
+                    variant.getStock(),
+                    jsonProduct.getImage_urls().isEmpty() ? "" : jsonProduct.getImage_urls().get(0),
+                    product,
+                    values
+            );
+            variations.add(pv);
+        }
+
+        return variations;
+    }
+
+    private String generateUniqueSku(String baseSku, Long productId, List<VariationValue> values) {
+        return baseSku + "-" + productId + "-" +
+                values.stream()
+                        .map(VariationValue::getValue)
+                        .collect(Collectors.joining("-"))
+                        .toUpperCase()
+                        .replaceAll("[^A-Z0-9]", "");
+    }
+
+    private String capitalize(String key) {
+        return key.substring(0, 1).toUpperCase() + key.substring(1);
+    }
+
+
 }

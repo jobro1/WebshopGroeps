@@ -1,0 +1,46 @@
+stages:
+  - lint
+  - test
+
+job_lint_frontend:
+  stage: lint
+  image: node:18
+  tags:
+    - "groep19Runner"
+  script:
+    - cd luxuryproducts_frontend
+    - npm ci
+    - npm run lint
+
+job_lint_backend:
+  stage: lint
+  image: maven:3.9.6-eclipse-temurin-21
+  tags:
+    - "groep19Runner"
+  script:
+    - cd luxuryproducts_backend
+    - mvn checkstyle:check
+
+job_e2e_test:
+  stage: test
+  image: pascalcypress:latest
+  before_script:
+    - cd luxuryproducts_frontend
+    - npm ci
+  tags:
+    - "groep19Runner"
+  script:
+    - echo "Starting Angular app..."
+    - npx ng serve --host 0.0.0.0 &
+    - npx wait-on http://localhost:4200
+    - echo "Running Cypress tests in Chrome..."
+    - npx cypress run --browser chrome --config baseUrl=http://localhost:4200
+
+job_unit_test:
+  stage: test
+  image: maven:3.9.6-eclipse-temurin-21
+  tags:
+    - "groep19Runner"
+  script:
+    - cd luxuryproducts_backend
+    - mvn clean test
