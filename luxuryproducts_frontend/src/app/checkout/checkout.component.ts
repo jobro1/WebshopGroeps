@@ -121,9 +121,6 @@ export class CheckoutComponent implements OnInit {
       } else {
         this.finalTotal.set(this.originalTotal);
       }
-    } catch (error) {
-      // console.error('Failed to load gift cards:', error);
-      this.finalTotal.set(this.originalTotal);
     } finally {
       this.isLoadingGiftCards.set(false);
     }
@@ -142,7 +139,6 @@ export class CheckoutComponent implements OnInit {
     if (this.loginService.isLoggedIn()) {
       const currentUser = this.user();
       if (currentUser) {
-        try {
           // First handle gift card purchases if any
           for (const item of this.giftCardItems()) {
             const recipientEmail = this.checkoutForm.get('giftCardRecipient' + item.productVariation.sku)?.value;
@@ -159,8 +155,7 @@ export class CheckoutComponent implements OnInit {
           }
 
           // Calculate final total after applying gift cards
-          const originalTotal = this.cartService.getCartCount();
-          const finalTotal = await this.cartService.calculateTotalWithGiftCards(currentUser.userId!);
+          const finalTotal = await this.cartService.calculateTotalWithGiftCards();
           
           // Create order with the final total
           await this.cartService.createOrder(currentUser, finalTotal);
@@ -170,11 +165,7 @@ export class CheckoutComponent implements OnInit {
           
           // Navigate to profile to see the order
           this.router.navigate([`userProfile/${currentUser.email}`]);
-        } catch (error) {
-          // console.error('Failed to submit order:', error);
-          this.error.set('Failed to submit order. Please try again.');
         }
-      }
     } else {
       this.loginRequest = true;
     }

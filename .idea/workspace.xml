@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="heb de registratie gefixed, zodat de rol, email en password goed worden opgeslagen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/luxuryproducts_backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/checkout/checkout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/checkout/checkout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/services/cart.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/services/cart.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +55,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;Spring Boot.WebshopBackend.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feat/language__swap&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature__giftcard&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/alexa/IdeaProjects/insofad-toets-2-groep-19/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api&quot;,
@@ -76,7 +77,7 @@
       <recent name="C:\Users\alexa\IdeaProjects\insofad-toets-2-groep-19\luxuryproducts_backend\src\main\resources\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.WebshopBackend">
+  <component name="RunManager">
     <configuration name="TestOrderDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="luxuryproducts_backend" />
       <extension name="coverage">
@@ -303,6 +304,7 @@
     <MESSAGE value="fix unverisioned files" />
     <MESSAGE value="de json files, bevatten nu ook alle tekst" />
     <MESSAGE value="de bluetooth icon verwijdert un category cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="de bluetooth icon verwijdert un category cards" />
+    <MESSAGE value="d" />
+    <option name="LAST_COMMIT_MESSAGE" value="d" />
   </component>
 </project>

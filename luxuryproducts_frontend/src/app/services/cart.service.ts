@@ -107,7 +107,6 @@ export class CartService {
   }
 
   public createOrder(user: User, finalTotal: number) {
-    const originalTotal = this.getCartCount();
     const currentDate = new Date().toISOString();
     const orderItems = [];
 
@@ -129,7 +128,7 @@ export class CartService {
     };
 
     return this.httpClient.post<OrderDTO>('http://localhost:8080/api/orders', order).subscribe({
-      next: async (response) => {
+      next: async () => {
         // console.log('Order created successfully with final total:', finalTotal);
         // console.log('Original total before gift cards:', originalTotal);
         this.clearCart();
@@ -142,10 +141,9 @@ export class CartService {
   }
 
 
-  public async calculateTotalWithGiftCards(userId: number): Promise<number> {
+  public async calculateTotalWithGiftCards(): Promise<number> {
     let total = this.getCartCount();
 
-    try {
       const giftCards = await firstValueFrom(this.giftCardService.getMyGiftCards());
       const activeCards = giftCards.filter(card => 
         card.status === GiftcardStatus.ACTIVE && 
@@ -153,8 +151,7 @@ export class CartService {
         new Date(card.expirationDate) > new Date()
       );
 
-      for (let giftCard of activeCards) {
-        try {
+      for (const giftCard of activeCards) {
           if (total <= 0) break;
 
           const amountToDeduct = Math.min(giftCard.currentBalance, total);
@@ -167,21 +164,10 @@ export class CartService {
           
           // Reduce the total by the amount deducted
           total = Number((total - amountToDeduct).toFixed(2));
-          
-          // console.log(`Applied gift card ${giftCard.code}: -€${amountToDeduct.toFixed(2)}`);
-          // console.log(`New gift card balance: €${newBalance.toFixed(2)}`);
-
-        } catch (error) {
-          // console.error(`Failed to process gift card ${giftCard.code}:`, error);
-          continue;
         }
-      }
 
       return Number(Math.max(0, total).toFixed(2));
-    } catch (error) {
-      // console.error('Failed to process gift cards:', error);
-      return Number(this.getCartCount().toFixed(2));
-    }
+
   }
 
   private saveCartToLocalStorage(cart: CartItem[]) {
