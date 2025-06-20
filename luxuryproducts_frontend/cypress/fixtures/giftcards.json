@@ -1,0 +1,54 @@
+{
+  "activeGiftCards": [
+    {
+      "id": 1,
+      "code": "LPHTEST123",
+      "initialValue": 100.00,
+      "currentBalance": 75.50,
+      "createdAt": "2024-03-15T10:00:00",
+      "expirationDate": "2025-03-15T10:00:00",
+      "activatedAt": "2024-03-15T10:00:00",
+      "status": "ACTIVE",
+      "message": "Test gift card 1",
+      "recipientEmail": "test@example.com"
+    },
+    {
+      "id": 2,
+      "code": "LPHTEST456",
+      "initialValue": 50.00,
+      "currentBalance": 50.00,
+      "createdAt": "2024-03-15T10:00:00",
+      "expirationDate": "2025-03-15T10:00:00",
+      "activatedAt": "2024-03-15T10:00:00",
+      "status": "ACTIVE",
+      "message": "Test gift card 2",
+      "recipientEmail": "test@example.com"
+    }
+  ],
+  "otherGiftCards": [
+    {
+      "id": 3,
+      "code": "LPHTEST789",
+      "initialValue": 100.00,
+      "currentBalance": 0.00,
+      "createdAt": "2024-02-15T10:00:00",
+      "expirationDate": "2025-02-15T10:00:00",
+      "activatedAt": "2024-02-15T10:00:00",
+      "status": "USED",
+      "message": "Used gift card",
+      "recipientEmail": "test@example.com"
+    },
+    {
+      "id": 4,
+      "code": "LPHTESTEXP",
+      "initialValue": 75.00,
+      "currentBalance": 75.00,
+      "createdAt": "2023-03-15T10:00:00",
+      "expirationDate": "2024-03-14T10:00:00",
+      "activatedAt": "2023-03-15T10:00:00",
+      "status": "EXPIRED",
+      "message": "Expired gift card",
+      "recipientEmail": "test@example.com"
+    }
+  ]
+} 
