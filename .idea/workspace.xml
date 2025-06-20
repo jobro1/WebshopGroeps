@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="de json files, bevatten nu ook alle tekst">
+    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="heb de registratie gefixed, zodat de rol, email en password goed worden opgeslagen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api/models/CustomUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api/models/CustomUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api/utils/Seeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api/utils/Seeder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_backend/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="feature_variant" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,7 +54,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;Spring Boot.WebshopBackend.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feat/language__swap&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/alexa/IdeaProjects/insofad-toets-2-groep-19/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api&quot;,
@@ -168,7 +166,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
       </set>
     </attachedChunks>
   </component>
@@ -187,7 +186,7 @@
       <workItem from="1749729723448" duration="6266000" />
       <workItem from="1749760561340" duration="599000" />
       <workItem from="1749797183919" duration="381000" />
-      <workItem from="1750056138710" duration="1011000" />
+      <workItem from="1750242118652" duration="742000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore on the application.properties">
       <option name="closed" value="true" />
@@ -253,46 +252,11 @@
       <option name="project" value="LOCAL" />
       <updated>1749732118446</updated>
     </task>
-    <task id="LOCAL-00009" summary="fix unverisioned files">
-      <option name="closed" value="true" />
-      <created>1749802925498</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1749802925498</updated>
-    </task>
-    <task id="LOCAL-00010" summary="de json files, bevatten nu ook alle tekst">
-      <option name="closed" value="true" />
-      <created>1750058559457</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1750058559459</updated>
-    </task>
-    <task id="LOCAL-00011" summary="de bluetooth icon verwijdert un category cards">
-      <option name="closed" value="true" />
-      <created>1750058967502</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1750058967502</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gitignore on the application.properties" />
@@ -301,10 +265,6 @@
     <MESSAGE value="gitlab-ci file toegevoegd" />
     <MESSAGE value="fix: admin verwijdert om ruimte te maken voor admin van Bram" />
     <MESSAGE value="Testing: heb testen toegevoegd voor order proces van een variant" />
-    <MESSAGE value="fix unversioned files" />
-    <MESSAGE value="fix unverisioned files" />
-    <MESSAGE value="de json files, bevatten nu ook alle tekst" />
-    <MESSAGE value="de bluetooth icon verwijdert un category cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="de bluetooth icon verwijdert un category cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing: heb testen toegevoegd voor order proces van een variant" />
   </component>
 </project>
