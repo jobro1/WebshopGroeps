@@ -133,3 +133,38 @@
     }
   }
 }
+
+.giftcard-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+
+  button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: #6b7280;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: #111827;
+    }
+
+    &.active {
+      color: #111827;
+      border-bottom-color: #4f46e5;
+    }
+  }
+}
+
+.no-cards-message {
+  text-align: center;
+  color: #6b7280;
+  padding: 1rem;
+  font-style: italic;
+}

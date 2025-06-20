@@ -1,25 +1,23 @@
 <div class="shopping-cart">
-  <h2><i class="fas fa-shopping-cart"></i> Shopping cart</h2>
+    <h2><i class="fas fa-shopping-cart"></i> {{ 'cart.title' | translate }}</h2>
 
-  <ul class="items-container">
-    @for(item of cartItems(); track item.product.product_id){
+    <ul class="items-container">
+        @for(item of cartItems(); track item.productVariation.sku) {
+            <li>
+                <app-cart-item [item]="item"></app-cart-item>
+            </li>
+        }
+    </ul>
 
-      <li>
-        <app-cart-item [item]="item"></app-cart-item>
-      </li>
-
-    }
-
-  </ul>
-
-
-<div class="cart-total">
-  <strong>Total: €{{totalPrice()}}</strong>
-  <section class="cart-action-btns">
-    <button class="remove-items-btn" (click)="removeAllItemsFromCart()"><i class="fa-solid fa-trash-can"></i> Remove all item</button>
-    <button class="checkout-button" routerLink="/checkout"  > checkout</button>
-  </section>
-
-</div>
-
+    <div class="cart-total">
+        <strong>{{ 'cart.total' | translate }} €{{ totalPrice() }}</strong>
+        <section class="cart-action-btns">
+            <button class="remove-items-btn" (click)="removeAllItemsFromCart()">
+                <i class="fa-solid fa-trash-can"></i> {{ 'cart.remove-all' | translate }}
+            </button>
+            <button class="checkout-button" routerLink="/checkout">
+                {{ 'cart.checkout' | translate }}
+            </button>
+        </section>
+    </div>
 </div>

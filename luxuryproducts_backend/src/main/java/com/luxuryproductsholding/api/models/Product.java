@@ -1,6 +1,7 @@
 package com.luxuryproductsholding.api.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
@@ -14,121 +15,89 @@ public class Product {
     private Long product_id;
 
     private String name;
-    private String manufacturer_code;
     private Double price;
     private String description;
     private String brand;
-    private String warranty;
-    private Integer amount;
-
 
     @ManyToOne(cascade = CascadeType.MERGE)
-    @JsonBackReference
+    @JsonIgnore
     private ProductCategory productCategory;
 
-    @OneToMany(mappedBy = "product")
-    @JsonManagedReference
-    private List<ProductSpecifications> productSpecifications;
-
-//    @OneToMany(mappedBy = "product")
-//    @JsonManagedReference
-//    private List<OrderItem> orderItems;
-
-    @OneToMany(mappedBy= "product")
-    @JsonManagedReference
-    private List<ImageUrl> imageUrls;
-
-
+    @OneToMany(mappedBy = "product", cascade = CascadeType.MERGE)
+    @JsonManagedReference(value = "product-variation")
+    private List<ProductVariation> variations;
 
     public Product() {}
 
-    public Product(String name, String manufacturer_code, Double price, String description, String brand,
-                   String warranty, Integer amount, ProductCategory productCategory
-                   ) {
+    public Product(String name, Double price, String description, String brand, ProductCategory productCategory) {
         this.name = name;
-        this.manufacturer_code = manufacturer_code;
         this.price = price;
         this.description = description;
         this.brand = brand;
-        this.warranty = warranty;
-        this.amount = amount;
         this.productCategory = productCategory;
-
-
     }
-
 
     public ProductCategory getProductCategory() {
         return productCategory;
-    }
-
-    public void setProductCategory(ProductCategory productCategory) {
-        this.productCategory = productCategory;
     }
 
     public Long getProduct_id() {
         return product_id;
     }
 
-    public void setProduct_id(Long product_id) {
-        this.product_id = product_id;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getManufacturer_code() {
-        return manufacturer_code;
-    }
-
-    public void setManufacturer_code(String manufacturer_code) {
-        this.manufacturer_code = manufacturer_code;
     }
 
     public Double getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
     public String getDescription() {
         return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getBrand() {
         return brand;
     }
 
+    public ProductCategory getCategory() {
+        return productCategory;
+    }
+
+    public List<ProductVariation> getVariations() {
+        return variations;
+    }
+
+    public void setProduct_id(Long product_id) {
+        this.product_id = product_id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public void setBrand(String brand) {
         this.brand = brand;
     }
 
-    public String getWarranty() {
-        return warranty;
+    public void setCategory(ProductCategory productCategory) {
+        this.productCategory = productCategory;
     }
 
-    public void setWarranty(String warranty) {
-        this.warranty = warranty;
+    public void setVariations(List<ProductVariation> variations) {
+        this.variations = variations;
     }
 
-    public Integer getAmount() {
-        return amount;
+    public Long getId() {
+        return this.product_id;
     }
-
-    public void setAmount(Integer amount) {
-        this.amount = amount;
-    }
-
-
 }

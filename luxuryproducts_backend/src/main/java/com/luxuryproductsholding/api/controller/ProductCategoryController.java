@@ -2,6 +2,7 @@ package com.luxuryproductsholding.api.controller;
 
 
 import com.luxuryproductsholding.api.dao.ProductCategoryDAO;
+import com.luxuryproductsholding.api.dto.CategoryDTO;
 import com.luxuryproductsholding.api.dto.ProductCategoryDTO;
 import com.luxuryproductsholding.api.models.ProductCategory;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +12,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/productCategories")
-@CrossOrigin(origins = "http://localhost:4200")
 public class ProductCategoryController {
 
     private final ProductCategoryDAO productCategoryDAO;
@@ -26,7 +26,7 @@ public class ProductCategoryController {
        return ResponseEntity.ok(this.productCategoryDAO.getAllProductCategories());
     }
     @GetMapping("/{id}")
-    public ResponseEntity<ProductCategory> getproductCategoryById(@PathVariable Long id) {
+    public ResponseEntity<CategoryDTO> getProductCategoryById(@PathVariable Long id) {
         return ResponseEntity.ok(this.productCategoryDAO.getProductCategoryById(id));
     }
 

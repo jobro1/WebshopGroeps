@@ -1,5 +1,4 @@
 import {OrderItem} from './orderItem';
-import {User} from './customUser';
 
 export interface Order {
   orderId?: number;

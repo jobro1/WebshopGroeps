@@ -1,5 +1,6 @@
 package com.luxuryproductsholding.api.dao;
 
+import com.luxuryproductsholding.api.dto.CategoryDTO;
 import com.luxuryproductsholding.api.dto.ProductCategoryDTO;
 import com.luxuryproductsholding.api.models.ProductCategory;
 import org.springframework.stereotype.Component;
@@ -22,7 +23,12 @@ public class ProductCategoryDAO {
         this.productCategoryRepository.save(new ProductCategory(productCategoryDTO.name));
     }
 
-    public ProductCategory getProductCategoryById(Long id) {
-        return this.productCategoryRepository.findByCategoryId(id).get();
+    public CategoryDTO getProductCategoryById(Long id) {
+        ProductCategory category = this.productCategoryRepository.findByCategoryId(id).get();
+        return new CategoryDTO(
+                category.getCategoryId(),
+                category.getName(),
+                category.getProducts()
+        );
     }
 }

@@ -11,10 +11,10 @@ import {ProductDetailComponent} from './products/product-detail/product-detail.c
 import {ProductsByCategoryComponent} from './categories/products-by-category/products-by-category.component';
 import {RegisterComponent} from './user/register/register.component';
 
+const canAccessUserProfile: CanMatchFn = () => {
+  const loginService = inject(LoginService);
+  const router = inject(Router);
 
-const canAccessUserProfile: CanMatchFn = (route, segments) => {
-  const router = inject(Router)
-  const loginService = inject(LoginService)
   if(loginService.isLoggedIn()){
     return true;
   }
