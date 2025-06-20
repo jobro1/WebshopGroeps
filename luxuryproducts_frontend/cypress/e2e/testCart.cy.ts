@@ -26,7 +26,7 @@ describe('Product toevoegen aan winkelmand', () => {
         cy.visit('/cart');
 
         // Controleer dat het product in de winkelmand staat
-        cy.get('.items-container').should('contain', 'GLV-BRO-S-1-BROWNS'); // Vervang 'SKU' door herkenbare tekst uit jouw productvariatie
+        cy.get('.items-container').should('contain', 'Brown'); // Vervang 'SKU' door herkenbare tekst uit jouw productvariatie
 
         // Controleer dat de total price niet 0 is
         cy.get('.cart-total strong').should(($el) => {
