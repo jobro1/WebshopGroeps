@@ -10,9 +10,6 @@
                 <p><strong>{{ 'profile.dateOfBirth' | translate }}:</strong> {{ userInfo()?.dateOfBirth}}</p>
                 <p><strong>{{ 'profile.email' | translate }}:</strong> {{ userInfo()?.email }}</p>
                 <p><strong>{{ 'profile.phone' | translate }}:</strong> {{ userInfo()?.phoneNumber }}</p>
-                <p><strong>{{ 'profile.address' | translate }}:</strong> {{ userInfo()?.address }}</p>
-                <p><strong>{{ 'profile.houseNumber' | translate }}:</strong> {{ userInfo()?.houseNumber }}</p>
-                <p><strong>{{ 'profile.postcode' | translate }}:</strong> {{ userInfo()?.postcode }}</p>
                 <button type="button" class="logout-button" (click)="onLogout()">{{ 'profile.logout' | translate }}</button>
             </div>
 
