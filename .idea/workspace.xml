@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="heb de registratie gefixed, zodat de rol, email en password goed worden opgeslagen" />
+    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="fix: login button in de test aangepast om zo te kijken of de pipeline wel passed">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/user-profile/user-profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/user-profile/user-profile.component.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature_variant" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,7 +32,7 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2y85EF63E7odBImwzrF4gh56cjm" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -51,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.WebshopBackend.executor": "Run",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "hotfix/adres",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/alexa/IdeaProjects/insofad-toets-2-groep-19/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api",
@@ -60,7 +63,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\darkc\\Projects\\insofad-toets-2-groep-19\\luxuryproducts_frontend\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Users\\alexa\\WebstormProjects\\insofad-toets-2-groep-19\\luxuryproducts_frontend\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -73,7 +76,7 @@
       <recent name="C:\Users\alexa\IdeaProjects\insofad-toets-2-groep-19\luxuryproducts_backend\src\main\resources\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.WebshopBackend">
+  <component name="RunManager">
     <configuration name="TestOrderDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="luxuryproducts_backend" />
       <extension name="coverage">
@@ -183,6 +186,9 @@
       <workItem from="1749760561340" duration="599000" />
       <workItem from="1749797183919" duration="381000" />
       <workItem from="1750056138710" duration="1011000" />
+      <workItem from="1750602534021" duration="122000" />
+      <workItem from="1750602908182" duration="1228000" />
+      <workItem from="1750662307318" duration="974000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore on the application.properties">
       <option name="closed" value="true" />
