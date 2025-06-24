@@ -7,11 +7,12 @@ import {TranslatePipe, TranslateService} from '@ngx-translate/core';
 import {SwitchLanguageComponent} from './switch-language/switch-language.component';
 import translationsEN from "../../../public/i18n/en.json";
 import translationsNL from "../../../public/i18n/nl.json";
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, FormsModule, TranslatePipe, SwitchLanguageComponent],
+  imports: [RouterLink, FormsModule, TranslatePipe, SwitchLanguageComponent, CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -19,9 +20,7 @@ export class HeaderComponent {
   private customUserService = inject(CustomUserService);
   private loginService = inject(LoginService);
   protected userInfo = this.customUserService.getUserInfo();
-  private router = inject(Router);
-  // private productService = inject(ProductService);
-  // protected products = this.productService.getProducts();
+  private router = inject(Router);  
 
   onUserClick() {
     if (this.loginService.isLoggedIn()) {
@@ -49,7 +48,7 @@ export class HeaderComponent {
     this.translateService.setTranslation('nl', translationsNL)
   }
 
-
-
-
+  isAdmin(): boolean {
+    return this.loginService.isAdmin();
+  }
 }

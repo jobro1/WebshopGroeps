@@ -61,4 +61,7 @@ public class VariationValue {
     public void setProductVariations(List<ProductVariation> productVariations) {
         this.productVariations = productVariations;
     }
+
+    public void setId(long l) {
+    }
 }

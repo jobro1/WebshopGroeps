@@ -58,6 +58,13 @@ export class CheckoutComponent implements OnInit {
   });
 
   ngOnInit() {
+    const email = this.getEmailFromToken();
+    if (email) {
+      this.customUserService.loadUserByEmail(email).subscribe();
+    } else {
+      console.warn('Email not found in token');
+    }
+
     // Fill form with current user data if logged in
     if (this.loginService.isLoggedIn()) {
       const currentUser = this.user();
@@ -136,9 +143,12 @@ export class CheckoutComponent implements OnInit {
   get email() {return this.checkoutForm.get("email");}
 
   protected async onSubmit() {
+    console.log('Checkout form submitted:', this.checkoutForm.value);
     if (this.loginService.isLoggedIn()) {
       const currentUser = this.user();
+      console.log('Current user from service:', currentUser);
       if (currentUser) {
+        console.log('Current user:', currentUser);
           // First handle gift card purchases if any
           for (const item of this.giftCardItems()) {
             const recipientEmail = this.checkoutForm.get('giftCardRecipient' + item.productVariation.sku)?.value;
@@ -179,4 +189,18 @@ export class CheckoutComponent implements OnInit {
   onRegisterButton() {
     this.router.navigate(['/register']);
   }
+
+  getEmailFromToken(): string | null {
+    const token = localStorage.getItem('authToken');
+    if (!token) return null;
+
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      return payload.email || null;
+    } catch (e) {
+      console.error('Invalid JWT token:', e);
+      return null;
+    }
+  }
+
 }

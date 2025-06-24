@@ -40,7 +40,7 @@ public class SecurityConfig {
                     .requestMatchers("/products/**").permitAll()
                     .requestMatchers("/giftcards/**").permitAll()
                     .requestMatchers("/productCategories/**").permitAll()
-                    .requestMatchers("/admin/**").hasRole("ADMIN")
+                    .requestMatchers("/products/admin/**").hasRole("ADMIN")
                     .requestMatchers("/error").anonymous()
                     .anyRequest().authenticated()
                 )

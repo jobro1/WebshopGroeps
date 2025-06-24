@@ -20,8 +20,7 @@ export class LoginComponent {
   login() {
     const subscription = this.loginService.login({email: this.email, password: this.password})
     subscription.subscribe({
-      next: (responseData) => {
-        localStorage.setItem('token', responseData.token);
+      next: () => {
         this.router.navigate([`userProfile/${this.email}`]);
       },
       error: (error) => {

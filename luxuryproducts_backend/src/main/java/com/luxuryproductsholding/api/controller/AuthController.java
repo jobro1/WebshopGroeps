@@ -73,8 +73,8 @@ public class AuthController {
                 );
         registerdCustomUser.setRole("USER");
         userDAO.save(registerdCustomUser);
-        String token = jwtUtil.generateToken(registerdCustomUser.getEmail());
-        LoginResponse loginResponse = new LoginResponse(registerdCustomUser.getUserId(), registerdCustomUser.getEmail(), token);
+        String token = jwtUtil.generateToken(registerdCustomUser.getEmail(), registerdCustomUser.getRole());
+        LoginResponse loginResponse = new LoginResponse(registerdCustomUser.getUserId(), registerdCustomUser.getEmail(), token, registerdCustomUser.getRole());
         return ResponseEntity.ok(loginResponse);
     }
 
@@ -86,11 +86,17 @@ public class AuthController {
 
             authManager.authenticate(authInputToken);
 
-            String token = jwtUtil.generateToken(body.email);
-
             CustomUser customUser = userDAO.findByEmail(body.email);
-            LoginResponse loginResponse = new LoginResponse(customUser.getUserId(), customUser.getEmail(), token);
 
+            // ✅ Pass role into token generator
+            String token = jwtUtil.generateToken(customUser.getEmail(), customUser.getRole());
+
+            LoginResponse loginResponse = new LoginResponse(
+                    customUser.getUserId(),
+                    customUser.getEmail(),
+                    token,
+                    customUser.getRole()
+            );
 
             return ResponseEntity.ok(loginResponse);
 
@@ -100,5 +106,6 @@ public class AuthController {
             );
         }
     }
+
 
 }

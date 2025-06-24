@@ -15,6 +15,7 @@ interface ProductVariationValue {
 }
 
 interface Productvariation {
+  productVariationId: number;
   values: ProductVariationValue[];
   stock: number;
   imageUrl: string;
@@ -61,14 +62,23 @@ export class ProductDetailComponent implements OnInit {
     });
   }
 
+  private cachedOptions?: Record<string, string[]>;
+
   protected getVariationOptions(): Record<string, string[]> {
+    if (this.cachedOptions) return this.cachedOptions;
+
     const map: Record<string, Set<string>> = {};
 
-    this.product()?.variations.forEach((variation) => {
+    console.log(`Processing variations for product: ${this.product()?.name} (ID: ${this.product()?.product_id})`);
+
+    this.product()?.variations.forEach((variation, i) => {
+      console.log(` Variation #${i + 1}:`, variation);
+
       variation.values.forEach((value) => {
         const name = value.variation.variationName;
         if (!map[name]) map[name] = new Set();
         map[name].add(value.value);
+        console.log(`  → Added value "${value.value}" for variation "${name}"`);
       });
     });
 
@@ -76,8 +86,12 @@ export class ProductDetailComponent implements OnInit {
     for (const key in map) {
       result[key] = Array.from(map[key]);
     }
+
+    console.log("Final variation options:", result);
+    this.cachedOptions = result;
     return result;
   }
+
 
   protected variationNames(): string[] {
     return Object.keys(this.getVariationOptions());
@@ -122,6 +136,7 @@ export class ProductDetailComponent implements OnInit {
   }
 
   public toSingleValueTuple(variation: Productvariation): {
+    productVariationId: number;
     sku: string;
     price: number;
     imageUrl: string;
@@ -139,6 +154,7 @@ export class ProductDetailComponent implements OnInit {
 
     // You must cast this because we're transforming to the expected structure
     return {
+      productVariationId: variation.productVariationId,
       sku: variation.sku,
       price: variation.price,
       imageUrl: variation.imageUrl,
