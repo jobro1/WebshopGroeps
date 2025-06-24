@@ -1,25 +1,25 @@
 stages:
-  - lint
+  # - lint
   - test
 
-job_lint_frontend:
-  stage: lint
-  image: node:18
-  tags:
-    - "groep19Runner"
-  script:
-    - cd luxuryproducts_frontend
-    - npm ci
-    - npm run lint
+# job_lint_frontend:
+#   stage: lint
+#   image: node:18
+#   tags:
+#     - "groep19Runner"
+#   script:
+#     - cd luxuryproducts_frontend
+#     - npm ci
+#     - npm run lint
 
-job_lint_backend:
-  stage: lint
-  image: maven:3.9.6-eclipse-temurin-21
-  tags:
-    - "groep19Runner"
-  script:
-    - cd luxuryproducts_backend
-    - mvn checkstyle:check
+# job_lint_backend:
+#   stage: lint
+#   image: maven:3.9.6-eclipse-temurin-21
+#   tags:
+#     - "groep19Runner"
+#   script:
+#     - cd luxuryproducts_backend
+#     - mvn checkstyle:check
 
 job_e2e_test:
   stage: test

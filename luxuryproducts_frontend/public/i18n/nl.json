@@ -1,9 +1,10 @@
 {
   "header": {
     "home": "Hoofd pagina",
-    "all-product": "Alle producten"
+    "all-product": "Alle producten",
+    "admin": "Beheerderspaneel"
   },
-  "switch-language":{
+  "switch-language": {
     "switchToNL": "Zet de taal naar Nederlands",
     "switchToEN": "Zet de taal naar Engels"
   },

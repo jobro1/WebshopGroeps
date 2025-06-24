@@ -10,6 +10,10 @@ import {LoginService} from './services/login.service';
 import {ProductDetailComponent} from './products/product-detail/product-detail.component';
 import {ProductsByCategoryComponent} from './categories/products-by-category/products-by-category.component';
 import {RegisterComponent} from './user/register/register.component';
+import {AdminComponent} from './admin/admin.component';
+import { EditProductsComponent } from './admin/edit-products/edit-products.component';
+import { EditPageComponent } from './admin/edit-products/edit-page/edit-page.component';
+import { AdminGuard } from './guards/admin.guard';
 
 const canAccessUserProfile: CanMatchFn = () => {
   const loginService = inject(LoginService);
@@ -58,5 +62,20 @@ export const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent,
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    canActivate: [AdminGuard]
+  },
+  {
+    path: 'admin/edit-products',
+    component: EditProductsComponent,
+    canActivate: [AdminGuard]
+  },
+  {
+    path: 'edit/:productId',
+    component: EditPageComponent,
+    canActivate: [AdminGuard]
   }
 ];

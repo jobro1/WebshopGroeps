@@ -1,9 +1,10 @@
 {
   "header": {
     "home": "Home",
-    "all-product": "All product"
+    "all-product": "All product",
+    "admin": "Admin panel"
   },
-  "switch-language":{
+  "switch-language": {
     "switchToNL": "Set language to Dutch",
     "switchToEN": "Set language to English"
   },
@@ -36,9 +37,9 @@
     "checkout": "Checkout"
   },
   "item": {
-  "price": "Price:",
-  "total": "Total:",
-  "remove": "Remove"
+    "price": "Price:",
+    "total": "Total:",
+    "remove": "Remove"
   },
   "login": {
     "title": "Login",

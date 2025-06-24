@@ -1,0 +1,10 @@
+<article class="product-info" [routerLink]="['/edit',product.product_id]" >
+  <figure class="product-images">
+    <img [src]="product.variations[0].imageUrl" [alt]="product.name" />
+  </figure>
+
+  <h3>{{ product.name }}</h3>
+  <p>{{ product.description }}</p>
+  <span class="price">${{ product.price }}</span>
+
+</article>

@@ -1,5 +1,6 @@
 {
   "userId": 1,
   "email": "jan@email.com",
-  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9..."
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJyb2xlIjoiQURNSU4iLCJpc3MiOiJEdWNrIFN0dWRpb3MiLCJleHAiOjE3NTA3MTY3MjcsImlhdCI6MTc1MDY5NTEyNywiZW1haWwiOiJqYW5AZW1haWwuY29tIn0.Van0Ez0-dB8PE0CgRxHhOIL3NSOZ7AoSYF-vJcZp39E",
+  "role": "ADMIN"
 }

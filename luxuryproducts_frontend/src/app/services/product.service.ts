@@ -2,6 +2,21 @@ import {inject, Injectable,signal} from '@angular/core';
 import {Product} from '../models/product';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
+import { Productvariation } from '../models/Productvariation';
+import { Observable } from 'rxjs';
+
+interface CreateProductVariationDTO {
+  sku: string;
+  price: number;
+  stock: number;
+  imageUrl: string;
+  productId: number;
+  values: {
+    variationName: string;
+    value: string;
+  }[];
+}
+
 
 @Injectable({
   providedIn: 'root'
@@ -39,5 +54,30 @@ export class ProductService {
       }
     )
   }
+
+  updateProductVariation(variation: Productvariation) {
+    const payload = {
+      productVariationId: variation.productVariationId,
+      sku: variation.sku,
+      price: variation.price,
+      imageUrl: variation.imageUrl,
+      stock: variation.stock,
+      values: variation.values.map(v => ({
+        variationValueId: v.variationValueId,
+        value: v.value,
+      })),
+    };
+
+    return this.httpClient.put(`${environment.apiUrl}/products/admin/variation`, payload);
+  }
+
+  deleteProductVariation(variationId: number) {
+    return this.httpClient.delete(`${environment.apiUrl}/products/admin/variation/${variationId}`);
+  }
+
+  createProductVariation(variation: CreateProductVariationDTO): Observable<unknown> {
+    return this.httpClient.post(`${environment.apiUrl}/products/admin/variation/create`, variation);
+}
+
 
 }

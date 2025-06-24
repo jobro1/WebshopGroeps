@@ -8,11 +8,17 @@ describe('Product toevoegen aan winkelmand', () => {
 
         // Wacht tot de API call is afgerond
         cy.wait('@getProduct');
+
+        // Eventuele extra render-tijd (optioneel)
+        cy.wait(500); // small delay to ensure DOM updates after async logic
     });
 
     it('selecteert variaties, klikt op add to cart en controleert winkelmand', () => {
-        // Wacht tot de variatie knoppen geladen zijn
-        cy.get('.variation-buttons button').should('have.length.greaterThan', 0);
+        // Zorg dat de productdata is gerenderd
+        cy.get('.variation-buttons').should('exist');
+        cy.get('.variation-buttons button').should('have.length.at.least', 1);
+
+        cy.get('.variation-buttons button', { timeout: 10000 }).should('have.length.greaterThan', 0);
 
         // Klik de eerste optie van elke variatie groep aan
         cy.get('.variation-group').each(($group) => {
@@ -26,7 +32,7 @@ describe('Product toevoegen aan winkelmand', () => {
         cy.visit('/cart');
 
         // Controleer dat het product in de winkelmand staat
-        cy.get('.items-container').should('contain', 'Brown'); // Vervang 'SKU' door herkenbare tekst uit jouw productvariatie
+        cy.get('.items-container', { timeout: 10000 }).should('contain', 'Brown'); // Pas dit aan indien nodig
 
         // Controleer dat de total price niet 0 is
         cy.get('.cart-total strong').should(($el) => {

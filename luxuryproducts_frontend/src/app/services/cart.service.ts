@@ -8,6 +8,7 @@ import {OrderDTO} from "../models/dtos/orderDTO";
 import {GiftCardService} from "./gift-card.service";
 import {firstValueFrom} from "rxjs";
 import {GiftcardStatus} from "../models/giftcard";
+import { environment } from '../../environments/environment';
 
 
 @Injectable({
@@ -127,7 +128,7 @@ export class CartService {
       orderItems: orderItems,
     };
 
-    return this.httpClient.post<OrderDTO>('http://localhost:8080/api/orders', order).subscribe({
+    return this.httpClient.post<OrderDTO>(`${environment.apiUrl}/orders`, order).subscribe({
       next: async () => {
         // console.log('Order created successfully with final total:', finalTotal);
         // console.log('Original total before gift cards:', originalTotal);

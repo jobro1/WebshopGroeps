@@ -46,4 +46,7 @@ public class Variation {
     public void setValueList(List<VariationValue> valueList) {
         this.valueList = valueList;
     }
+
+    public void setName(String variationName) {
+    }
 }

@@ -17,11 +17,12 @@ public class JWTUtil {
     @Value("${jwt.secret}")
     private String secret;
 
-    public String generateToken(String email) throws IllegalArgumentException, JWTCreationException {
+    public String generateToken(String email, String role) throws IllegalArgumentException, JWTCreationException {
 
         return JWT.create()
                 .withSubject("User Details")
                 .withClaim("email", email)
+                .withClaim("role", role)
                 .withIssuedAt(new Date())
                 .withExpiresAt(this.createExpirationDate())
                 .withIssuer("Duck Studios")
