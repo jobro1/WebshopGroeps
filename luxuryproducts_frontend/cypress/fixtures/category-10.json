@@ -1,0 +1,116 @@
+{
+  "categoryId": 10,
+  "name": "Giftcards",
+  "products": [
+    {
+      "product_id": 63,
+      "name": "Cadeaubon €50",
+      "price": 50.0,
+      "description": "Een luxe cadeaubon ter waarde van €50, perfect voor elke gelegenheid.",
+      "brand": "Unknown Brand",
+      "variations": [
+        {
+          "productVariationId": 182,
+          "sku": "GC50-63-",
+          "price": 50.0,
+          "imageUrl": "https://image.hslidda.nl/400/0164dc86-3f8a-4118-8890-d4698580018c.jpg",
+          "stock": 999,
+          "values": []
+        }
+      ],
+      "id": 63,
+      "category": {
+        "categoryId": 10,
+        "name": "Giftcards"
+      }
+    },
+    {
+      "product_id": 64,
+      "name": "Cadeaubon €100",
+      "price": 100.0,
+      "description": "Een luxe cadeaubon ter waarde van €100, een royaal geschenk voor uw dierbaren.",
+      "brand": "Unknown Brand",
+      "variations": [
+        {
+          "productVariationId": 183,
+          "sku": "GC100-64-",
+          "price": 100.0,
+          "imageUrl": "https://image.hslidda.nl/400/0164dc86-3f8a-4118-8890-d4698580018c.jpg",
+          "stock": 999,
+          "values": []
+        }
+      ],
+      "id": 64,
+      "category": {
+        "categoryId": 10,
+        "name": "Giftcards"
+      }
+    },
+    {
+      "product_id": 65,
+      "name": "Cadeaubon €200",
+      "price": 200.0,
+      "description": "Een luxe cadeaubon ter waarde van €200, voor een extra speciale verrassing.",
+      "brand": "Unknown Brand",
+      "variations": [
+        {
+          "productVariationId": 184,
+          "sku": "GC200-65-",
+          "price": 200.0,
+          "imageUrl": "https://image.hslidda.nl/400/0164dc86-3f8a-4118-8890-d4698580018c.jpg",
+          "stock": 999,
+          "values": []
+        }
+      ],
+      "id": 65,
+      "category": {
+        "categoryId": 10,
+        "name": "Giftcards"
+      }
+    },
+    {
+      "product_id": 66,
+      "name": "Cadeaubon €400",
+      "price": 400.0,
+      "description": "Een luxe cadeaubon ter waarde van €400, voor een buitengewone gift.",
+      "brand": "Unknown Brand",
+      "variations": [
+        {
+          "productVariationId": 185,
+          "sku": "GC400-66-",
+          "price": 400.0,
+          "imageUrl": "https://image.hslidda.nl/400/0164dc86-3f8a-4118-8890-d4698580018c.jpg",
+          "stock": 999,
+          "values": []
+        }
+      ],
+      "id": 66,
+      "category": {
+        "categoryId": 10,
+        "name": "Giftcards"
+      }
+    },
+    {
+      "product_id": 67,
+      "name": "Cadeaubon €780",
+      "price": 780.0,
+      "description": "Een luxe cadeaubon ter waarde van €780, voor de ultieme verwennerij.",
+      "brand": "Unknown Brand",
+      "variations": [
+        {
+          "productVariationId": 186,
+          "sku": "GC780-67-",
+          "price": 780.0,
+          "imageUrl": "https://image.hslidda.nl/400/0164dc86-3f8a-4118-8890-d4698580018c.jpg",
+          "stock": 999,
+          "values": []
+        }
+      ],
+      "id": 67,
+      "category": {
+        "categoryId": 10,
+        "name": "Giftcards"
+      }
+    }
+  ]
+}
