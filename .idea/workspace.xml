@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="fix: login button in de test aangepast om zo te kijken of de pipeline wel passed">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/user-profile/user-profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/user-profile/user-profile.component.html" afterDir="false" />
-    </list>
+    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="fix; testen hadden de backend nodig voor bepaalde calls die niet werden opgevangen met een intercept. nu zijn de fixtures aanwezig en werken ze zonder backend" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.WebshopBackend.executor": "Run",
-    "git-widget-placeholder": "hotfix/adres",
+    "git-widget-placeholder": "fix/cypress__tests",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/alexa/IdeaProjects/insofad-toets-2-groep-19/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api",
@@ -294,7 +291,63 @@
       <option name="project" value="LOCAL" />
       <updated>1750406368647</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="chore: images uit public folder verwijdert ivm hosting">
+      <option name="closed" value="true" />
+      <created>1750882048769</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1750882048769</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix; expired token in de fixture voor login, en checkout test opgeschoond">
+      <option name="closed" value="true" />
+      <created>1750886165095</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1750886165095</updated>
+    </task>
+    <task id="LOCAL-00016" summary="test pipeline">
+      <option name="closed" value="true" />
+      <created>1750886494412</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1750886494412</updated>
+    </task>
+    <task id="LOCAL-00017" summary="test pipeline">
+      <option name="closed" value="true" />
+      <created>1750886641233</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1750886641233</updated>
+    </task>
+    <task id="LOCAL-00018" summary="test pipeline">
+      <option name="closed" value="true" />
+      <created>1750886837283</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1750886837283</updated>
+    </task>
+    <task id="LOCAL-00019" summary="test pipeline">
+      <option name="closed" value="true" />
+      <created>1750887314275</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1750887314275</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix; testen hadden de backend nodig voor bepaalde calls die niet werden opgevangen met een intercept. nu zijn de fixtures aanwezig en werken ze zonder backend">
+      <option name="closed" value="true" />
+      <created>1750889272412</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1750889272412</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,6 +377,10 @@
     <MESSAGE value="de bluetooth icon verwijdert un category cards" />
     <MESSAGE value="d" />
     <MESSAGE value="fix cypress tests errors temp" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix cypress tests errors temp" />
+    <MESSAGE value="chore: images uit public folder verwijdert ivm hosting" />
+    <MESSAGE value="fix; expired token in de fixture voor login, en checkout test opgeschoond" />
+    <MESSAGE value="test pipeline" />
+    <MESSAGE value="fix; testen hadden de backend nodig voor bepaalde calls die niet werden opgevangen met een intercept. nu zijn de fixtures aanwezig en werken ze zonder backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix; testen hadden de backend nodig voor bepaalde calls die niet werden opgevangen met een intercept. nu zijn de fixtures aanwezig en werken ze zonder backend" />
   </component>
 </project>
