@@ -27,7 +27,7 @@
 
     <div class="product-info">
       <label>
-        Price (€):
+          {{ 'admin.price'| translate }} (€):
         <input
           type="number"
           [(ngModel)]="selectedVariation.price"
@@ -36,7 +36,7 @@
       </label>
 
       <label>
-        Stock:
+          {{ 'admin.stock'| translate }}
         <input type="number" [(ngModel)]="selectedVariation.stock" />
       </label>
 
@@ -54,7 +54,7 @@
 
       <button (click)="saveVariationChanges()">Save</button>
       <button (click)="deleteVariation(selectedVariation.productVariationId)">
-        Delete Variation
+          {{ 'admin.del-var'| translate }}
       </button>
     </div>
   </div>
@@ -68,7 +68,7 @@
 
   <!-- New Variation Form -->
   <div *ngIf="showCreateForm" class="new-variation-form">
-    <h3>Create New Variation</h3>
+    <h3>{{ 'admin.new-var'| translate }}</h3>
 
     <label>
       SKU:
@@ -76,12 +76,12 @@
     </label>
 
     <label>
-      Price (€):
+        {{ 'admin.price'| translate }} (€):
       <input type="number" [(ngModel)]="newVariation.price" step="0.01" />
     </label>
 
     <label>
-      Stock:
+        {{ 'admin.stock'| translate }}
       <input type="number" [(ngModel)]="newVariation.stock" />
     </label>
 
@@ -93,20 +93,20 @@
     <!-- Dynamic Fields for Variation Name/Value Pairs -->
     <div *ngFor="let val of newVariation.values; let i = index">
       <label>
-        Variation Name:
+          {{ 'admin.var-name'| translate }}
         <input [(ngModel)]="val.variation.variationName" />
       </label>
 
       <label>
-        Value:
+          {{ 'admin.var-value'| translate }}
         <input [(ngModel)]="val.value" />
       </label>
 
-      <button (click)="removeVariationField(i)" type="button">Remove</button>
+      <button (click)="removeVariationField(i)" type="button">{{ 'admin.rem-field'| translate }}</button>
     </div>
 
     <button (click)="addVariationField()" type="button">
-      + Add Variation Field
+      {{ 'admin.add-field' | translate }}
     </button>
 
     <br />
