@@ -9,8 +9,6 @@ describe('Product toevoegen aan winkelmand', () => {
         // Wacht tot de API call is afgerond
         cy.wait('@getProduct');
 
-        // Eventuele extra render-tijd (optioneel)
-        cy.wait(500); // small delay to ensure DOM updates after async logic
     });
 
     it('selecteert variaties, klikt op add to cart en controleert winkelmand', () => {

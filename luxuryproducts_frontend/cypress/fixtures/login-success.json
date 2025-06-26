@@ -1,6 +1,6 @@
 {
   "userId": 1,
   "email": "jan@email.com",
-  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJyb2xlIjoiQURNSU4iLCJpc3MiOiJEdWNrIFN0dWRpb3MiLCJleHAiOjE3NTA5MDcxOTgsImlhdCI6MTc1MDg4NTU5OCwiZW1haWwiOiJqYW5AZW1haWwuY29tIn0.Eeern8xVwvCdTYhu_8PCdzsq3b5Qc8tXlHSqg69ClA0",
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJyb2xlIjoiQURNSU4iLCJpc3MiOiJEdWNrIFN0dWRpb3MiLCJleHAiOjE3NTA5NDMxODIsImlhdCI6MTc1MDkyMTU4MiwiZW1haWwiOiJqYW5AZW1haWwuY29tIn0.A2xi6xSi8zv2aeXnJVBjtWP4xZYeYdiogAp6kKU_swk",
   "role": "ADMIN"
 }

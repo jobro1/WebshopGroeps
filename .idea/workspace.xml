@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="fix; testen hadden de backend nodig voor bepaalde calls die niet werden opgevangen met een intercept. nu zijn de fixtures aanwezig en werken ze zonder backend" />
+    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/cypress/fixtures/login-success.json" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/cypress/fixtures/login-success.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="fix/language_swap_admin" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.WebshopBackend.executor": "Run",
-    "git-widget-placeholder": "fix/cypress__tests",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/alexa/IdeaProjects/insofad-toets-2-groep-19/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api",
@@ -186,6 +189,7 @@
       <workItem from="1750602534021" duration="122000" />
       <workItem from="1750602908182" duration="1228000" />
       <workItem from="1750662307318" duration="974000" />
+      <workItem from="1750921444008" duration="296000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore on the application.properties">
       <option name="closed" value="true" />
