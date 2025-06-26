@@ -2,8 +2,14 @@ describe('Product toevoegen aan winkelmand', () => {
     beforeEach(() => {
         // Stub de product API response
         cy.intercept('GET', '/api/products/1', { fixture: 'product1.json' }).as('getProduct');
+        cy.intercept('GET', '/api/productCategories', { fixture: 'category-10.json' }).as('getCategories');
+        cy.intercept('GET', '/api/products', { fixture: 'product1.json' }).as('getProduct');
+
+        cy.wait(100);
 
         // Ga naar de productpagina
+        cy.visit('/products/1');
+        cy.visit('/');
         cy.visit('/products/1');
 
         // Wacht tot de API call is afgerond

@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="">
+    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="fix; nieuwe token die geldig zoort te blijven gedurende tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/cypress/fixtures/login-success.json" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/cypress/fixtures/login-success.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/cypress/e2e/testCart.cy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/cypress/e2e/testCart.cy.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +189,7 @@
       <workItem from="1750602534021" duration="122000" />
       <workItem from="1750602908182" duration="1228000" />
       <workItem from="1750662307318" duration="974000" />
-      <workItem from="1750921444008" duration="296000" />
+      <workItem from="1750921444008" duration="1232000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore on the application.properties">
       <option name="closed" value="true" />
@@ -351,7 +351,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750889272412</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="fix; nieuwe token die geldig zoort te blijven gedurende tests">
+      <option name="closed" value="true" />
+      <created>1750921861841</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1750921861841</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,6 +393,7 @@
     <MESSAGE value="fix; expired token in de fixture voor login, en checkout test opgeschoond" />
     <MESSAGE value="test pipeline" />
     <MESSAGE value="fix; testen hadden de backend nodig voor bepaalde calls die niet werden opgevangen met een intercept. nu zijn de fixtures aanwezig en werken ze zonder backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix; testen hadden de backend nodig voor bepaalde calls die niet werden opgevangen met een intercept. nu zijn de fixtures aanwezig en werken ze zonder backend" />
+    <MESSAGE value="fix; nieuwe token die geldig zoort te blijven gedurende tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix; nieuwe token die geldig zoort te blijven gedurende tests" />
   </component>
 </project>
