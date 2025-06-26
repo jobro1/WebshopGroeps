@@ -12,6 +12,7 @@ import { NgForOf, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from '../../../services/product.service';
 import { CartService } from '../../../services/cart.service';
+import {TranslatePipe} from "@ngx-translate/core";
 
 interface ProductVariationValue {
   variation: {
@@ -51,7 +52,7 @@ interface CreateProductVariationDTO {
 
 @Component({
   selector: 'app-edit-page',
-  imports: [NgForOf, NgIf, FormsModule],
+    imports: [NgForOf, NgIf, FormsModule, TranslatePipe],
   templateUrl: './edit-page.component.html',
   styleUrl: './edit-page.component.scss',
 })
