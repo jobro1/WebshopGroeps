@@ -128,5 +128,15 @@
     "productImageAlt": "Product image",
     "quantity": "Quantity",
     "price": "Price"
+  },
+  "admin": {
+    "del-var": "Delete Variation",
+    "new-var": "Create New Variation",
+    "price": "Price",
+    "stock": "Stock:",
+    "var-name": "Variation Name:",
+    "var-value": "Value:",
+    "rem-field": "Remove",
+    "add-field": "+ Add Variation Field"
   }
 }

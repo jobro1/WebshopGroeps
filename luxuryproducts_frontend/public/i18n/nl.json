@@ -128,5 +128,16 @@
     "productImageAlt": "Productafbeelding",
     "quantity": "Aantal",
     "price": "Prijs"
+  },
+  "admin": {
+    "del-var": "Verwijder Variatie",
+    "new-var": "Nieuwe Variatie Aanmaken",
+    "price": "Prijs",
+    "stock": "Voorraad:",
+    "var-name": "Naam van Variatie:",
+    "var-value": "Waarde:",
+    "rem-field": "Verwijderen",
+    "add-field": "+ Variatieveld Toevoegen"
   }
+
 }

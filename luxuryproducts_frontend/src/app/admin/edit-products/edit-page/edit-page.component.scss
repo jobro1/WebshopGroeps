@@ -7,6 +7,9 @@ $border-radius: 8px;
 $box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 $text-color: #222;
 $text-secondary: #555;
+$input-border: #ccc;
+$input-focus: #80bdff;
+$transition-fast: 0.25s;
 
 .product-detail-container {
   max-width: $product-container-max-width;
@@ -20,22 +23,24 @@ $text-secondary: #555;
   padding: 2rem;
   color: $text-color;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex-wrap: wrap;
 }
 
 .variation-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 
-  label {
+  .variation-label {
     font-weight: 600;
     margin-bottom: 0.75rem;
     display: block;
-    color: #222;
+    color: $text-color;
+    font-size: 1rem;
   }
 
   .variation-buttons {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem; // verticale ruimte tussen knoppen
+    gap: 0.5rem;
 
     button {
       background-color: #e0e7ff;
@@ -46,7 +51,7 @@ $text-secondary: #555;
       font-weight: 600;
       color: #3b82f6;
       text-align: left;
-      transition: background-color 0.25s, border-color 0.25s, color 0.25s;
+      transition: background-color $transition-fast, border-color $transition-fast, color $transition-fast;
 
       &:hover {
         background-color: #c7d2fe;
@@ -60,7 +65,6 @@ $text-secondary: #555;
     }
   }
 }
-
 
 .product-display {
   flex: 3;
@@ -79,9 +83,34 @@ $text-secondary: #555;
 
   .product-info {
     color: $text-secondary;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 
-    p,
-    ul {
+    label {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      font-weight: 500;
+      color: $text-color;
+
+      input {
+        margin-top: 0.25rem;
+        padding: 0.4rem 0.6rem;
+        border: 1px solid $input-border;
+        border-radius: 4px;
+        transition: border-color $transition-fast;
+
+        &:focus {
+          border-color: $input-focus;
+          outline: none;
+        }
+      }
+    }
+
+    p, ul {
       margin: 0.3rem 0;
     }
 
@@ -109,15 +138,73 @@ $text-secondary: #555;
     &:hover {
       background-color: $primary-hover;
     }
+
+    & + button {
+      margin-left: 1rem;
+      background-color: #dc3545;
+
+      &:hover {
+        background-color: #c82333;
+      }
+    }
   }
 }
 
 .low-stock-warning {
   color: red;
   font-weight: bold;
-  margin-top: 5px;
+  margin-top: 0.5rem;
 }
 
+.new-variation-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    color: $text-color;
+
+    input {
+      margin-top: 0.25rem;
+      padding: 0.4rem 0.6rem;
+      border: 1px solid $input-border;
+      border-radius: 4px;
+
+      &:focus {
+        border-color: $input-focus;
+        outline: none;
+      }
+    }
+  }
+
+  button {
+    align-self: flex-start;
+    padding: 0.5rem 1rem;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color $transition-fast;
+
+    &:hover {
+      background-color: $primary-hover;
+    }
+
+    &.remove {
+      background-color: #dc3545;
+
+      &:hover {
+        background-color: #c82333;
+      }
+    }
+  }
+}
 
 /* Responsive voor kleinere schermen */
 @media (max-width: 768px) {

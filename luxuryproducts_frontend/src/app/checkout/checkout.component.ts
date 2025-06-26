@@ -168,13 +168,13 @@ export class CheckoutComponent implements OnInit {
           const finalTotal = await this.cartService.calculateTotalWithGiftCards();
           
           // Create order with the final total
-          await this.cartService.createOrder(currentUser, finalTotal);
+        this.cartService.createOrder(currentUser, finalTotal);
 
           // Reload user data to reflect updated gift card balances
           await firstValueFrom(this.customUserService.loadUserByEmail(currentUser.email));
           
           // Navigate to profile to see the order
-          this.router.navigate([`userProfile/${currentUser.email}`]);
+          await this.router.navigate([`userProfile/${currentUser.email}`]);
         }
     } else {
       this.loginRequest = true;
