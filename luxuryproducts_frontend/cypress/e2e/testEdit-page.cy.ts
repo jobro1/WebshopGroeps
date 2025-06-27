@@ -59,7 +59,7 @@ describe('Edit Page Product Variation Management', () => {
   });
 
   it('creates a new variation', () => {
-    cy.contains('Create New Variation').click();
+    cy.contains('Create New Variant').click();
     cy.get('input[placeholder="SKU"], input[type="text"]').first().type('SKU123');
     cy.get('input[type="number"]').eq(0).type('49.99');
     cy.get('input[type="number"]').eq(1).type('10');

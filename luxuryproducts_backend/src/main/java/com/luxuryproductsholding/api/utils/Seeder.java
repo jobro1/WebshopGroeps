@@ -12,6 +12,9 @@ import org.springframework.context.event.EventListener;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +32,11 @@ public class Seeder {
     private final VariationValueRepository variationValueRepository;
     private final ProductVariationRepository productVariationRepository;
     private final UserRepository userRepository;
+
+    @Autowired
+    private Environment env;
+
+    private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
     public Seeder(ProductRepository productRepository,
                   ProductCategoryRepository productCategoryRepository,
@@ -50,53 +58,40 @@ public class Seeder {
         this.seedCustomUser();
     }
 
-    private void seedCustomUser(){
+    public void seedCustomUser() {
         CustomUser user1 = new CustomUser(
-                "J",
+                env.getProperty("USER1_FIRST_NAME"),
                 "",
-                "J",
-                "straat",
-                123,
-                "1234AB",
-                "1990-01-01",
-                "0612345678",
-                "jan@email.com",
-                (new BCryptPasswordEncoder().encode("Password12!"))
+                env.getProperty("USER1_LAST_NAME"),
+                "straat", 123, "1234AB", "1990-01-01", "0612345678",
+                env.getProperty("USER1_EMAIL"),
+                passwordEncoder.encode(env.getProperty("USER1_PASSWORD"))
         );
-        user1.setRole("ADMIN");
+        user1.setRole(env.getProperty("USER1_ROLE"));
         userRepository.save(user1);
 
         CustomUser user2 = new CustomUser(
-                "admin",
+                env.getProperty("USER2_FIRST_NAME"),
                 "",
-                "user",
-                "straat",
-                2,
-                "1233AB",
-                "1990-01-01",
-                "0612444678",
-                "admin@lux.com",
-                (new BCryptPasswordEncoder().encode("Admin123!"))
+                env.getProperty("USER2_LAST_NAME"),
+                "straat", 2, "1233AB", "1990-01-01", "0612444678",
+                env.getProperty("USER2_EMAIL"),
+                passwordEncoder.encode(env.getProperty("USER2_PASSWORD"))
         );
-        user2.setRole("ADMIN");
+        user2.setRole(env.getProperty("USER2_ROLE"));
         userRepository.save(user2);
 
         CustomUser user3 = new CustomUser(
-                "User",
+                env.getProperty("USER3_FIRST_NAME"),
                 "",
-                "UU",
-                "straat",
-                13,
-                "1214AB",
-                "1990-01-01",
-                "0612395678",
-                "user@lux.com",
-                (new BCryptPasswordEncoder().encode("User123!"))
+                env.getProperty("USER3_LAST_NAME"),
+                "straat", 13, "1214AB", "1990-01-01", "0612395678",
+                env.getProperty("USER3_EMAIL"),
+                passwordEncoder.encode(env.getProperty("USER3_PASSWORD"))
         );
-        user3.setRole("ADMIN");
+        user3.setRole(env.getProperty("USER3_ROLE"));
         userRepository.save(user3);
     }
-
 
     public void seedProductsFromJson() {
         try {
