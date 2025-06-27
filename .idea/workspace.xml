@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="fix; cart test zou nu meteen moeten werken in pipeline">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/admin/edit-products/edit-page/edit-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/admin/edit-products/edit-page/edit-page.component.html" afterDir="false" />
-    </list>
+    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="feat: build stage voor front en backend" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fix/language_swap_admin" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,34 +36,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.TestOrderDAO.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderDAO.testCreateOrder_EmptyOrderItems.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderDAO.testGetAllOrders.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderDAO.testGetOrderById_NotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderService.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderService.testSaveOrderItems_NegativeQuantity.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.WebshopBackend.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alexa/IdeaProjects/insofad-toets-2-groep-19/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\alexa\\WebstormProjects\\insofad-toets-2-groep-19\\luxuryproducts_frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.TestOrderDAO.executor": "Run",
+    "JUnit.TestOrderDAO.testCreateOrder_EmptyOrderItems.executor": "Run",
+    "JUnit.TestOrderDAO.testGetAllOrders.executor": "Run",
+    "JUnit.TestOrderDAO.testGetOrderById_NotFound.executor": "Run",
+    "JUnit.TestOrderService.executor": "Run",
+    "JUnit.TestOrderService.testSaveOrderItems_NegativeQuantity.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.WebshopBackend.executor": "Run",
+    "git-widget-placeholder": "build__pipeline",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/alexa/IdeaProjects/insofad-toets-2-groep-19/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\alexa\\WebstormProjects\\insofad-toets-2-groep-19\\luxuryproducts_frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alexa\IdeaProjects\insofad-toets-2-groep-19\luxuryproducts_backend\src\main\java\com\luxuryproductsholding\api" />
@@ -76,7 +73,7 @@
       <recent name="C:\Users\alexa\IdeaProjects\insofad-toets-2-groep-19\luxuryproducts_backend\src\main\resources\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.WebshopBackend">
+  <component name="RunManager">
     <configuration name="TestOrderDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="luxuryproducts_backend" />
       <extension name="coverage">
@@ -191,7 +188,7 @@
       <workItem from="1750662307318" duration="974000" />
       <workItem from="1750921444008" duration="1879000" />
       <workItem from="1751010066590" duration="270000" />
-      <workItem from="1751010456587" duration="1387000" />
+      <workItem from="1751010456587" duration="4309000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore on the application.properties">
       <option name="closed" value="true" />
@@ -369,7 +366,23 @@
       <option name="project" value="LOCAL" />
       <updated>1750922926165</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fix: variation aangepast naar variant in het admin paneel">
+      <option name="closed" value="true" />
+      <created>1751015932700</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1751015932700</updated>
+    </task>
+    <task id="LOCAL-00024" summary="feat: build stage voor front en backend">
+      <option name="closed" value="true" />
+      <created>1751021129860</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1751021129860</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,6 +418,8 @@
     <MESSAGE value="fix; testen hadden de backend nodig voor bepaalde calls die niet werden opgevangen met een intercept. nu zijn de fixtures aanwezig en werken ze zonder backend" />
     <MESSAGE value="fix; nieuwe token die geldig zoort te blijven gedurende tests" />
     <MESSAGE value="fix; cart test zou nu meteen moeten werken in pipeline" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix; cart test zou nu meteen moeten werken in pipeline" />
+    <MESSAGE value="fix: variation aangepast naar variant in het admin paneel" />
+    <MESSAGE value="feat: build stage voor front en backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: build stage voor front en backend" />
   </component>
 </project>

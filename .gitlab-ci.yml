@@ -1,6 +1,7 @@
 stages:
   - lint
   - test
+  - build
 
 job_lint_frontend:
    stage: lint
@@ -44,3 +45,32 @@ job_unit_test:
   script:
     - cd luxuryproducts_backend
     - mvn clean test
+
+backend_build:
+  stage: build
+  tags:
+    - "groep19Runner"
+  image: maven:3.9-eclipse-temurin-21
+  before_script:
+    - cd luxuryproducts_backend
+  script:
+    - mvn install -DskipTests
+#  rules:
+#    - if: $CI_COMMIT_BRANCH == "master"
+
+frontend_build:
+  stage: build
+  tags:
+    - "groep19Runner"
+  image: node:alpine
+  before_script:
+    - cd luxuryproducts_frontend
+  script:
+    - npm install
+    - npm run build --prod
+  cache:
+    key: alexfrontendnpm
+    paths:
+      - luxuryproducts_frontend/node_modules/
+#  rules:
+#    - if: $CI_COMMIT_BRANCH == "master"
