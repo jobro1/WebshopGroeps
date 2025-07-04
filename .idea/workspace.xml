@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="fix: updated token om komende 2 weken geldig te zijn, deze is specifiek voor testen dus hoort nergens anders gebruikt te worden">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/cypress/fixtures/login-success.json" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/cypress/fixtures/login-success.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,34 +39,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.TestOrderDAO.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderDAO.testCreateOrder_EmptyOrderItems.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderDAO.testGetAllOrders.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderDAO.testGetOrderById_NotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderService.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestOrderService.testSaveOrderItems_NegativeQuantity.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.WebshopBackend.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;fix/variant__shopping__cart&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alexa/IdeaProjects/insofad-toets-2-groep-19/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\alexa\\WebstormProjects\\insofad-toets-2-groep-19\\luxuryproducts_frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.TestOrderDAO.executor": "Run",
+    "JUnit.TestOrderDAO.testCreateOrder_EmptyOrderItems.executor": "Run",
+    "JUnit.TestOrderDAO.testGetAllOrders.executor": "Run",
+    "JUnit.TestOrderDAO.testGetOrderById_NotFound.executor": "Run",
+    "JUnit.TestOrderService.executor": "Run",
+    "JUnit.TestOrderService.testSaveOrderItems_NegativeQuantity.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.WebshopBackend.executor": "Run",
+    "git-widget-placeholder": "fix/long__lasting__test__jwt",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/alexa/IdeaProjects/insofad-toets-2-groep-19/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\alexa\\WebstormProjects\\insofad-toets-2-groep-19\\luxuryproducts_frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alexa\IdeaProjects\insofad-toets-2-groep-19\luxuryproducts_backend\src\main\java\com\luxuryproductsholding\api" />
