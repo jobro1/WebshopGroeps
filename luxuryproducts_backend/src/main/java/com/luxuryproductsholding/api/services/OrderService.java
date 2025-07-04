@@ -46,7 +46,7 @@ public class OrderService {
                 String sku = productVariation.getSku();
                 Double priceAtOrder = productVariation.getPrice();
                 String variationSummary = buildVariationSummary(productVariation.getValues());
-                String imageUrlAtOrder = productVariation.getImageUrl();
+                String imageUrl = productVariation.getImageUrl();
 
                 OrderItem orderItem = new OrderItem(
                         orderItemDTO.quantity,
@@ -55,7 +55,7 @@ public class OrderService {
                         priceAtOrder,
                         variationSummary,
                         newOrder,
-                        imageUrlAtOrder
+                        imageUrl
                 );
 
                 this.orderItemRepository.save(orderItem);

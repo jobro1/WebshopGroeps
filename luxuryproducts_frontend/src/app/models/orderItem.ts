@@ -8,5 +8,5 @@ export interface OrderItem {
   sku: string;
   priceAtOrder: number;
   variationSummary: string;
-  imageUrl?: string;
+  imageUrlAtOrder: string;
 }
