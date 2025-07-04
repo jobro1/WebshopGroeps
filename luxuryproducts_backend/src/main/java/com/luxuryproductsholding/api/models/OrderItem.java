@@ -14,8 +14,10 @@ public class OrderItem {
     private Integer quantity;
     private Double subtotal;
 
-    @ManyToOne(cascade = CascadeType.MERGE)
-    private ProductVariation productVariation;
+    private String sku;
+    private Double priceAtOrder;
+    private String variationSummary;
+    private String imageUrlAtOrder;
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JsonBackReference
@@ -23,11 +25,14 @@ public class OrderItem {
 
     public OrderItem() {}
 
-    public OrderItem(Integer quantity, Double subtotal, Order order, ProductVariation productVariation) {
+    public OrderItem(Integer quantity, Double subtotal, String sku, Double priceAtOrder, String variationSummary, Order order, String imageUrlAtOrder) {
         this.quantity = quantity;
         this.subtotal = subtotal;
+        this.sku = sku;
+        this.priceAtOrder = priceAtOrder;
+        this.variationSummary = variationSummary;
+        this.imageUrlAtOrder = imageUrlAtOrder;
         this.order = order;
-        this.productVariation = productVariation;
     }
 
     public Long getOrderItemId() {
@@ -54,19 +59,43 @@ public class OrderItem {
         this.subtotal = subtotal;
     }
 
-    public ProductVariation getProductVariation() {
-        return productVariation;
-    }
-
-    public void setProductVariation(ProductVariation product) {
-        this.productVariation = product;
-    }
-
     public Order geOrder() {
         return this.order;
     }
 
     public void setOrder(Order userOrder) {
         this.order = userOrder;
+    }
+
+    public String getSku() {
+        return sku;
+    }
+
+    public void setSku(String sku) {
+        this.sku = sku;
+    }
+
+    public Double getPriceAtOrder() {
+        return priceAtOrder;
+    }
+
+    public void setPriceAtOrder(Double priceAtOrder) {
+        this.priceAtOrder = priceAtOrder;
+    }
+
+    public String getVariationSummary() {
+        return variationSummary;
+    }
+
+    public void setVariationSummary(String variationSummary) {
+        this.variationSummary = variationSummary;
+    }
+
+    public String getImageUrlAtOrder() {
+        return imageUrlAtOrder;
+    }
+
+    public void setImageUrlAtOrder(String imageUrlAtOrder) {
+        this.imageUrlAtOrder = imageUrlAtOrder;
     }
 }

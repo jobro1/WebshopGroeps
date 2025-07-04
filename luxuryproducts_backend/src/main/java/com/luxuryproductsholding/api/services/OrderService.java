@@ -8,11 +8,14 @@ import com.luxuryproductsholding.api.exceptions.insufficientStockException;
 import com.luxuryproductsholding.api.models.Order;
 import com.luxuryproductsholding.api.models.OrderItem;
 import com.luxuryproductsholding.api.models.ProductVariation;
+import com.luxuryproductsholding.api.models.VariationValue;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class OrderService {
@@ -38,12 +41,36 @@ public class OrderService {
 
             if (this.hasEnoughStock(productVariation, orderItemDTO)) {
                 this.updateStock(productVariation, orderItemDTO);
-                OrderItem orderItem = new OrderItem(orderItemDTO.quantity, orderItemDTO.subtotal, newOrder, productVariation);
+
+                // snapshot
+                String sku = productVariation.getSku();
+                Double priceAtOrder = productVariation.getPrice();
+                String variationSummary = buildVariationSummary(productVariation.getValues());
+                String imageUrlAtOrder = productVariation.getImageUrl();
+
+                OrderItem orderItem = new OrderItem(
+                        orderItemDTO.quantity,
+                        orderItemDTO.subtotal,
+                        sku,
+                        priceAtOrder,
+                        variationSummary,
+                        newOrder,
+                        imageUrlAtOrder
+                );
+
                 this.orderItemRepository.save(orderItem);
             }
         }
-
     }
+
+
+    private String buildVariationSummary(List<VariationValue> values) {
+        return values.stream()
+                .map(v -> v.getVariation().getVariationName() + ": " + v.getValue())
+                .collect(Collectors.joining(", "));
+    }
+
+
 
     private void updateStock(ProductVariation productVariation, OrderItemDTO orderItemDTO) {
         int updatedStock = productVariation.getStock() - orderItemDTO.quantity;
