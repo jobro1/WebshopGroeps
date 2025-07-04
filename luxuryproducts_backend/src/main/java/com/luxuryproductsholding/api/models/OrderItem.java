@@ -17,7 +17,7 @@ public class OrderItem {
     private String sku;
     private Double priceAtOrder;
     private String variationSummary;
-    private String imageUrlAtOrder;
+    private String imageUrl;
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JsonBackReference
@@ -25,13 +25,13 @@ public class OrderItem {
 
     public OrderItem() {}
 
-    public OrderItem(Integer quantity, Double subtotal, String sku, Double priceAtOrder, String variationSummary, Order order, String imageUrlAtOrder) {
+    public OrderItem(Integer quantity, Double subtotal, String sku, Double priceAtOrder, String variationSummary, Order order, String imageUrl) {
         this.quantity = quantity;
         this.subtotal = subtotal;
         this.sku = sku;
         this.priceAtOrder = priceAtOrder;
         this.variationSummary = variationSummary;
-        this.imageUrlAtOrder = imageUrlAtOrder;
+        this.imageUrl = imageUrl;
         this.order = order;
     }
 
@@ -92,10 +92,10 @@ public class OrderItem {
     }
 
     public String getImageUrlAtOrder() {
-        return imageUrlAtOrder;
+        return imageUrl;
     }
 
     public void setImageUrlAtOrder(String imageUrlAtOrder) {
-        this.imageUrlAtOrder = imageUrlAtOrder;
+        this.imageUrl = imageUrlAtOrder;
     }
 }

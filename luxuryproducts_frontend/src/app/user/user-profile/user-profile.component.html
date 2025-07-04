@@ -73,8 +73,8 @@
                             @for(orderItem of order.orderItems; track orderItem.orderItemId){
                                 <li>
                                 <img 
-                                    *ngIf="orderItem.imageUrl"
-                                    [src]="orderItem.imageUrl" 
+                                    *ngIf="orderItem.imageUrlAtOrder"
+                                    [src]="orderItem.imageUrlAtOrder" 
                                     alt="{{ 'profile.productImageAlt' | translate }}" 
                                     width="100"
                                 >
