@@ -4,5 +4,9 @@ export interface OrderItem {
   orderItemId: number;
   quantity: number;
   subtotal: number;
-  productVariation: Productvariation
+
+  sku: string;
+  priceAtOrder: number;
+  variationSummary: string;
+  imageUrl?: string;
 }

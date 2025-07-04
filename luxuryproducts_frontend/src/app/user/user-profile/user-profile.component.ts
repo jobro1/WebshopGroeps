@@ -105,7 +105,7 @@ export class UserProfileComponent implements OnInit {
 
 
   protected async linkGiftCard(orderItem: OrderItem, recipientEmail: string) {
-    if (!recipientEmail || orderItem.productVariation?.sku?.startsWith('GC')) {
+    if (!recipientEmail || orderItem.sku?.startsWith('GC')) {
       alert('Please enter a valid recipient email address and select a gift card product.');
       return;
     }
