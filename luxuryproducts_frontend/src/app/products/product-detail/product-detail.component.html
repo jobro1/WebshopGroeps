@@ -23,7 +23,7 @@
                 ⚠️ {{ 'product-detail.low-stock' | translate }}
             </p>
 
-            <button (click)="cartService.addToCart(toSingleValueTuple(selectedVariation))">
+            <button (click)="cartService.addToCart(selectedVariation)">
                 {{ 'product-detail.add-to-cart' | translate }}
             </button>
         </div>

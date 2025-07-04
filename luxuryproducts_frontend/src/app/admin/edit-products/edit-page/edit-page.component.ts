@@ -127,27 +127,19 @@ export class EditPageComponent implements OnInit {
     return Object.keys(this.getVariationOptions());
   }
 
-  public getFilteredOptions(name: string): string[] {
-    const product = this.product();
-    if (!product) return [];
+  getFilteredOptions(name: string): string[] {
+    if (!this.product()) return [];
 
-    const variations = product.variations;
-    const allOptions = this.getVariationOptions()[name] || [];
+    const variations = this.product()!.variations;
+    const allOptions = this.getVariationOptions()[name];
 
-    return allOptions.filter((option) =>
-      variations.some((variation) => {
-        if (variation.stock === 0) return false;
-
-        return variation.values.every((v) => {
-          if (v.variation.variationName === name) {
-            return v.value === option;
-          }
-          const selected = this.selectedValues[v.variation.variationName];
-          return selected ? v.value === selected : true;
-        });
-      })
-    );
+    return allOptions.filter((option) => {
+      return variations.some((variation) =>
+          this.productService.isMatchingVariation(variation, name, option, this.selectedValues)
+      );
+    });
   }
+
 
   public onSelectValue(variationName: string, value: string): void {
     this.selectedValues[variationName] = value;

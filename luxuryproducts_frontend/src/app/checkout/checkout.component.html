@@ -151,7 +151,7 @@
                 <div class="gift-cards-list">
                     @for (card of activeGiftCards(); track card.code) {
                         <div class="gift-card-item">
-                            <span>Gift Card: {{card.code}}</span>
+                            <span>Gift Card: {{card.code}} </span>
                             <span>Balance: €{{card.currentBalance | number:'1.2-2'}}</span>
                         </div>
                     }

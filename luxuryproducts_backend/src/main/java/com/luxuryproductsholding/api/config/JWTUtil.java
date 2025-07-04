@@ -17,6 +17,9 @@ public class JWTUtil {
     @Value("${jwt.secret}")
     private String secret;
 
+    @Value("${jwt.expiration}")
+    private int expiration;
+
     public String generateToken(String email, String role) throws IllegalArgumentException, JWTCreationException {
 
         return JWT.create()
@@ -39,7 +42,7 @@ public class JWTUtil {
     }
 
     private Date createExpirationDate(){
-        int expirationHours = 6;
+        int expirationHours = expiration;
         Calendar appendableDate = Calendar.getInstance();
         appendableDate.setTime(new Date());
         appendableDate.add(Calendar.HOUR, expirationHours);

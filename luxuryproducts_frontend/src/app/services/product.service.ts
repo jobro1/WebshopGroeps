@@ -77,7 +77,24 @@ export class ProductService {
 
   createProductVariation(variation: CreateProductVariationDTO): Observable<unknown> {
     return this.httpClient.post(`${environment.apiUrl}/products/admin/variation/create`, variation);
-}
+  }
+
+  public isMatchingVariation(
+      variation: Productvariation,
+      name: string,
+      option: string,
+      selectedValues: Record<string, string>
+  ): boolean {
+    if (variation.stock === 0) return false;
+
+    return variation.values.every((v) => {
+      if (v.variation.variationName === name) {
+        return v.value === option;
+      }
+      const selected = selectedValues[v.variation.variationName];
+      return selected ? v.value === selected : true;
+    });
+  }
 
 
 }

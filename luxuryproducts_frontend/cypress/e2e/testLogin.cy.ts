@@ -1,6 +1,6 @@
 describe('Login tests', () => {
     beforeEach(() => {
-        cy.visit('/login'); // url van je login pagina
+        cy.visit('/login');
     });
 
     it('logs in successfully with correct credentials', () => {

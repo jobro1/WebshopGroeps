@@ -1,15 +1,11 @@
-// cypress/e2e/edit-page.cy.ts
 
 describe('Edit Page Product Variation Management', () => {
   beforeEach(() => {
-    // Intercept user and order API
-    cy.intercept('GET', '/api/users/jan@email.com', { fixture: 'user-jan.json' }).as('getUser');
+    cy.intercept('GET', '/api/users/JohnJ@lph.nl', { fixture: 'user-john.json' }).as('getUser');
     cy.intercept('GET', '/api/products/1', { fixture: 'product1.json' }).as('getProduct');
 
-    // Log in as admin (define cy.login custom command or intercept token flow)
-    cy.login('jan@example.com', 'Password12!');
+    cy.login('JohnJ@lph.nl', 'whc8fKxHzGVPTMh');
 
-    // Pre-fill the cart (optional)
     cy.window().then(win => {
       win.localStorage.setItem('cart', JSON.stringify([
         {
@@ -19,16 +15,12 @@ describe('Edit Page Product Variation Management', () => {
       ]));
     });
 
-    // Click on admin link if user is admin
-    cy.contains('a', 'Admin').click(); // Matches translated "admin" link
+    cy.contains('a', 'Admin').click();
 
-    // Click on "edit products" button in admin area
-    cy.contains('a.btn', 'edit products').click(); // Class + text match
+    cy.contains('a.btn', 'edit products').click();
 
-    // Finally navigate to edit/1
     cy.visit('/edit/1');
 
-    // Ensure product data is loaded
     cy.wait('@getProduct');
   });
 
@@ -76,40 +68,32 @@ describe('Edit Page Product Variation Management', () => {
   });
 
   it('deletes a variation and ensures "S" is no longer available', () => {
-    // Intercept the initial product load
     cy.intercept('GET', '/api/products/1', { fixture: 'product1.json' }).as('getProduct');
 
-    // Intercept the DELETE call
     cy.intercept('DELETE', '/api/products/admin/variation/1', {
       statusCode: 200,
     }).as('deleteVariation');
 
-    // Simulate deletion and replace the product fixture with a modified version
     cy.fixture('product1.json').then((product) => {
-      // Remove the variation value with value === 'S'
       product.variations = product.variations.filter((v: { values: any[]; }) =>
         v.values?.every((vv: any) => vv.value !== 'S')
       );
 
-      // After delete, respond with modified product data
       cy.intercept('GET', '/api/products/1', product).as('getProductAfterDelete');
     });
 
-    // Select variations to enable the delete button
     cy.get('.variation-group').each(($group) => {
       cy.wrap($group).find('button').first().click();
     });
 
     cy.contains('button', 'Delete Variation').click();
-    cy.on('window:confirm', () => true); // confirm popup
+    cy.on('window:confirm', () => true);
 
     cy.wait('@deleteVariation');
 
-    // Reload to trigger GET /api/products/1 again
     cy.reload();
     cy.wait('@getProductAfterDelete');
 
-    // ✅ Assert "S" is gone
     cy.get('.variation-buttons').should('not.contain', 'S');
   });
 });
