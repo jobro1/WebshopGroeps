@@ -2,7 +2,6 @@ import {effect, inject, Injectable, signal} from '@angular/core';
 import {CartItem} from '../models/cartItem';
 import {HttpClient} from '@angular/common/http';
 import {User} from '../models/customUser';
-import {OrderService} from './order.service';
 import {Productvariation} from "../models/Productvariation";
 import {OrderDTO} from "../models/dtos/orderDTO";
 import {GiftCardService} from "./gift-card.service";
@@ -16,7 +15,6 @@ import { environment } from '../../environments/environment';
 })
 export class CartService {
   private cartItems= signal<CartItem[]>(this.loadCartFromLocalStorage());
-  private orderService = inject(OrderService);
   private httpClient = inject(HttpClient);
   private giftCardService = inject(GiftCardService);
 
@@ -39,6 +37,7 @@ export class CartService {
   public addToCart(variation: Productvariation) {
     const updateCart = [...this.cartItems()];
     const existingItem = updateCart.find(item => item.productVariation.sku === variation.sku);
+
 
     if (existingItem) {
       if (variation.sku.startsWith('GC')) {
@@ -130,12 +129,9 @@ export class CartService {
 
     return this.httpClient.post<OrderDTO>(`${environment.apiUrl}/orders`, order).subscribe({
       next: async () => {
-        // console.log('Order created successfully with final total:', finalTotal);
-        // console.log('Original total before gift cards:', originalTotal);
         this.clearCart();
       },
       error: (error) => {
-        // console.error('Failed to create the order:', error);
         throw new Error(`Failed to create the order. Server responded with: ${error.message}`);
       }
     });

@@ -5,23 +5,7 @@ import { CartService } from '../../services/cart.service';
 import { NgForOf, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {TranslatePipe} from "@ngx-translate/core";
-
-// Interfaces for better typing
-interface ProductVariationValue {
-  variation: {
-    variationName: string;
-  };
-  value: string;
-}
-
-interface Productvariation {
-  productVariationId: number;
-  values: ProductVariationValue[];
-  stock: number;
-  imageUrl: string;
-  price: number;
-  sku: string;
-}
+import {Productvariation} from "../../models/Productvariation";
 
 @Component({
   selector: 'app-product-detail',
@@ -69,16 +53,13 @@ export class ProductDetailComponent implements OnInit {
 
     const map: Record<string, Set<string>> = {};
 
-    console.log(`Processing variations for product: ${this.product()?.name} (ID: ${this.product()?.product_id})`);
 
-    this.product()?.variations.forEach((variation, i) => {
-      console.log(` Variation #${i + 1}:`, variation);
+    this.product()?.variations.forEach((variation) => {
 
       variation.values.forEach((value) => {
         const name = value.variation.variationName;
         if (!map[name]) map[name] = new Set();
         map[name].add(value.value);
-        console.log(`  → Added value "${value.value}" for variation "${name}"`);
       });
     });
 
@@ -87,7 +68,6 @@ export class ProductDetailComponent implements OnInit {
       result[key] = Array.from(map[key]);
     }
 
-    console.log("Final variation options:", result);
     this.cachedOptions = result;
     return result;
   }
@@ -120,54 +100,11 @@ export class ProductDetailComponent implements OnInit {
     const variations = this.product()!.variations;
     const allOptions = this.getVariationOptions()[name];
 
-    return allOptions.filter((option) => {
-      return variations.some((variation) => {
-        if (variation.stock === 0) return false;
-
-        return variation.values.every((v) => {
-          if (v.variation.variationName === name) {
-            return v.value === option;
-          }
-          const selected = this.selectedValues[v.variation.variationName];
-          return selected ? v.value === selected : true;
-        });
-      });
-    });
-  }
-
-  public toSingleValueTuple(variation: Productvariation): {
-    productVariationId: number;
-    sku: string;
-    price: number;
-    imageUrl: string;
-    stock: number;
-    values: [{
-      variationValueId: number;
-      value: string;
-      variation: {
-        variationId: number;
-        variationName: string;
-      };
-    }];
-  } {
-    const firstValue = variation.values[0];
-
-    // You must cast this because we're transforming to the expected structure
-    return {
-      productVariationId: variation.productVariationId,
-      sku: variation.sku,
-      price: variation.price,
-      imageUrl: variation.imageUrl,
-      stock: variation.stock,
-      values: [firstValue] as [{
-        variationValueId: number;
-        value: string;
-        variation: {
-          variationId: number;
-          variationName: string;
-        };
-      }],
-    };
+    return allOptions.filter((option) =>
+      variations.some((variation) =>
+          this.productService.isMatchingVariation(variation, name, option, this.selectedValues)
+      )
+    );
   }
 
 }
