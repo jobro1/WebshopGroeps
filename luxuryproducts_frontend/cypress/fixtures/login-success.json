@@ -1,6 +1,6 @@
 {
   "userId": 1,
   "email": "JohnJ@lph.nl",
-  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJyb2xlIjoiQURNSU4iLCJpc3MiOiJEdWNrIFN0dWRpb3MiLCJleHAiOjE3NTE2NDAxOTgsImlhdCI6MTc1MTYxODU5OCwiZW1haWwiOiJKb2huSkBscGgubmwifQ.UrBaC6dRXQboQiPDIS9GgjVzzURAtaPXbTHTegfujho",
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJyb2xlIjoiQURNSU4iLCJpc3MiOiJEdWNrIFN0dWRpb3MiLCJleHAiOjE4NDMyMTEwNTgsImlhdCI6MTc1MTY1NjE4MywiZW1haWwiOiJKb2huSkBscGgubmwifQ.r7Z2RuhhBJ6sMiV5R4gBDTpAr1_oiYnnMhYsc68pWms",
   "role": "ADMIN"
 }
