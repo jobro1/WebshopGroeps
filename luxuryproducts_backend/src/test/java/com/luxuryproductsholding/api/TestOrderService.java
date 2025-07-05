@@ -5,9 +5,7 @@ import com.luxuryproductsholding.api.dao.ProductVariationRepository;
 import com.luxuryproductsholding.api.dto.OrderDTO;
 import com.luxuryproductsholding.api.dto.OrderItemDTO;
 import com.luxuryproductsholding.api.exceptions.insufficientStockException;
-import com.luxuryproductsholding.api.models.Order;
-import com.luxuryproductsholding.api.models.OrderItem;
-import com.luxuryproductsholding.api.models.ProductVariation;
+import com.luxuryproductsholding.api.models.*;
 import com.luxuryproductsholding.api.services.OrderService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -43,6 +41,16 @@ public class TestOrderService {
         ProductVariation pv = new ProductVariation();
         pv.setSku("SKU123");
         pv.setStock(5);
+        pv.setPrice(50.0);
+        pv.setImageUrl("http://example.com/image.jpg");
+
+        // set variation values for summary
+        VariationValue vv = new VariationValue();
+        vv.setValue("M");
+        Variation var = new Variation();
+        var.setVariationName("Size");
+        vv.setVariation(var);
+        pv.setValues(List.of(vv));
 
         Order order = new Order();
 
@@ -51,7 +59,19 @@ public class TestOrderService {
 
         orderService.saveOrderItems(dto, order);
 
-        verify(orderItemRepository).save(any(OrderItem.class));
+        // capture the OrderItem that was saved
+        ArgumentCaptor<OrderItem> orderItemCaptor = ArgumentCaptor.forClass(OrderItem.class);
+        verify(orderItemRepository).save(orderItemCaptor.capture());
+
+        OrderItem savedItem = orderItemCaptor.getValue();
+        assertEquals("SKU123", savedItem.getSku());
+        assertEquals(50.0, savedItem.getPriceAtOrder());
+        assertEquals("Size: M", savedItem.getVariationSummary());
+        assertEquals("http://example.com/image.jpg", savedItem.getImageUrlAtOrder());
+        assertEquals(2, savedItem.getQuantity());
+        assertEquals(100.0, savedItem.getSubtotal());
+        assertEquals(order, savedItem.geOrder());
+
         verify(productVariationRepository).save(pv);
         assertEquals(3, pv.getStock());
     }
@@ -100,6 +120,16 @@ public class TestOrderService {
         ProductVariation pv = new ProductVariation();
         pv.setSku("SKU_MATCH");
         pv.setStock(3);
+        pv.setPrice(50.0);
+        pv.setImageUrl("http://example.com/img.png");
+
+        // set variation values for summary
+        VariationValue vv = new VariationValue();
+        vv.setValue("Red");
+        Variation var = new Variation();
+        var.setVariationName("Color");
+        vv.setVariation(var);
+        pv.setValues(List.of(vv));
 
         when(productVariationRepository.findProductVariationBySku("SKU_MATCH"))
                 .thenReturn(Optional.of(pv));
@@ -108,9 +138,23 @@ public class TestOrderService {
 
         orderService.saveOrderItems(dto, order);
 
-        verify(orderItemRepository).save(any(OrderItem.class));
+        // capture and assert the OrderItem saved
+        ArgumentCaptor<OrderItem> orderItemCaptor = ArgumentCaptor.forClass(OrderItem.class);
+        verify(orderItemRepository).save(orderItemCaptor.capture());
+
+        OrderItem savedItem = orderItemCaptor.getValue();
+        assertEquals("SKU_MATCH", savedItem.getSku());
+        assertEquals(50.0, savedItem.getPriceAtOrder());
+        assertEquals("Color: Red", savedItem.getVariationSummary());
+        assertEquals("http://example.com/img.png", savedItem.getImageUrlAtOrder());
+        assertEquals(3, savedItem.getQuantity());
+        assertEquals(150.0, savedItem.getSubtotal());
+        assertEquals(order, savedItem.geOrder());
+
+        // assert stock now zero
         assertEquals(0, pv.getStock());
     }
+
 
     @Test
     void testSaveOrderItems_NegativeQuantity() {
@@ -157,6 +201,15 @@ public class TestOrderService {
         ProductVariation pv = new ProductVariation();
         pv.setSku("SKU_DUP");
         pv.setStock(5);
+        pv.setPrice(50.0);
+        pv.setImageUrl("http://example.com/dup.png");
+
+        VariationValue vv = new VariationValue();
+        vv.setValue("Large");
+        Variation var = new Variation();
+        var.setVariationName("Size");
+        vv.setVariation(var);
+        pv.setValues(List.of(vv));
 
         when(productVariationRepository.findProductVariationBySku("SKU_DUP"))
                 .thenReturn(Optional.of(pv));
@@ -165,7 +218,34 @@ public class TestOrderService {
 
         orderService.saveOrderItems(dto, order);
 
-        verify(orderItemRepository, times(2)).save(any(OrderItem.class));
-        assertEquals(2, pv.getStock()); // 5 - 1 - 2 = 2
+        // capture the two OrderItems saved
+        ArgumentCaptor<OrderItem> captor = ArgumentCaptor.forClass(OrderItem.class);
+        verify(orderItemRepository, times(2)).save(captor.capture());
+
+        List<OrderItem> savedItems = captor.getAllValues();
+
+        // first item
+        OrderItem item1 = savedItems.get(0);
+        assertEquals("SKU_DUP", item1.getSku());
+        assertEquals(50.0, item1.getPriceAtOrder());
+        assertEquals("Size: Large", item1.getVariationSummary());
+        assertEquals("http://example.com/dup.png", item1.getImageUrlAtOrder());
+        assertEquals(1, item1.getQuantity());
+        assertEquals(50.0, item1.getSubtotal());
+        assertEquals(order, item1.geOrder());
+
+        // second item
+        OrderItem item2 = savedItems.get(1);
+        assertEquals("SKU_DUP", item2.getSku());
+        assertEquals(50.0, item2.getPriceAtOrder());
+        assertEquals("Size: Large", item2.getVariationSummary());
+        assertEquals("http://example.com/dup.png", item2.getImageUrlAtOrder());
+        assertEquals(2, item2.getQuantity());
+        assertEquals(100.0, item2.getSubtotal());
+        assertEquals(order, item2.geOrder());
+
+        // final stock check
+        assertEquals(2, pv.getStock()); // 5 -1 -2 = 2
     }
+
 }
