@@ -19,12 +19,12 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent {
   private customUserService = inject(CustomUserService);
   private loginService = inject(LoginService);
-  protected userInfo = this.customUserService.getUserInfo();
-  private router = inject(Router);  
+  private router = inject(Router);
 
   onUserClick() {
     if (this.loginService.isLoggedIn()) {
-      this.router.navigate([`userProfile/${this.userInfo()?.email}`]);
+      const email = this.customUserService.getEmail()
+      this.router.navigate([`userProfile/${email}`]);
     } else {
       this.router.navigate(['/login']);
     }

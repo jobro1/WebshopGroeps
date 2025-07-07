@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="fix: updated token om komende 2 weken geldig te zijn, deze is specifiek voor testen dus hoort nergens anders gebruikt te worden">
-      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/cypress/fixtures/login-success.json" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/cypress/fixtures/login-success.json" afterDir="false" />
+    <list default="true" id="2c4ef644-1790-4094-b42b-5880dc878b92" name="Changes" comment="fix: ongebruikte functie verwijderd">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/user-profile/user-profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/luxuryproducts_frontend/src/app/user/user-profile/user-profile.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,34 +40,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.TestOrderDAO.executor": "Run",
-    "JUnit.TestOrderDAO.testCreateOrder_EmptyOrderItems.executor": "Run",
-    "JUnit.TestOrderDAO.testGetAllOrders.executor": "Run",
-    "JUnit.TestOrderDAO.testGetOrderById_NotFound.executor": "Run",
-    "JUnit.TestOrderService.executor": "Run",
-    "JUnit.TestOrderService.testSaveOrderItems_NegativeQuantity.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.WebshopBackend.executor": "Run",
-    "git-widget-placeholder": "fix/long__lasting__test__jwt",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/alexa/IdeaProjects/insofad-toets-2-groep-19/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\alexa\\WebstormProjects\\insofad-toets-2-groep-19\\luxuryproducts_frontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.TestOrderDAO.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestOrderDAO.testCreateOrder_EmptyOrderItems.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestOrderDAO.testGetAllOrders.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestOrderDAO.testGetOrderById_NotFound.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestOrderService.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestOrderService.testSaveOrderItems_NegativeQuantity.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.WebshopBackend.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;fix/logged__out__user__page&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alexa/IdeaProjects/insofad-toets-2-groep-19/luxuryproducts_backend/src/main/java/com/luxuryproductsholding/api&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\alexa\\WebstormProjects\\insofad-toets-2-groep-19\\luxuryproducts_frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alexa\IdeaProjects\insofad-toets-2-groep-19\luxuryproducts_backend\src\main\java\com\luxuryproductsholding\api" />
@@ -196,6 +197,8 @@
       <workItem from="1751121446205" duration="615000" />
       <workItem from="1751529829166" duration="15448000" />
       <workItem from="1751617841578" duration="633000" />
+      <workItem from="1751881493880" duration="4701000" />
+      <workItem from="1751892734042" duration="1315000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore on the application.properties">
       <option name="closed" value="true" />
@@ -509,7 +512,47 @@
       <option name="project" value="LOCAL" />
       <updated>1751576518790</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="change: JwtPayload interface verplaatst naar models in aparte file om het te kunnen gebruiken op meerdere plekken">
+      <option name="closed" value="true" />
+      <created>1751884227879</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1751884227879</updated>
+    </task>
+    <task id="LOCAL-00041" summary="fix: nu wordt de email uit de token gehaald om te kunnen navigeren naar de user page">
+      <option name="closed" value="true" />
+      <created>1751885435168</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1751885435168</updated>
+    </task>
+    <task id="LOCAL-00042" summary="fix: linting fix in user profile component">
+      <option name="closed" value="true" />
+      <created>1751885878407</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1751885878407</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fix: comment verwijderd, en onnodige functie verwijdert">
+      <option name="closed" value="true" />
+      <created>1751892873511</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1751892873511</updated>
+    </task>
+    <task id="LOCAL-00044" summary="fix: ongebruikte functie verwijderd">
+      <option name="closed" value="true" />
+      <created>1751894540249</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1751894540249</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,11 +573,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="de bluetooth icon verwijdert un category cards" />
-    <MESSAGE value="d" />
-    <MESSAGE value="fix cypress tests errors temp" />
-    <MESSAGE value="chore: images uit public folder verwijdert ivm hosting" />
-    <MESSAGE value="fix; expired token in de fixture voor login, en checkout test opgeschoond" />
     <MESSAGE value="test pipeline" />
     <MESSAGE value="fix; testen hadden de backend nodig voor bepaalde calls die niet werden opgevangen met een intercept. nu zijn de fixtures aanwezig en werken ze zonder backend" />
     <MESSAGE value="fix; nieuwe token die geldig zoort te blijven gedurende tests" />
@@ -555,6 +593,11 @@
     <MESSAGE value="fix: comments verwijdert uit de testen voor netheid" />
     <MESSAGE value="fix: updated token" />
     <MESSAGE value="fix: updated token om komende 2 weken geldig te zijn, deze is specifiek voor testen dus hoort nergens anders gebruikt te worden" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: updated token om komende 2 weken geldig te zijn, deze is specifiek voor testen dus hoort nergens anders gebruikt te worden" />
+    <MESSAGE value="change: JwtPayload interface verplaatst naar models in aparte file om het te kunnen gebruiken op meerdere plekken" />
+    <MESSAGE value="fix: nu wordt de email uit de token gehaald om te kunnen navigeren naar de user page" />
+    <MESSAGE value="fix: linting fix in user profile component" />
+    <MESSAGE value="fix: comment verwijderd, en onnodige functie verwijdert" />
+    <MESSAGE value="fix: ongebruikte functie verwijderd" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: ongebruikte functie verwijderd" />
   </component>
 </project>
