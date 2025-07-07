@@ -16,7 +16,9 @@ export class OrderService {
 
   public loadOrdersByUserId(userId: number) {
     this.httpClient.get<Order[]>(`${environment.apiUrl}/orders?userId=${userId}`).subscribe({
-    next: (orders) => this.orders.set(orders),
+    next: (orders) => {
+      this.orders.set(orders);
+    },
     error: (error) => console.error('error loading orders',error)
       }
     )

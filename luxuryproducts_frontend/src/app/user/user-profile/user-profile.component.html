@@ -71,19 +71,25 @@
                         </p>
                         <ul class="order-item">
                             @for(orderItem of order.orderItems; track orderItem.orderItemId){
-                                <li *ngIf="orderItem.productVariation">
-                                    <img [src]="orderItem.productVariation.imageUrl" alt="{{ 'profile.productImageAlt' | translate }}" width="100">
-                                    <p>
-                                        {{ orderItem.productVariation.sku }} - {{ 'profile.quantity' | translate }}: {{ orderItem.quantity }} - {{ 'profile.price' | translate }}: €{{ orderItem.subtotal | number:'1.2-2' }}
-                                    </p>
-                                    <ul>
-                                        <li *ngFor="let value of orderItem.productVariation.values">
-                                            {{ value.variation.variationName }}: {{ value.value }}
-                                        </li>
-                                    </ul>
+                                <li>
+                                <img 
+                                    *ngIf="orderItem.imageUrlAtOrder"
+                                    [src]="orderItem.imageUrlAtOrder" 
+                                    alt="{{ 'profile.productImageAlt' | translate }}" 
+                                    width="100"
+                                >
+                                <p>
+                                    {{ orderItem.sku }} - 
+                                    {{ 'profile.quantity' | translate }}: {{ orderItem.quantity }} - 
+                                    {{ 'profile.price' | translate }}: €{{ orderItem.subtotal | number:'1.2-2' }}
+                                </p>
+                                <p *ngIf="orderItem.variationSummary">
+                                    {{ orderItem.variationSummary }}
+                                </p>
                                 </li>
                             }
                         </ul>
+
                     </li>
                 }
             </ul>
