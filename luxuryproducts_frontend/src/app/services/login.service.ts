@@ -4,15 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { Token } from '../models/token';
 import { tap } from 'rxjs';
 import { environment } from '../../environments/environment';
-import { jwtDecode } from 'jwt-decode';
-
-interface JwtPayload {
-  sub: string;
-  role?: string;
-  roles?: string[];
-  exp: number;
-  [key: string]: unknown;
-}
+import {jwtDecode} from 'jwt-decode';
+import {JwtPayload} from "../models/JwtPayload";
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +20,7 @@ export class LoginService {
     if (this.token && !this.isTokenExpired()) {
       this.loggedIn = true;
     } else {
-      this.logout(); // clear expired tokens
+      this.logout();
     }
   }
 
