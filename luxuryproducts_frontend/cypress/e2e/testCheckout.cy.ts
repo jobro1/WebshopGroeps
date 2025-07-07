@@ -8,16 +8,17 @@ describe('Checkout flow', () => {
 
         cy.login('JohnJ@lph.nl', 'whc8fKxHzGVPTMh');
 
-        cy.window().then(win => {
-            win.localStorage.setItem('cart', JSON.stringify([
-                {
-                    productVariation: { sku: 'TESTSKU', price: 10 },
-                    quantity: 2
-                }
-            ]));
+        cy.visit('/checkout', {
+            onBeforeLoad(win) {
+                win.localStorage.setItem('cart', JSON.stringify([
+                    {
+                        productVariation: { sku: 'TESTSKU', price: 10 },
+                        quantity: 2
+                    }
+                ]));
+            }
         });
 
-        cy.visit('/checkout');
     });
 
     it('should place order successfully', () => {
@@ -44,8 +45,10 @@ describe('Checkout flow', () => {
         cy.url().should('include', '/userProfile/JohnJ@lph.nl');
 
         cy.window().then(win => {
-            const cart = JSON.parse(<string>win.localStorage.getItem('cart'));
+            const rawCart = win.localStorage.getItem('cart');
+            const cart = rawCart ? JSON.parse(rawCart) : [];
             expect(cart).to.be.empty;
+
         });
     });
 });
