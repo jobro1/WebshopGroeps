@@ -1,11 +1,7 @@
 <article class="profile-container">
-
     <section class="container-leftside">
-
-        <div class="user-card" >
-
-            <h2> {{ userInfo()?.firstName }} {{ userInfo()?.lastName }} </h2>
-            <!--      <p><strong>{{ 'profile.name' | translate }}:</strong> {{ userInfo()?.firstName }} {{ userInfo()?.lastName }}</p>-->
+        <div class="user-card">
+            <h2>{{ userInfo()?.firstName }} {{ userInfo()?.lastName }}</h2>
             <div class="user-info">
                 <p><strong>{{ 'profile.dateOfBirth' | translate }}:</strong> {{ userInfo()?.dateOfBirth}}</p>
                 <p><strong>{{ 'profile.email' | translate }}:</strong> {{ userInfo()?.email }}</p>
@@ -18,12 +14,12 @@
                     <hr />
                     <h4>Gift Cards</h4>
                     <div class="giftcard-tabs">
-                        <button 
+                        <button
                             [class.active]="activeTab() === 'active'"
                             (click)="switchTab('active')">
                             Active Gift Cards
                         </button>
-                        <button 
+                        <button
                             [class.active]="activeTab() === 'other'"
                             (click)="switchTab('other')">
                             Other Gift Cards
@@ -53,7 +49,6 @@
             } @else {
                 <p><em>No gift cards associated with this account.</em></p>
             }
-
         </div>
     </section>
 
@@ -61,7 +56,7 @@
         <h3>{{ 'profile.orderHistory' | translate }}</h3>
         <div class="order-history">
             <ul class="order">
-                @for(order of usersOrders(); track order.orderId) {
+                @for (order of usersOrders(); track order.orderId) {
                     <li>
                         <p class="order-info">
                             <span><strong>{{ 'profile.orderId' | translate }}:</strong> {{ order.orderId }}</span>
@@ -70,30 +65,29 @@
                             <span><strong>{{ 'profile.total' | translate }}:</strong> €{{ order.totalPrice | number:'1.2-2' }}</span>
                         </p>
                         <ul class="order-item">
-                            @for(orderItem of order.orderItems; track orderItem.orderItemId){
+                            @for (orderItem of order.orderItems; track orderItem.orderItemId) {
                                 <li>
-                                <img 
-                                    *ngIf="orderItem.imageUrlAtOrder"
-                                    [src]="orderItem.imageUrlAtOrder" 
-                                    alt="{{ 'profile.productImageAlt' | translate }}" 
-                                    width="100"
-                                >
-                                <p>
-                                    {{ orderItem.sku }} - 
-                                    {{ 'profile.quantity' | translate }}: {{ orderItem.quantity }} - 
-                                    {{ 'profile.price' | translate }}: €{{ orderItem.subtotal | number:'1.2-2' }}
-                                </p>
-                                <p *ngIf="orderItem.variationSummary">
-                                    {{ orderItem.variationSummary }}
-                                </p>
+                                    @if (orderItem.imageUrlAtOrder) {
+                                        <img
+                                            [src]="orderItem.imageUrlAtOrder"
+                                            alt="{{ 'profile.productImageAlt' | translate }}"
+                                            width="100"
+                                        >
+                                    }
+                                    <p>
+                                        {{ orderItem.sku }} -
+                                        {{ 'profile.quantity' | translate }}: {{ orderItem.quantity }} -
+                                        {{ 'profile.price' | translate }}: €{{ orderItem.subtotal | number:'1.2-2' }}
+                                    </p>
+                                    @if (orderItem.variationSummary) {
+                                        <p>{{ orderItem.variationSummary }}</p>
+                                    }
                                 </li>
                             }
                         </ul>
-
                     </li>
                 }
             </ul>
         </div>
     </section>
-
 </article>

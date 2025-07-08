@@ -1,25 +1,27 @@
 <header class="header">
-  <div class="logo">
-    <span class="brand" routerLink="/">Luxury Products</span>
-  </div>
-  <button class="menu-toggle" (click)="toggleNavbar()" aria-label="Toggle navigation menu">
-    <i class="fas fa-bars"></i>
-  </button>
-  <ul class="navbar" [class.active]="isNavbarActive">
-    <li><a routerLink="/">{{ 'header.home' | translate}} </a></li>
-    <li><a routerLink="/products">{{ 'header.all-product' | translate}}</a></li>
-    <li *ngIf="isAdmin()">
-      <a routerLink="/admin">{{ 'header.admin' | translate }}</a>
-    </li>
-  </ul>
-  <div class="search-bar">
-    <input type="text" placeholder="Search products..."   />
-    <button><i class="fas fa-search"></i></button>
-  </div>
+    <div class="logo">
+        <span class="brand" routerLink="/">Luxury Products</span>
+    </div>
+    <button class="menu-toggle" (click)="toggleNavbar()" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <ul class="navbar" [class.active]="isNavbarActive">
+        <li><a routerLink="/">{{ 'header.home' | translate }} </a></li>
+        <li><a routerLink="/products">{{ 'header.all-product' | translate }}</a></li>
+        @if (isAdmin()) {
+            <li>
+                <a routerLink="/admin">{{ 'header.admin' | translate }}</a>
+            </li>
+        }
+    </ul>
+    <div class="search-bar">
+        <input type="text" placeholder="Search products..." />
+        <button><i class="fas fa-search"></i></button>
+    </div>
 
-  <app-switch-language></app-switch-language>
-  <div class="header-actions">
-    <button class="icon-btn" (click)="onUserClick()"><i class="fas fa-user"></i></button>
-    <button class="icon-btn" routerLink="/cart"><i class="fas fa-shopping-cart"></i></button>
-  </div>
+    <app-switch-language></app-switch-language>
+    <div class="header-actions">
+        <button class="icon-btn" (click)="onUserClick()"><i class="fas fa-user"></i></button>
+        <button class="icon-btn" routerLink="/cart"><i class="fas fa-shopping-cart"></i></button>
+    </div>
 </header>

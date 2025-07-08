@@ -1,0 +1,71 @@
+.en-btn, .nl-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 0.25rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  i {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+.en-btn {
+  background-color: #0056b3;
+  color: white;
+  border: 1px solid #003d7a;
+
+  &:hover {
+    background-color: #004494;
+  }
+}
+
+.nl-btn {
+  background-color: #ffdf00;
+  color: #c60c30;
+  border: 1px solid #e6c700;
+
+  &:hover {
+    background-color: #f2d200;
+  }
+}
+
+app-switch-language {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+
+  div {
+    display: flex;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-right: auto;
+    order: -1;
+    padding: 0.5rem 0;
+
+    .en-btn, .nl-btn {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+    }
+  }
+}

@@ -1,16 +1,20 @@
 <div class="item-card">
     <div class="image-container">
-        <img [src]="getImageUrl(item.productVariation)" 
-             [alt]="getProductName(item.productVariation)" 
-             class="product-image" 
+        <img [src]="getImageUrl(item.productVariation)"
+             [alt]="getProductName(item.productVariation)"
+             class="product-image"
              onerror="this.src='/assets/placeholder.png'">
     </div>
     <div class="item-info-text">
         <h3>{{ item.productVariation.sku }}</h3>
         @if (item.productVariation?.values?.length) {
-            <li *ngFor="let value of item.productVariation.values">
-                {{ value.variation.variationName }}: {{ value.value }}
-            </li>
+            <ul>
+                @for (value of item.productVariation.values; track value) {
+                    <li>
+                        {{ value.variation.variationName }}: {{ value.value }}
+                    </li>
+                }
+            </ul>
         }
         <p class="price">{{ 'item.price' | translate }} €{{ item.productVariation?.price || 0 }}</p>
         <p class="price">{{ 'item.total' | translate }} €{{ (item.productVariation?.price || 0) * item.quantity }}</p>

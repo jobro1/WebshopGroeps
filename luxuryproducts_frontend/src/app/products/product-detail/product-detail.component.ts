@@ -2,7 +2,6 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { ActivatedRoute } from '@angular/router';
 import { CartService } from '../../services/cart.service';
-import { NgForOf, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {TranslatePipe} from "@ngx-translate/core";
 import {Productvariation} from "../../models/Productvariation";
@@ -10,8 +9,6 @@ import {Productvariation} from "../../models/Productvariation";
 @Component({
   selector: 'app-product-detail',
     imports: [
-        NgForOf,
-        NgIf,
         FormsModule,
         TranslatePipe,
     ],

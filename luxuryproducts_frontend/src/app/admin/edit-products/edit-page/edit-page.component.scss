@@ -10,48 +10,51 @@ $text-secondary: #555;
 $input-border: #ccc;
 $input-focus: #80bdff;
 $transition-fast: 0.25s;
+$save-btn-color: #28a745;
+$save-btn-hover: #218838;
+$delete-btn-color: #dc3545;
+$delete-btn-hover: #c82333;
+$btn-padding: 0.75rem 1.5rem;
+$btn-radius: 6px;
+$btn-transition: all 0.2s ease;
 
 .product-detail-container {
-  max-width: $product-container-max-width;
-  margin: 3rem auto;
-  background-color: $card-bg-color;
-  border: 1px solid $card-border-color;
-  border-radius: $border-radius;
-  box-shadow: $box-shadow;
-  display: flex;
-  gap: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
   padding: 2rem;
-  color: $text-color;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  flex-wrap: wrap;
+  background-color: #f9faff;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+
+  hr {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid #dde3eb;
+  }
 }
 
 .variation-group {
   margin-bottom: 2rem;
 
   .variation-label {
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 0.75rem;
-    display: block;
-    color: $text-color;
-    font-size: 1rem;
+    margin-bottom: 1rem;
   }
 
   .variation-buttons {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
 
     button {
+      padding: 0.6rem 1.2rem;
       background-color: #e0e7ff;
-      border: 1.5px solid #a5b4fc;
+      border: 1px solid #a5b4fc;
       border-radius: 6px;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      font-weight: 600;
       color: #3b82f6;
-      text-align: left;
-      transition: background-color $transition-fast, border-color $transition-fast, color $transition-fast;
+      font-weight: 500;
+      transition: $btn-transition;
 
       &:hover {
         background-color: #c7d2fe;
@@ -59,7 +62,6 @@ $transition-fast: 0.25s;
 
       &.selected {
         background-color: #3b82f6;
-        border-color: #2563eb;
         color: white;
       }
     }
@@ -67,162 +69,141 @@ $transition-fast: 0.25s;
 }
 
 .product-display {
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
 
   .product-image {
     width: 100%;
-    max-width: 350px;
-    border-radius: $border-radius;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    margin-bottom: 1.5rem;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
 
   .product-info {
-    color: $text-secondary;
-    width: 100%;
-    max-width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 
     label {
       display: flex;
       flex-direction: column;
-      text-align: left;
+      gap: 0.5rem;
       font-weight: 500;
-      color: $text-color;
 
       input {
-        margin-top: 0.25rem;
-        padding: 0.4rem 0.6rem;
-        border: 1px solid $input-border;
+        padding: 0.75rem;
+        border: 1px solid #ccc;
         border-radius: 4px;
-        transition: border-color $transition-fast;
+        transition: border-color 0.2s ease;
 
         &:focus {
-          border-color: $input-focus;
+          border-color: #80bdff;
           outline: none;
+          box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
         }
-      }
-    }
-
-    p, ul {
-      margin: 0.3rem 0;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-
-      li {
-        margin: 0.15rem 0;
-      }
-    }
-  }
-
-  button {
-    margin-top: 1.5rem;
-    padding: 0.6rem 1.5rem;
-    background-color: $primary-color;
-    border: none;
-    border-radius: 6px;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: $primary-hover;
-    }
-
-    & + button {
-      margin-left: 1rem;
-      background-color: #dc3545;
-
-      &:hover {
-        background-color: #c82333;
       }
     }
   }
 }
 
-.low-stock-warning {
-  color: red;
-  font-weight: bold;
-  margin-top: 0.5rem;
+.save-var-btn {
+  padding: $btn-padding;
+  background-color: $save-btn-color;
+  color: white;
+  border: none;
+  border-radius: $btn-radius;
+  font-weight: 600;
+  cursor: pointer;
+  transition: $btn-transition;
+  margin-right: 1rem;
+
+  &:hover {
+    background-color: $save-btn-hover;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.delete-var-btn {
+  padding: $btn-padding;
+  background-color: $delete-btn-color;
+  color: white;
+  border: none;
+  border-radius: $btn-radius;
+  font-weight: 600;
+  cursor: pointer;
+  transition: $btn-transition;
+
+  &:hover {
+    background-color: $delete-btn-hover;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
 }
 
 .new-variation-form {
   margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  padding: 2rem;
+  background-color: #fbfcff;
+  border-radius: 8px;
+  border: 1px solid #dde3eb;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
 
   label {
     display: flex;
     flex-direction: column;
-    font-weight: 500;
-    color: $text-color;
-
-    input {
-      margin-top: 0.25rem;
-      padding: 0.4rem 0.6rem;
-      border: 1px solid $input-border;
-      border-radius: 4px;
-
-      &:focus {
-        border-color: $input-focus;
-        outline: none;
-      }
-    }
+    gap: 0.5rem;
+    margin-bottom: 1rem;
   }
 
-  button {
-    align-self: flex-start;
-    padding: 0.5rem 1rem;
+  .create-var-btn {
+    padding: $btn-padding;
     background-color: $primary-color;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: $btn-radius;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color $transition-fast;
+    transition: $btn-transition;
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $box-shadow;
 
     &:hover {
       background-color: $primary-hover;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
-    &.remove {
-      background-color: #dc3545;
-
-      &:hover {
-        background-color: #c82333;
-      }
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
   }
 }
 
-/* Responsive voor kleinere schermen */
 @media (max-width: 768px) {
   .product-detail-container {
-    flex-direction: column;
     padding: 1rem;
   }
 
-  .product-display,
-  .variation-selectors {
-    width: 100%;
-    flex: none;
-  }
-
   .product-display {
-    .product-image {
-      max-width: 100%;
-      margin-bottom: 1rem;
-    }
+    grid-template-columns: 1fr;
   }
 }

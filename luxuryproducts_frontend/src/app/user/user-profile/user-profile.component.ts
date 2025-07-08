@@ -3,15 +3,13 @@ import {CustomUserService} from '../../services/customUser.service.';
 import {ActivatedRoute, Router} from '@angular/router';
 import {OrderService} from '../../services/order.service';
 import {LoginService} from '../../services/login.service';
-import {DatePipe, DecimalPipe, NgForOf, NgIf} from "@angular/common";
+import {DatePipe, DecimalPipe} from "@angular/common";
 import {TranslatePipe} from "@ngx-translate/core";
 import {GiftcardStatus} from "../../models/giftcard";
 
 @Component({
   selector: 'app-user-profile',
   imports: [
-    NgIf,
-    NgForOf,
     DecimalPipe,
     TranslatePipe,
     DatePipe
@@ -47,7 +45,7 @@ export class UserProfileComponent implements OnInit {
         card.status === GiftcardStatus.EXPIRED || 
         card.status === GiftcardStatus.CANCELLED ||
         (card.status === GiftcardStatus.ACTIVE && 
-         (card.currentBalance <= 0 || new Date(card.expirationDate) <= new Date()))
+        (card.currentBalance <= 0 || new Date(card.expirationDate) <= new Date()))
       );
     }
   }

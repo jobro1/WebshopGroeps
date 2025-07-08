@@ -8,7 +8,6 @@ import {
   Injector,
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NgForOf, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from '../../../services/product.service';
 import { CartService } from '../../../services/cart.service';
@@ -52,7 +51,7 @@ interface CreateProductVariationDTO {
 
 @Component({
   selector: 'app-edit-page',
-    imports: [NgForOf, NgIf, FormsModule, TranslatePipe],
+  imports: [FormsModule, TranslatePipe],
   templateUrl: './edit-page.component.html',
   styleUrl: './edit-page.component.scss',
 })
