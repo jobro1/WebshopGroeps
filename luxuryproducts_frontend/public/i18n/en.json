@@ -130,13 +130,13 @@
     "price": "Price"
   },
   "admin": {
-    "del-var": "Delete Variation",
-    "new-var": "Create New Variation",
+    "del-var": "Delete Variant",
+    "new-var": "Create New Variant",
     "price": "Price",
     "stock": "Stock:",
-    "var-name": "Variation Name:",
+    "var-name": "Variant Name:",
     "var-value": "Value:",
     "rem-field": "Remove",
-    "add-field": "+ Add Variation Field"
+    "add-field": "+ Add Variant Field"
   }
 }

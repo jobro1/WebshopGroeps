@@ -1,115 +1,122 @@
-<div class="product-detail-container" *ngIf="product()">
-  <!-- Existing Variation Selection -->
-  <div *ngFor="let name of variationNames()" class="variation-group">
-    <span class="variation-label">{{ name }}:</span>
-    <div class="variation-buttons">
-      <button
-        *ngFor="let option of getFilteredOptions(name)"
-        (click)="onSelectValue(name, option)"
-        [class.selected]="selectedValues[name] === option"
-        type="button"
-      >
-        {{ option }}
-      </button>
+@if (product()) {
+    <div class="product-detail-container">
+        @for (name of variationNames(); track name) {
+            <div class="variation-group">
+                <span class="variation-label">{{ name }}:</span>
+                <div class="variation-buttons">
+                    @for (option of getFilteredOptions(name); track option) {
+                        <button
+                            (click)="onSelectValue(name, option)"
+                            [class.selected]="selectedValues[name] === option"
+                            type="button"
+                        >
+                            {{ option }}
+                        </button>
+                    }
+                </div>
+            </div>
+        }
+
+        @if (selectedVariation && selectedVariation.stock >= 0) {
+            <div class="product-display">
+                <img
+                    [src]="selectedVariation.imageUrl"
+                    [alt]="selectedVariation.sku"
+                    class="product-image"
+                />
+
+                <div class="product-info">
+                    <label>
+                        {{ 'admin.price' | translate }} (€):
+                        <input
+                            type="number"
+                            [(ngModel)]="selectedVariation.price"
+                            step="0.01"
+                        />
+                    </label>
+
+                    <label>
+                        {{ 'admin.stock' | translate }}
+                        <input type="number" [(ngModel)]="selectedVariation.stock" />
+                    </label>
+
+                    <label>
+                        Image URL:
+                        <input type="text" [(ngModel)]="selectedVariation.imageUrl" />
+                    </label>
+
+                    @for (val of selectedVariation.values; track val) {
+                        <div>
+                            <label>
+                                {{ val.variation.variationName }}:
+                                <input [(ngModel)]="val.value" />
+                            </label>
+                        </div>
+                    }
+
+                    <button class="save-var-btn" (click)="saveVariationChanges()">Save</button>
+                    <button class="delete-var-btn" (click)="deleteVariation(selectedVariation!.productVariationId)">
+                        {{ 'admin.del-var' | translate }}
+                    </button>
+                </div>
+            </div>
+        }
+
+        <hr />
+
+        <button (click)="toggleCreateForm()" type="button">
+            {{ showCreateForm ? 'Cancel' : 'Create New Variant' }}
+        </button>
+
+        @if (showCreateForm) {
+            <div class="new-variation-form">
+                <h3>{{ 'admin.new-var' | translate }}</h3>
+
+                <label>
+                    SKU:
+                    <input type="text" [(ngModel)]="newVariation.sku" />
+                </label>
+
+                <label>
+                    {{ 'admin.price' | translate }} (€):
+                    <input type="number" [(ngModel)]="newVariation.price" step="0.01" />
+                </label>
+
+                <label>
+                    {{ 'admin.stock' | translate }}
+                    <input type="number" [(ngModel)]="newVariation.stock" />
+                </label>
+
+                <label>
+                    Image URL:
+                    <input type="text" [(ngModel)]="newVariation.imageUrl" />
+                </label>
+
+                @for (val of newVariation.values; track val; let i = $index) {
+                    <div>
+                        <label>
+                            {{ 'admin.var-name' | translate }}
+                            <input [(ngModel)]="val.variation.variationName" />
+                        </label>
+
+                        <label>
+                            {{ 'admin.var-value' | translate }}
+                            <input [(ngModel)]="val.value" />
+                        </label>
+
+                        <button (click)="removeVariationField(i)" type="button">
+                            {{ 'admin.rem-field' | translate }}
+                        </button>
+                    </div>
+                }
+
+                <button (click)="addVariationField()" type="button">
+                    {{ 'admin.add-field' | translate }}
+                </button>
+
+                <br />
+                <button class="create-var-btn" (click)="createVariation()" type="button">Create Variant</button>
+            </div>
+        }
     </div>
-  </div>
-
-  <!-- Selected Variation Details -->
-  <div
-    class="product-display"
-    *ngIf="selectedVariation && selectedVariation.stock >= 0"
-  >
-    <img
-      [src]="selectedVariation.imageUrl"
-      [alt]="selectedVariation.sku"
-      class="product-image"
-    />
-
-    <div class="product-info">
-      <label>
-          {{ 'admin.price'| translate }} (€):
-        <input
-          type="number"
-          [(ngModel)]="selectedVariation.price"
-          step="0.01"
-        />
-      </label>
-
-      <label>
-          {{ 'admin.stock'| translate }}
-        <input type="number" [(ngModel)]="selectedVariation.stock" />
-      </label>
-
-      <label>
-        Image URL:
-        <input type="text" [(ngModel)]="selectedVariation.imageUrl" />
-      </label>
-
-      <div *ngFor="let val of selectedVariation.values">
-        <label>
-          {{ val.variation.variationName }}:
-          <input [(ngModel)]="val.value" />
-        </label>
-      </div>
-
-      <button (click)="saveVariationChanges()">Save</button>
-      <button (click)="deleteVariation(selectedVariation.productVariationId)">
-          {{ 'admin.del-var'| translate }}
-      </button>
-    </div>
-  </div>
-
-  <hr />
-
-  <!-- Toggle Button to Create New Variation -->
-  <button (click)="toggleCreateForm()" type="button">
-    {{ showCreateForm ? 'Cancel' : 'Create New Variant' }}
-  </button>
-
-  <!-- New Variation Form -->
-  <div *ngIf="showCreateForm" class="new-variation-form">
-    <h3>{{ 'admin.new-var'| translate }}</h3>
-
-    <label>
-      SKU:
-      <input type="text" [(ngModel)]="newVariation.sku" />
-    </label>
-
-    <label>
-        {{ 'admin.price'| translate }} (€):
-      <input type="number" [(ngModel)]="newVariation.price" step="0.01" />
-    </label>
-
-    <label>
-        {{ 'admin.stock'| translate }}
-      <input type="number" [(ngModel)]="newVariation.stock" />
-    </label>
-
-    <label>
-      Image URL:
-      <input type="text" [(ngModel)]="newVariation.imageUrl" />
-    </label>
-
-    <!-- Dynamic Fields for Variation Name/Value Pairs -->
-    <div *ngFor="let val of newVariation.values; let i = index">
-      <label>
-          {{ 'admin.var-name'| translate }}
-        <input [(ngModel)]="val.variation.variationName" />
-      </label>
-
-      <label>
-          {{ 'admin.var-value'| translate }}
-        <input [(ngModel)]="val.value" />
-      </label>
-
-      <button (click)="removeVariationField(i)" type="button">{{ 'admin.rem-field'| translate }}</button>
-    </div>
-
-    <button (click)="addVariationField()" type="button">
-      {{ 'admin.add-field' | translate }}
-    </button>
-
-    <br />
-    <button (click)="createVariation()" type="button">Create Variation</button>
-  </div>
-</div>
+}

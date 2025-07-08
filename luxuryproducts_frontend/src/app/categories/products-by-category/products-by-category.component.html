@@ -1,12 +1,12 @@
 <div class="products-by-category">
-  <h2>{{category()?.name}}</h2>
-  <ul class="products-by-category-container">
-    @for (product of category()?.products; track product.product_id) {
-      <li>
-        <app-product [product]="product"></app-product>
-      </li>
-    }
-  </ul>
+    <h2>{{category()?.name}}</h2>
+    <ul class="products-by-category-container">
+        @for (product of category()?.products; track product.product_id) {
+            <li>
+                <app-product [product]="product"></app-product>
+            </li>
+        }
+    </ul>
 </div>
 
 

@@ -1,31 +1,40 @@
-<div class="product-detail-container" *ngIf="product()">
-    <div *ngFor="let name of variationNames()" class="variation-group">
-        <span class="variation-label">{{ name }}:</span>
-        <div class="variation-buttons">
-            <button
-                    *ngFor="let option of getFilteredOptions(name)"
-                    (click)="onSelectValue(name, option)"
-                    [class.selected]="selectedValues[name] === option"
-                    type="button"
-            >
-                {{ option }}
-            </button>
-        </div>
+@if (product()) {
+    <div class="product-detail-container">
+        @for (name of variationNames(); track name) {
+            <div class="variation-group">
+                <span class="variation-label">{{ name }}:</span>
+                <div class="variation-buttons">
+                    @for (option of getFilteredOptions(name); track option) {
+                        <button
+                            (click)="onSelectValue(name, option)"
+                            [class.selected]="selectedValues[name] === option"
+                            type="button"
+                        >
+                            {{ option }}
+                        </button>
+                    }
+                </div>
+            </div>
+        }
+
+        @if (selectedVariation && selectedVariation.stock > 0) {
+            <div class="product-display">
+                <img [src]="selectedVariation.imageUrl" [alt]="selectedVariation.sku" class="product-image" />
+                <div class="product-info">
+                    <p><strong>{{ 'product-detail.price' | translate }}:</strong> €{{ selectedVariation.price }}</p>
+                    <p><strong>{{ 'product-detail.stock' | translate }}:</strong> {{ selectedVariation.stock }} {{ 'product-detail.items' | translate }}</p>
+
+                    @if (selectedVariation.stock <= 3 && selectedVariation.stock > 0) {
+                        <p class="low-stock-warning">
+                            ⚠️ {{ 'product-detail.low-stock' | translate }}
+                        </p>
+                    }
+
+                    <button (click)="cartService.addToCart(selectedVariation!)">
+                        {{ 'product-detail.add-to-cart' | translate }}
+                    </button>
+                </div>
+            </div>
+        }
     </div>
-
-    <div class="product-display" *ngIf="selectedVariation && selectedVariation.stock > 0">
-        <img [src]="selectedVariation.imageUrl" [alt]="selectedVariation.sku" class="product-image" />
-        <div class="product-info">
-            <p><strong>{{ 'product-detail.price' | translate }}:</strong> €{{ selectedVariation.price }}</p>
-            <p><strong>{{ 'product-detail.stock' | translate }}:</strong> {{ selectedVariation.stock }} {{ 'product-detail.items' | translate }}</p>
-
-            <p *ngIf="selectedVariation.stock <= 3 && selectedVariation.stock > 0" class="low-stock-warning">
-                ⚠️ {{ 'product-detail.low-stock' | translate }}
-            </p>
-
-            <button (click)="cartService.addToCart(selectedVariation)">
-                {{ 'product-detail.add-to-cart' | translate }}
-            </button>
-        </div>
-    </div>
-</div>
+}

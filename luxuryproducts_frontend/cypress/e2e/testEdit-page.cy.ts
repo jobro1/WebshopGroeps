@@ -1,5 +1,5 @@
 
-describe('Edit Page Product Variation Management', () => {
+describe('Edit Page Product Variant Management', () => {
   beforeEach(() => {
     cy.intercept('GET', '/api/users/JohnJ@lph.nl', { fixture: 'user-john.json' }).as('getUser');
     cy.intercept('GET', '/api/products/1', { fixture: 'product1.json' }).as('getProduct');
@@ -17,7 +17,7 @@ describe('Edit Page Product Variation Management', () => {
 
     cy.contains('a', 'Admin').click();
 
-    cy.contains('a.btn', 'edit products').click();
+    cy.contains('a.admin-edit-btn', 'edit products').click();
 
     cy.visit('/edit/1');
 
@@ -57,11 +57,11 @@ describe('Edit Page Product Variation Management', () => {
     cy.get('input[type="number"]').eq(1).type('10');
     cy.get('input[type="text"]').eq(1).type('http://example.com/image.jpg');
 
-    cy.contains('+ Add Variation Field').click();
-    cy.get('label').contains('Variation Name:').parent().find('input').first().type('Color');
+    cy.contains('+ Add Variant Field').click();
+    cy.get('label').contains('Variant Name:').parent().find('input').first().type('Color');
     cy.get('label').contains('Value').parent().find('input').first().type('Red');
 
-    cy.contains('Create Variation').click();
+    cy.contains('Create Variant').click();
 
     cy.reload();
     cy.get('.variation-group').should('exist');
@@ -86,7 +86,7 @@ describe('Edit Page Product Variation Management', () => {
       cy.wrap($group).find('button').first().click();
     });
 
-    cy.contains('button', 'Delete Variation').click();
+    cy.contains('button', 'Delete Variant').click();
     cy.on('window:confirm', () => true);
 
     cy.wait('@deleteVariation');
